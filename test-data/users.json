@@ -1,8 +1,0 @@
-{
-  "roles": {
-    "admin": {
-      "usernameEnv": "TEST_USERNAME",
-      "passwordEnv": "TEST_PASSWORD"
-    }
-  }
-}
