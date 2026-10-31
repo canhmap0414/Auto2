@@ -52,9 +52,9 @@ Không có. AC2 của `REQ-LOGIN-42` là **vế mới trong REQ 🟡**, xử lý
 | Risk Level · Priority | High · High |
 | Test Scenario | Đang thao tác thì phiên được gia hạn — không bị đăng xuất dù đã quá 1 giờ kể từ lúc đăng nhập |
 | Pre-Condition | Trình duyệt sạch, chưa đăng nhập. **TC chạy mất khoảng 70 phút** — không xếp vào bộ smoke |
-| Test Steps | 1. Đăng nhập bằng `admin@example.com` + `ADMIN_PASSWORD` trong `.env`, xác nhận đang ở Dashboard. Ghi lại thời điểm đăng nhập là **T0**<br>2. Tại khoảng **T0 + 30 phút**: bấm mục `Customers` trên menu trái<br>3. Tại khoảng **T0 + 55 phút**: bấm mục `Dashboard` trên menu trái<br>4. Để yên tới **T0 + 70 phút** — lúc này đã quá 1 giờ kể từ khi đăng nhập, nhưng mới 15 phút kể từ lần thao tác cuối<br>5. Gõ thẳng `https://crm.anhtester.com/admin/clients` vào thanh địa chỉ<br>6. Đọc URL và quan sát nội dung trang |
+| Test Steps | 1. Đăng nhập bằng `admin@example.com` + `ADMIN_PASSWORD` trong `.env`, xác nhận đang ở Dashboard. Ghi lại thời điểm đăng nhập là **T0**<br>2. Tại khoảng **T0 + 30 phút**: bấm mục `Customers` trên menu trái<br>3. Tại khoảng **T0 + 55 phút**: bấm mục `Dashboard` trên menu trái<br>4. Để yên tới **T0 + 70 phút** — lúc này đã quá 1 giờ kể từ khi đăng nhập, nhưng mới 15 phút kể từ lần thao tác cuối<br>5. Gõ thẳng `https://crm.canhnt14.com/admin/clients` vào thanh địa chỉ<br>6. Đọc URL và quan sát nội dung trang |
 | Test Data | Email: `admin@example.com` · Password: `ADMIN_PASSWORD` trong `.env`<br>Mốc thời gian: thao tác ở T0+30 và T0+55 · kiểm ở T0+70 — mỗi khoảng nghỉ đều **dưới 1 giờ** |
-| Expected Result | 1. Đăng nhập thành công, vào Dashboard<br>2–3. Mỗi lần bấm menu đều mở đúng trang, **không** bị đưa về trang đăng nhập<br>5–6. Vẫn ở `https://crm.anhtester.com/admin/clients`, thấy danh sách khách hàng — **không** bị đưa về `/admin/authentication`, **không** phải đăng nhập lại |
+| Expected Result | 1. Đăng nhập thành công, vào Dashboard<br>2–3. Mỗi lần bấm menu đều mở đúng trang, **không** bị đưa về trang đăng nhập<br>5–6. Vẫn ở `https://crm.canhnt14.com/admin/clients`, thấy danh sách khách hàng — **không** bị đưa về `/admin/authentication`, **không** phải đăng nhập lại |
 | Automation · Auto Type | ~~Partial · UI~~ → **No · N/A** — user duyệt 19-09-2026: QA tự chạy và theo dõi |
 | Tags | `@Regression` · `@Slow` · `@PersonalOnly` · `@Login` |
 

@@ -9,12 +9,12 @@
 | Mã tài liệu | `test_plan_release_1.0` |
 | Phiên bản tài liệu | v1.3 |
 | Trạng thái | 🟨 Draft — còn 12 ô chờ thông tin |
-| Mức phân loại | ❓ Chờ Anh Tester chọn: công khai · nội bộ · mật (ô treo 8) |
+| Mức phân loại | ❓ Chờ canhnt14 chọn: công khai · nội bộ · mật (ô treo 8) |
 | Ngày lập | 17-09-2026 |
 | Ngày hiệu lực | — (chưa duyệt) |
-| Người lập | Anh Tester — QA Lead (agent hỗ trợ) |
+| Người lập | canhnt14 — QA Lead (agent hỗ trợ) |
 | Người review | ❓ Chưa chỉ định (ô treo 8) |
-| Người phê duyệt | Anh Tester — QA Lead · ❓ Product Owner — chữ ký ở mục 11 |
+| Người phê duyệt | canhnt14 — QA Lead · ❓ Product Owner — chữ ký ở mục 11 |
 | Hệ thống · Build | Perfex CRM · `v1.0.0` |
 | Phiếu đầu vào | `docs/test-plans/test_plan_release_1.0.input.yaml` (bản lưu của `test_plan.config.yaml`) |
 | Cấu trúc tài liệu | Biên soạn **theo cấu trúc** ISO/IEC/IEEE 29119-3 — Test Plan · phủ đủ nội dung điển hình của ISTQB CTFL v4.0 mục 5.1.1 · ánh xạ ở mục 12 |
@@ -23,7 +23,7 @@
 
 > **Ô còn treo (12)** — gom theo người trả lời:
 >
-> **Anh Tester — QA Lead**
+> **canhnt14 — QA Lead**
 >
 > - **4.** Mức độc lập kiểm thử thể hiện ở đâu (QA báo cáo cho ai, có review TC chéo không) (3.4)
 > - **5.** Công sức **automation** (dựng framework, viết script Smoke và regression) chưa có hạng mục trong ước lượng (7.2)
@@ -32,13 +32,13 @@
 > - **8.** Người review plan · mức phân loại tài liệu (Kiểm soát tài liệu)
 > - **10.** Chiến lược tự động hoá: mục tiêu · tầng kiểm thử · tiêu chí chọn TC · phần không tự động · khi nào chạy từng bộ (3.7)
 >
-> **Anh Tester và Product Owner**
+> **canhnt14 và Product Owner**
 >
 > - **1.** Mục tiêu kiểm thử O1–O4 là **đề xuất của agent** — cần duyệt (1.1)
 > - **2.** Tên Product Owner — người duyệt plan, làm UAT và cùng chấp nhận dừng kiểm thử (2.4 · 4.2 · 11)
 > - **9.** Bốn loại phi chức năng **Tương thích · Khả năng truy cập · Khả dụng · Độ tin cậy & phục hồi** — đợt này có làm không, ngưỡng chấp nhận là bao nhiêu (3.2.1)
 >
-> **Đội DEV (cùng Anh Tester)**
+> **Đội DEV (cùng canhnt14)**
 >
 > - **3.** Dữ liệu kiểm thử trên môi trường mới: dữ liệu nền · nguồn dữ liệu · có dữ liệu thật của khách hàng không · ai dọn, bao lâu làm mới · tài khoản 3 vai trò (5.2 · 4.1)
 > - **11.** Quản lý lỗi: dùng quy trình và thang Severity/Priority mặc định hay workflow Jira · ai phân loại lỗi · họp bao lâu một lần · thời hạn phản hồi/sửa theo Severity (9)
@@ -51,10 +51,10 @@
 
 | Phiên bản | Ngày | Người sửa | Mục thay đổi | Nội dung | Người duyệt |
 |---|---|---|---|---|---|
-| v1.3 | 17-09-2026 | Anh Tester (agent hỗ trợ) | Kiểm soát tài liệu · 3.2 · **3.2.1** · 3.6 · **3.7** · **5.1 · 5.2 · 5.3** · 8.1 · **9** · 10 · 11 · 12 | Chuyển sang cấu trúc mới của template: đầu tài liệu thành mục **Kiểm soát tài liệu** (người review, mức phân loại, ngày hiệu lực) · thêm **3.2.1 Kiểm thử phi chức năng** (đối chiếu TC phi chức năng đã có của `LOGIN`) · thêm **3.7 Chiến lược tự động hoá** · tách mục 5 thành **Môi trường · Dữ liệu kiểm thử · Công cụ** · thêm **9 Quản lý lỗi** · Sản phẩm bàn giao, Phê duyệt, Ánh xạ chuẩn thành mục 10, 11, 12 · chuyển plan và bản lưu phiếu sang `docs/test-plans/`. Phiếu thêm 5 nhóm mới, đều còn trống → **4 ô treo mới** (8 · 9 · 10 · 11); ô treo cũ 8 thành 12. Rủi ro: thêm R13. **Không** đổi phạm vi, lịch, nhân lực, ước lượng, tiêu chí exit | ❓ Chờ Anh Tester và Product Owner duyệt |
-| v1.2 | 17-09-2026 | Anh Tester (agent hỗ trợ) | Đầu tài liệu · 2.1 · 2.4 · 3.1 · 3.2 · 3.4 · 4.1 · 4.2 · 4.3 · 5 · 6 · 7.1 · 7.2 · 7.3 · 8.1 · 10 · 11.2 *(số mục theo cấu trúc v1.2)* | Cập nhật theo phiếu đã bổ sung: build `v1.0.0` · **đưa lại 5 REQ ⚪** bị loại vì môi trường dùng chung vào phạm vi · chốt cấp độ kiểm thử, mức độc lập, UAT do PO/BA nội bộ · **lịch mới**: môi trường 27-09 → 05-10, bắt đầu thực thi 30-09 → 06-10, thêm duyệt plan 21-09, xong TC 02-10, code freeze 19-11, hồi quy 20→25-11, UAT 30-11→04-12, báo cáo tổng hợp 10-12, release 15-12, báo cáo tiến độ hằng tuần thứ Sáu · Anh Tester kiêm automation · ước lượng ba điểm 19,0 người-ngày · không ngân sách riêng · nguồn chính khi lệch · trình duyệt Chrome và Firefox · người chấp nhận dừng · xác nhận ngưỡng tạm dừng · thêm PO vào bên liên quan và phê duyệt · không có Test Policy · chuyển plan và bản lưu phiếu từ `docs/executions/` sang `docs/testplan/`. Rủi ro: cập nhật R1, R5, R6, R7; đóng R10; thêm R11, R12. **Không** đổi tiêu chí exit | ❓ Chờ Anh Tester và Product Owner duyệt |
-| v1.1 | 17-09-2026 | Anh Tester (agent hỗ trợ) | Cấu trúc toàn tài liệu · 1.2 · 3.1 · 3.4 · 3.6 · 4.1 · 7.2 · 7.3 · 8.1 · 8.2 · 11 | Chuyển sang cấu trúc mới của template (ISO/IEC/IEEE 29119-3 + nội dung điển hình ISTQB CTFL v4.0 mục 5.1.1): thêm mục tiêu đo được, cơ sở kiểm thử, cấp độ và mức độc lập kiểm thử, ước lượng công sức, ngân sách, tóm tắt rủi ro sản phẩm, mẫu tài liệu dùng trong đợt; nhóm lại tiêu chí vào và chỉ số theo ISTQB; rủi ro dự án thành mục 8.1, thêm R10; sửa số ngày làm việc còn lại ở R1 từ 9 thành 8. Lập phiếu `test_plan.config.json` từ câu trả lời ngày 17-09-2026. **Không** đổi phạm vi, lịch, nhân lực, tiêu chí exit so với v1.0 | ❓ Chờ Anh Tester duyệt |
-| v1.0 | 17-09-2026 | Anh Tester (agent hỗ trợ) | Toàn bộ | Lập mới | — (được thay bằng v1.1 trước khi duyệt) |
+| v1.3 | 17-09-2026 | canhnt14 (agent hỗ trợ) | Kiểm soát tài liệu · 3.2 · **3.2.1** · 3.6 · **3.7** · **5.1 · 5.2 · 5.3** · 8.1 · **9** · 10 · 11 · 12 | Chuyển sang cấu trúc mới của template: đầu tài liệu thành mục **Kiểm soát tài liệu** (người review, mức phân loại, ngày hiệu lực) · thêm **3.2.1 Kiểm thử phi chức năng** (đối chiếu TC phi chức năng đã có của `LOGIN`) · thêm **3.7 Chiến lược tự động hoá** · tách mục 5 thành **Môi trường · Dữ liệu kiểm thử · Công cụ** · thêm **9 Quản lý lỗi** · Sản phẩm bàn giao, Phê duyệt, Ánh xạ chuẩn thành mục 10, 11, 12 · chuyển plan và bản lưu phiếu sang `docs/test-plans/`. Phiếu thêm 5 nhóm mới, đều còn trống → **4 ô treo mới** (8 · 9 · 10 · 11); ô treo cũ 8 thành 12. Rủi ro: thêm R13. **Không** đổi phạm vi, lịch, nhân lực, ước lượng, tiêu chí exit | ❓ Chờ canhnt14 và Product Owner duyệt |
+| v1.2 | 17-09-2026 | canhnt14 (agent hỗ trợ) | Đầu tài liệu · 2.1 · 2.4 · 3.1 · 3.2 · 3.4 · 4.1 · 4.2 · 4.3 · 5 · 6 · 7.1 · 7.2 · 7.3 · 8.1 · 10 · 11.2 *(số mục theo cấu trúc v1.2)* | Cập nhật theo phiếu đã bổ sung: build `v1.0.0` · **đưa lại 5 REQ ⚪** bị loại vì môi trường dùng chung vào phạm vi · chốt cấp độ kiểm thử, mức độc lập, UAT do PO/BA nội bộ · **lịch mới**: môi trường 27-09 → 05-10, bắt đầu thực thi 30-09 → 06-10, thêm duyệt plan 21-09, xong TC 02-10, code freeze 19-11, hồi quy 20→25-11, UAT 30-11→04-12, báo cáo tổng hợp 10-12, release 15-12, báo cáo tiến độ hằng tuần thứ Sáu · canhnt14 kiêm automation · ước lượng ba điểm 19,0 người-ngày · không ngân sách riêng · nguồn chính khi lệch · trình duyệt Chrome và Firefox · người chấp nhận dừng · xác nhận ngưỡng tạm dừng · thêm PO vào bên liên quan và phê duyệt · không có Test Policy · chuyển plan và bản lưu phiếu từ `docs/executions/` sang `docs/testplan/`. Rủi ro: cập nhật R1, R5, R6, R7; đóng R10; thêm R11, R12. **Không** đổi tiêu chí exit | ❓ Chờ canhnt14 và Product Owner duyệt |
+| v1.1 | 17-09-2026 | canhnt14 (agent hỗ trợ) | Cấu trúc toàn tài liệu · 1.2 · 3.1 · 3.4 · 3.6 · 4.1 · 7.2 · 7.3 · 8.1 · 8.2 · 11 | Chuyển sang cấu trúc mới của template (ISO/IEC/IEEE 29119-3 + nội dung điển hình ISTQB CTFL v4.0 mục 5.1.1): thêm mục tiêu đo được, cơ sở kiểm thử, cấp độ và mức độc lập kiểm thử, ước lượng công sức, ngân sách, tóm tắt rủi ro sản phẩm, mẫu tài liệu dùng trong đợt; nhóm lại tiêu chí vào và chỉ số theo ISTQB; rủi ro dự án thành mục 8.1, thêm R10; sửa số ngày làm việc còn lại ở R1 từ 9 thành 8. Lập phiếu `test_plan.config.json` từ câu trả lời ngày 17-09-2026. **Không** đổi phạm vi, lịch, nhân lực, tiêu chí exit so với v1.0 | ❓ Chờ canhnt14 duyệt |
+| v1.0 | 17-09-2026 | canhnt14 (agent hỗ trợ) | Toàn bộ | Lập mới | — (được thay bằng v1.1 trước khi duyệt) |
 
 ---
 
@@ -62,7 +62,7 @@
 
 ### 1.1 Mục tiêu kiểm thử
 
-> ❓ **Đề xuất của agent** từ phạm vi đợt — chờ Anh Tester và Product Owner duyệt (ô treo 1).
+> ❓ **Đề xuất của agent** từ phạm vi đợt — chờ canhnt14 và Product Owner duyệt (ô treo 1).
 
 | # | Mục tiêu | Đo bằng |
 |---|---|---|
@@ -102,15 +102,15 @@
 | `REQ-PRJ-89` · `91` · `94` | CRUD mốc tiến độ / tệp / thảo luận của dự án (`AMB-PRJ-13`) | Không chạy CRUD trên môi trường dùng chung | ✅ Đưa lại vào phạm vi |
 | `REQ-PRJ-104` | Nội dung tệp `Export project data` (`AMB-PRJ-12`) | Không tải tệp về | ✅ Đưa lại vào phạm vi |
 
-> Anh Tester quyết định đưa lại ngày 17-09-2026. 5 REQ này vẫn mang trạng thái ⚪ trong tài liệu requirements — phải **khảo sát bổ sung trên môi trường mới** bằng `/update-requirements-from-ticket` trước khi sinh TC cho chúng (rủi ro R11). ⚠️ Danh mục `docs/requirements/README.md` ghi REQ ⚪ của `PRJ` là `89, 91, 94`, còn mục `AMB-PRJ-13` trong tài liệu `PRJ` ghi `89, 91, 93` — plan theo danh mục; cần rà lại khi khảo sát bổ sung.
+> canhnt14 quyết định đưa lại ngày 17-09-2026. 5 REQ này vẫn mang trạng thái ⚪ trong tài liệu requirements — phải **khảo sát bổ sung trên môi trường mới** bằng `/update-requirements-from-ticket` trước khi sinh TC cho chúng (rủi ro R11). ⚠️ Danh mục `docs/requirements/README.md` ghi REQ ⚪ của `PRJ` là `89, 91, 94`, còn mục `AMB-PRJ-13` trong tài liệu `PRJ` ghi `89, 91, 93` — plan theo danh mục; cần rà lại khi khảo sát bổ sung.
 
 ### 2.2 NGOÀI phạm vi (out of scope)
 
 | Không kiểm thử | Lý do | Ai chịu trách nhiệm | Nguồn quyết định |
 |---|---|---|---|
-| 20 module CRM còn lại: `CONT` · `LEAD` · `TASK` · `EST` · `PROP` · `INV` · `PAY` · `CN` · `SUB` · `CTR` · `EXP` · `ITEM` · `TICK` · `ESTREQ` · `KB` · `REP` · `DASH` · `TODO` · `REM` · `PROF` | Không thuộc Release 1.0 · 20/20 module chưa khảo sát requirements | Đợt sau | Anh Tester — QA Lead, 17-09-2026 |
-| Hệ thống **Book API** (8 module, namespace `_book-api/`) | Không thuộc Release 1.0 · chưa có REQ, chưa có TC | Đợt sau | Anh Tester — QA Lead, 17-09-2026 |
-| **Cổng khách hàng** (khu front-end ngoài `/admin`) | Loại khỏi phạm vi. Hệ quả: `STORY-PRJ-03` (11 REQ về `Visible Tabs` và công tắc quyền khách hàng) chỉ kiểm được mức *biểu mẫu ghi nhận đúng*, **không** kiểm tác dụng thật phía khách hàng (`AMB-PRJ-14`). Riêng `REQ-LOGIN-43` — tài khoản khách hàng bị chặn ở khu `/admin` — **vẫn trong phạm vi** | Chưa xếp đợt — chờ PO chốt phạm vi cổng khách hàng | Anh Tester — QA Lead, 17-09-2026 |
+| 20 module CRM còn lại: `CONT` · `LEAD` · `TASK` · `EST` · `PROP` · `INV` · `PAY` · `CN` · `SUB` · `CTR` · `EXP` · `ITEM` · `TICK` · `ESTREQ` · `KB` · `REP` · `DASH` · `TODO` · `REM` · `PROF` | Không thuộc Release 1.0 · 20/20 module chưa khảo sát requirements | Đợt sau | canhnt14 — QA Lead, 17-09-2026 |
+| Hệ thống **Book API** (8 module, namespace `_book-api/`) | Không thuộc Release 1.0 · chưa có REQ, chưa có TC | Đợt sau | canhnt14 — QA Lead, 17-09-2026 |
+| **Cổng khách hàng** (khu front-end ngoài `/admin`) | Loại khỏi phạm vi. Hệ quả: `STORY-PRJ-03` (11 REQ về `Visible Tabs` và công tắc quyền khách hàng) chỉ kiểm được mức *biểu mẫu ghi nhận đúng*, **không** kiểm tác dụng thật phía khách hàng (`AMB-PRJ-14`). Riêng `REQ-LOGIN-43` — tài khoản khách hàng bị chặn ở khu `/admin` — **vẫn trong phạm vi** | Chưa xếp đợt — chờ PO chốt phạm vi cổng khách hàng | canhnt14 — QA Lead, 17-09-2026 |
 | Khu Quản trị hệ thống (Setup: Settings · Staff · Roles · Departments · Taxes · Currencies · Payment Modes · Custom Fields · Email Templates) | 403 với tài khoản hiện có, kể cả `Project Manager` | Cần tài khoản quyền cao hơn — đợt sau | `system_map.md` — Vùng loại khỏi phạm vi (14-08-2026) |
 | Calendar · Media · Bulk PDF Export | Loại khỏi phạm vi khảo sát | — | `system_map.md` — Vùng loại khỏi phạm vi (14-08-2026) |
 | `REQ-LOGIN-27` — gửi mail đặt lại mật khẩu với email có thật | Không kiểm chứng luồng gửi mail thật (`AMB-LOGIN-04`) | — | Quyết định PO 18-08-2026 |
@@ -133,7 +133,7 @@
 
 | Loại | Nội dung | Ảnh hưởng tới kiểm thử | Nguồn |
 |---|---|---|---|
-| Giả định | Đợt này chạy trên **môi trường test riêng** do đội DEV dựng — **không** dùng chung | Được chạy TC phá huỷ dữ liệu (xoá, nhập CSV, CRUD tab dự án). Kiểm chứng được `AMB-CUST-11` · `AMB-CUST-12` · `AMB-PRJ-11` · `AMB-PRJ-13` | Phiếu `Môi trường` — Anh Tester 17-09-2026 |
+| Giả định | Đợt này chạy trên **môi trường test riêng** do đội DEV dựng — **không** dùng chung | Được chạy TC phá huỷ dữ liệu (xoá, nhập CSV, CRUD tab dự án). Kiểm chứng được `AMB-CUST-11` · `AMB-CUST-12` · `AMB-PRJ-11` · `AMB-PRJ-13` | Phiếu `Môi trường` — canhnt14 17-09-2026 |
 | Ràng buộc | Requirements của cả 3 module được khảo sát trên **bản demo dùng chung**, không phải môi trường test đợt này | Cấu hình, dữ liệu nền, phiên bản có thể khác → một số REQ có thể lệch khi chạy trên môi trường mới. Xem rủi ro R2 | `docs/requirements/README.md` |
 | Ràng buộc | QA **không** có quyền gọi API · truy vấn CSDL · kiểm tầng tích hợp | Nhánh Vòng 3 tương ứng do đội Dev xác minh | `docs/requirements/README.md` — Năng lực kiểm thử của QA |
 | Ràng buộc | Tester có DevTools trình duyệt | Chạy được phần 🔧 của TC gắn `@TechCheck` (25 TC ở `LOGIN`) | `docs/requirements/README.md` — Năng lực kiểm thử của QA |
@@ -148,7 +148,7 @@
 
 | Bên | Vai trò trong đợt | Liên quan tới kiểm thử | Nhận gì | Tần suất | Kênh |
 |---|---|---|---|---|---|
-| Anh Tester | QA Lead · phụ trách automation | Duyệt plan và TC · lập báo cáo tiến độ, báo cáo tổng hợp · dựng automation | Plan · báo cáo tiến độ · báo cáo tổng hợp | Hằng tuần thứ Sáu · cuối đợt | Jira · repo |
+| canhnt14 | QA Lead · phụ trách automation | Duyệt plan và TC · lập báo cáo tiến độ, báo cáo tổng hợp · dựng automation | Plan · báo cáo tiến độ · báo cáo tổng hợp | Hằng tuần thứ Sáu · cuối đợt | Jira · repo |
 | Hồng · Lan · Huệ | Tester | Viết/chạy TC theo module phụ trách · báo bug | Plan · TC | Khi plan hoặc TC đổi phiên bản | Jira · repo |
 | Đội DEV | Sửa bug · dựng và duy trì môi trường test riêng · xác minh nhánh Vòng 3 QA không có quyền | Chất lượng build bàn giao quyết định tiêu chí vào | Báo cáo lỗi | Khi phát sinh | Jira |
 | ❓ Product Owner / BA (ô treo 2) | Duyệt plan · trả lời AMB 🔴 · chốt phạm vi REQ · **thực hiện UAT** · cùng QA Lead chấp nhận dừng kiểm thử | Quyết định phạm vi REQ ảnh hưởng trực tiếp bộ TC; nhận khuyến nghị go/no-go cuối đợt | Plan · báo cáo tiến độ · báo cáo tổng hợp | Hằng tuần thứ Sáu · cuối đợt | Email · Jira |
@@ -268,7 +268,7 @@
 | Tiêu chí chọn TC để tự động | ❓ (ô treo 10). Gợi ý: dùng cột `Automation` sẵn có của tài liệu TC — `LOGIN` có 38 TC `Yes` · 10 `Partial` · 2 `No` (`TC_034`, `TC_044`) |
 | Framework · report | Playwright + TypeScript · Allure Report — output trong `reports/` |
 | Hệ thống CI | ❓ `GitLab Actions CI` — GitLab CI hay GitHub Actions (ô treo 6) |
-| Người bảo trì | Anh Tester — theo phiếu `Nhân lực`, vai trò tự động hoá, **kiêm** QA Lead (R5) |
+| Người bảo trì | canhnt14 — theo phiếu `Nhân lực`, vai trò tự động hoá, **kiêm** QA Lead (R5) |
 
 **Phạm vi:**
 
@@ -327,11 +327,11 @@
 
 Phiếu không khai tiêu chí bổ sung.
 
-☑ Bộ mặc định — Anh Tester chọn ngày 17-09-2026, hiệu lực khi plan được duyệt  ☐ Bộ mặc định + bổ sung  ☐ Bộ tiêu chí riêng của dự án
+☑ Bộ mặc định — canhnt14 chọn ngày 17-09-2026, hiệu lực khi plan được duyệt  ☐ Bộ mặc định + bổ sung  ☐ Bộ tiêu chí riêng của dự án
 
 > ⚠️ Tại ngày lập plan, tiêu chí **#1 chưa đạt**: `BUG_login_1785678750_TC039` (🔴 Critical — trang đăng nhập phục vụ qua HTTP, không ép sang HTTPS) đang mở, lần retest gần nhất `NOT_FIXED`. Lỗi này phụ thuộc cấu hình máy chủ → phải retest trên môi trường mới.
 >
-> ⚠️ **Dừng kiểm thử khi hết thời gian hoặc ngân sách** (ISTQB CTFL v4.0 mục 5.1.3): được coi là hợp lệ **chỉ khi** **Product Owner cùng Anh Tester — QA Lead** đã xem xét và **chấp nhận bằng văn bản** rủi ro phát hành mà chưa đạt đủ tiêu chí. Báo cáo tổng hợp khi đó ghi rõ tiêu chí nào chưa đạt và ai chấp nhận — **không** chấm lại thành "Đạt".
+> ⚠️ **Dừng kiểm thử khi hết thời gian hoặc ngân sách** (ISTQB CTFL v4.0 mục 5.1.3): được coi là hợp lệ **chỉ khi** **Product Owner cùng canhnt14 — QA Lead** đã xem xét và **chấp nhận bằng văn bản** rủi ro phát hành mà chưa đạt đủ tiêu chí. Báo cáo tổng hợp khi đó ghi rõ tiêu chí nào chưa đạt và ai chấp nhận — **không** chấm lại thành "Đạt".
 
 ### 4.3 Tiêu chí TẠM DỪNG (Suspension) & tiếp tục
 
@@ -381,11 +381,11 @@ Phiếu không khai tiêu chí bổ sung.
 
 | Vai trò | Người | Module × nền tảng phụ trách | Ghi chú |
 |---|---|---|---|
-| QA Lead | Anh Tester | Cả 3 module | Duyệt plan và TC, lập báo cáo tiến độ và báo cáo tổng hợp |
+| QA Lead | canhnt14 | Cả 3 module | Duyệt plan và TC, lập báo cáo tiến độ và báo cáo tổng hợp |
 | Tester | Hồng | `LOGIN` × Web | Bộ TC đã có — trọng tâm chạy 9 TC chưa từng chạy + retest 6 bug trên môi trường mới |
 | Tester | Lan | `CUST` × Web | Sinh + review TC trước 02-10-2026 · gồm `REQ-CUST-79` được đưa lại |
 | Tester | Huệ | `PRJ` × Web | Sinh + review TC trước 02-10-2026 — module lớn nhất (104 REQ, gồm 4 REQ được đưa lại) |
-| Automation | Anh Tester *(kiêm)* | `LOGIN` · `CUST` · `PRJ` × Web | Dựng framework, automate Smoke và regression — **kiêm cùng vai trò QA Lead** (R5) |
+| Automation | canhnt14 *(kiêm)* | `LOGIN` · `CUST` · `PRJ` × Web | Dựng framework, automate Smoke và regression — **kiêm cùng vai trò QA Lead** (R5) |
 
 **Nhu cầu đào tạo:** ❓ — `LOGIN` có 25 TC gắn `@TechCheck`, trong đó `TC_025` và `TC_041` **bắt buộc** biết DevTools mới chạy được từ đầu (ô treo 7). **Nhu cầu tuyển thêm:** Không.
 
@@ -395,7 +395,7 @@ Phiếu không khai tiêu chí bổ sung.
 
 | Mốc | Ngày | Điều kiện hoàn thành |
 |---|---|---|
-| Duyệt plan | **21-09-2026** (thứ Hai) | Mục 11 có chữ ký Anh Tester và Product Owner |
+| Duyệt plan | **21-09-2026** (thứ Hai) | Mục 11 có chữ ký canhnt14 và Product Owner |
 | Hoàn tất viết và review TC `CUST`, `PRJ` | **02-10-2026** (thứ Sáu) | TC đã review qua `/review-testcases` · đạt tiêu chí vào #8 |
 | Môi trường test sẵn sàng | **05-10-2026** (thứ Hai) | Đạt tiêu chí vào #2, #3, #9 |
 | Smoke xác nhận môi trường | 05-10-2026 (thứ Hai) — *suy từ lịch, không có ngày riêng* | Đạt tiêu chí vào #10 |
@@ -432,7 +432,7 @@ Công thức: E = (a + 4m + b) / 6 · SD = (b − a) / 6. E tổng = cộng E c�
 | Giai đoạn | Người | Ngày làm việc | Năng lực | Ước lượng E | Kết luận |
 |---|---|---|---|---|---|
 | Viết & review TC — 18-09 → 02-10-2026 | Lan · Huệ (+ Hồng) | 11 | 22–33 người-ngày | 8,0 | Đủ về số người-ngày |
-| Thực thi — 06-10 → 19-11-2026 (bắt đầu thực thi tới code freeze) | Hồng · Lan · Huệ · Anh Tester | 33 | 132 người-ngày | 6,0 + 3,0 + 2,0 = 11,0 | Dư rất nhiều |
+| Thực thi — 06-10 → 19-11-2026 (bắt đầu thực thi tới code freeze) | Hồng · Lan · Huệ · canhnt14 | 33 | 132 người-ngày | 6,0 + 3,0 + 2,0 = 11,0 | Dư rất nhiều |
 
 > ⚠️ Không thiếu người, nhưng ước lượng **thấp bất thường** so với khối lượng: 8 người-ngày cho 183 REQ chưa có TC, 6 người-ngày thực thi manual cho 3 module, trong khi riêng bộ Regression `LOGIN` đã mất ~3 giờ 40 phút một lượt. Giai đoạn thực thi dài 33 ngày làm việc mà chỉ dùng 11 người-ngày — ước lượng có thể chỉ tính một lượt chạy, chưa tính các vòng retest sau mỗi build. Xem rủi ro R12.
 
@@ -462,7 +462,7 @@ Công thức: E = (a + 4m + b) / 6 · SD = (b − a) / 6. E tổng = cộng E c�
 | R2 | Kỹ thuật | Requirements khảo sát trên **bản demo**, còn đợt này chạy trên **môi trường mới** — cấu hình, dữ liệu, phiên bản có thể khác | Trung bình | TC FAIL do tài liệu lệch chứ không do lỗi → mở bug sai | Chạy Smoke ngay khi môi trường sẵn sàng 05-10-2026 (tiêu chí vào #10); lệch thì cập nhật requirements bằng `/update-requirements-from-ticket` trước khi mở bug | `docs/requirements/README.md` |
 | R3 | Tổ chức | 10 AMB 🔴 của `CUST`/`PRJ` chưa có câu trả lời, gồm 2 ma trận phân quyền chưa kiểm chứng (`AMB-CUST-01`, `AMB-PRJ-01`) | Cao | TC phân quyền viết theo suy đoán, phải sửa giữa đợt | Gửi danh sách AMB cho PO ngay; dùng tài khoản `Project Manager` trên môi trường mới chạy lại ma trận phân quyền trước khi sinh TC Vòng 3 | `docs/requirements/README.md` — mục 3 |
 | R4 | Kỹ thuật | Bug Critical `TC_039` (HTTP không chuyển HTTPS) đang mở | Cao | Tiêu chí exit #1 không đạt → khuyến nghị không nên release | Retest trên môi trường mới ngay khi sẵn sàng; báo DEV xử lý cấu hình máy chủ sớm | `docs/bugs/README.md` |
-| R5 | Con người | Repo **chưa có** project automation — phải dựng framework từ đầu, và người phụ trách là **QA Lead kiêm nhiệm** (Anh Tester) | Cao | Việc quản lý đợt (duyệt TC, báo cáo tuần, trả lời tester) chiếm thời gian dựng automation; automation không kịp phủ regression 20-11-2026 | Automation **không** chặn manual; ưu tiên automate bộ Smoke `LOGIN` trước; tới báo cáo tiến độ thứ Sáu đầu tiên sau 06-10-2026 mà chưa chạy được Smoke tự động → cân nhắc thu hẹp phạm vi automation | Phiếu `Nhân lực` · kiểm tra repo 17-09-2026 |
+| R5 | Con người | Repo **chưa có** project automation — phải dựng framework từ đầu, và người phụ trách là **QA Lead kiêm nhiệm** (canhnt14) | Cao | Việc quản lý đợt (duyệt TC, báo cáo tuần, trả lời tester) chiếm thời gian dựng automation; automation không kịp phủ regression 20-11-2026 | Automation **không** chặn manual; ưu tiên automate bộ Smoke `LOGIN` trước; tới báo cáo tiến độ thứ Sáu đầu tiên sau 06-10-2026 mà chưa chạy được Smoke tự động → cân nhắc thu hẹp phạm vi automation | Phiếu `Nhân lực` · kiểm tra repo 17-09-2026 |
 | R6 | Tổ chức | Dùng song song Jira và file markdown — hai nguồn lệch nhau | Thấp | Báo cáo tổng hợp lấy số sai, bug trùng hoặc sót | Đã chốt nguồn chính: **Jira cho trạng thái bug · repo cho execution report**; đồng bộ qua `/create-bug-report` (đẩy Jira) | Phiếu `Công cụ` |
 | R7 | Tổ chức | Môi trường sẵn sàng 05-10-2026, **ngay trước** ngày bắt đầu thực thi 06-10-2026 — không còn ngày đệm cho smoke xác nhận môi trường | Cao | Môi trường trễ hoặc smoke fail là trễ ngày bắt đầu; bắt đầu khi chưa đạt tiêu chí vào #10 dễ tràn BLOCKED | DEV bàn giao sớm hơn nếu được; chuẩn bị sẵn tài khoản 3 vai trò và mô tả dữ liệu nền trước 05-10-2026; smoke fail → dời ngày bắt đầu, **không** bắt đầu rồi chữa sau | Phiếu `Lịch` |
 | R8 | Tổ chức | 6 bug `LOGIN` xác nhận trên bản demo; trong đó `BUG_login_1787226515_TC018` nhiều khả năng **không phải lỗi** (ranh giới chuẩn RFC — phát hiện 11-09-2026) | Trung bình | Số bug mở bị thổi phồng trong báo cáo release | Retest cả 6 bug trên môi trường mới; xem xét đóng `TC018` với trạng thái *không phải lỗi* | `TEST_CASES_LOGIN_SUMMARY.md` — Nhật ký thay đổi |
@@ -572,7 +572,7 @@ TC FAIL ──/create-bug-report──→ 🔴 Đang mở ──Dev sửa──�
 
 | Vai trò | Tên | Phiên bản duyệt | Ngày | Ý kiến |
 |---|---|---|---|---|
-| QA Lead | Anh Tester | v1.3 | | |
+| QA Lead | canhnt14 | v1.3 | | |
 | Product Owner | ❓ Tên — ô treo 2 | v1.3 | | |
 
 > Bản v1.2 chưa được duyệt. Bản duyệt nào trước v1.3 **không** tự áp cho v1.3.
@@ -623,4 +623,4 @@ TC FAIL ──/create-bug-report──→ 🔴 Đang mở ──Dev sửa──�
 
 ### 12.2 Điểm làm khác chính sách & chiến lược kiểm thử chung (Deviations)
 
-**Không áp dụng — tổ chức chưa có Test Policy và Test Strategy** (Anh Tester xác nhận 17-09-2026, phiếu `Chuẩn tổ chức`).
+**Không áp dụng — tổ chức chưa có Test Policy và Test Strategy** (canhnt14 xác nhận 17-09-2026, phiếu `Chuẩn tổ chức`).

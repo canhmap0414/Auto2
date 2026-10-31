@@ -1,4 +1,4 @@
-# Danh mục Test Cases — AnhTester Book Management (`BK`)
+# Danh mục Test Cases — canhnt14 Book Management (`BK`)
 
 > **Điểm vào tầng test case của hệ thống Book.** Đọc file này trước khi đụng tới `docs/testcases/_book-api/`: module nào đã có TC · dải TC ID nào đã chiếm · mã kế tiếp · độ phủ so với requirements.
 >
@@ -6,7 +6,7 @@
 
 | Mục | Giá trị |
 |---|---|
-| Hệ thống | AnhTester Book Management — `https://book.anhtester.com` (production, server duy nhất) |
+| Hệ thống | canhnt14 Book Management — `https://book.canhnt14.com` (production, server duy nhất) |
 | Tiền tố TC ID | `BK_` → `BK_<MODULE>_TC_<3 số>` — dải **chung mọi nền tảng** của module |
 | Nguồn requirements | [`docs/requirements/_book-api/README.md`](../../requirements/_book-api/README.md) |
 | Nền tảng | API · Android (`AUTH` 20-09-2026 · `USER` · `BOOK` 26-09-2026, bổ sung 20-10-2026) · **Web** (thêm 25-09-2026) · iOS chưa khảo sát |

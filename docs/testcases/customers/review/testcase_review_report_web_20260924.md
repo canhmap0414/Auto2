@@ -124,7 +124,7 @@ Chấm độc lập, đối chiếu với Bảng 4 vòng của index. Chỉ ghi 
 
 | # | Kịch bản thiếu | Vòng / Nhánh | Priority đề xuất |
 |---|---|---|---|
-| 1 | Mở `https://crm.anhtester.com/admin/clients/delete/{id}` của `KH-TEST` khi **(a)** chưa đăng nhập và **(b)** chỉ có phiên cổng khách hàng. Kết quả: bị đưa về trang đăng nhập, `KH-TEST` **vẫn còn** khi Admin tìm lại. Nên thêm thành biến thể `e` của `TC_113` và `c` của `TC_114` (cùng thao tác, cùng loại phản hồi *"bị chặn"*), **không** cần TC mới | V3 · Security | High |
+| 1 | Mở `https://crm.canhnt14.com/admin/clients/delete/{id}` của `KH-TEST` khi **(a)** chưa đăng nhập và **(b)** chỉ có phiên cổng khách hàng. Kết quả: bị đưa về trang đăng nhập, `KH-TEST` **vẫn còn** khi Admin tìm lại. Nên thêm thành biến thể `e` của `TC_113` và `c` của `TC_114` (cùng thao tác, cùng loại phản hồi *"bị chặn"*), **không** cần TC mới | V3 · Security | High |
 | 2 | Latitude / Longitude tại biên **hợp lệ** tách khỏi TC ngoài miền: `CRM_CUST_TC_130` (Latitude `90`, `-90`) · `CRM_CUST_TC_131` (Longitude `180`, `-180`) | V2 · BVA | Low |
 | 3 | Áp bộ lọc City → bấm `F5` → ghi lại bộ lọc **còn hay mất**, bảng có khớp với bộ lọc đang hiện không. FAIL nếu biểu tượng bộ lọc báo đang áp mà bảng hiện đủ bản ghi | V2 · Error Guessing (Data Table: *Refresh giữ/mất filter*) | Low |
 | 4 | Chọn `All` hoặc chuyển trang → quan sát chỉ báo đang tải của bảng hiện ra rồi tắt. Có thể thêm thành mục bảng kiểm ở `TC_019-e` | V1 · Display (trạng thái đang tải) | Low |
@@ -144,12 +144,12 @@ Không có. Các cặp gần nhau có mục đích khác nhau:
 
 ## Rủi ro dữ liệu dùng chung (ghi chú cho lần chạy đầu)
 
-Các TC sau dựa vào **dữ liệu chuẩn của người khác** trên `crm.anhtester.com`. Nếu dữ liệu đó đổi, TC sẽ FAIL giả:
+Các TC sau dựa vào **dữ liệu chuẩn của người khác** trên `crm.canhnt14.com`. Nếu dữ liệu đó đổi, TC sẽ FAIL giả:
 
 | TC | Phụ thuộc | Khi lệch thì làm gì |
 |---|---|---|
 | `035`, `036`, `058`, `106` | Nhóm `Platinum`, `Information Technology` (`AMB-CUST-07`: mỗi tên trùng hàng chục lần) | Chọn mục đầu tiên khớp tên, ghi lại. Nhóm không còn → BLOCKED |
-| `072`, `096`, `121` | *"đúng 3 nhân sự"* `Project Manager` · `Admin Anh Tester` · `Admin Example` | Đổi thành *"có ít nhất 3 nhân sự kể trên"*, để có thêm nhân sự mới cũng không FAIL |
+| `072`, `096`, `121` | *"đúng 3 nhân sự"* `Project Manager` · `Admin canhnt14` · `Admin Example` | Đổi thành *"có ít nhất 3 nhân sự kể trên"*, để có thêm nhân sự mới cũng không FAIL |
 | `129` | Hoá đơn của khách hàng khác | Xem đề xuất ở bảng TC |
 
 ---

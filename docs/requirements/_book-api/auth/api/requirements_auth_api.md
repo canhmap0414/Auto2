@@ -4,10 +4,10 @@
 
 | Mục | Giá trị |
 |---|---|
-| **Hệ thống** | AnhTester Book Management API (mã hệ thống `BK`) |
+| **Hệ thống** | canhnt14 Book Management API (mã hệ thống `BK`) |
 | **Module** | Xác thực & Phiên đăng nhập — tag `Authentication Management` |
 | **Nền tảng** | API |
-| **Nguồn spec** | `https://book.anhtester.com/swagger/json` (trang `/swagger` là Scalar renderer) · snapshot 19-09-2026 [`openapi_2026-09-19.json`](../../_discovery/sources/openapi_2026-09-19.json) · `openapi: 3.0.0` · `info.version: 1.0.0` · `sha256 32bb8b39…3f09` |
+| **Nguồn spec** | `https://book.canhnt14.com/swagger/json` (trang `/swagger` là Scalar renderer) · snapshot 19-09-2026 [`openapi_2026-09-19.json`](../../_discovery/sources/openapi_2026-09-19.json) · `openapi: 3.0.0` · `info.version: 1.0.0` · `sha256 32bb8b39…3f09` |
 | **Môi trường gọi thử** | Production — 1 server duy nhất · **không** dùng chung (user chốt 14-08-2026) · `Gọi API: ✅` (user xác nhận 19-09-2026) · base URL + tài khoản ở `.env`, không ghi vào tài liệu |
 | **Phương pháp** | Parse spec + **101 request gọi thật** ngày 19-09-2026 (2 vòng: `K-01 → K-55` · `K-101 → K-145`, cộng 1 request dò trạng thái mật khẩu không đánh số), dùng **5 tài khoản tự đăng ký** `auto_auth_<timestamp>_*` — đã dọn cả 5 (mục 12.2) |
 | **REQ trong file này** | **40** — `REQ-BK-AUTH-02` · `04 → 07` · `10` · `12` · `13` · `17 → 48`. Từ 19-09-2026, 8 REQ `01` · `03` · `08` · `09` · `11` · `14` · `15` · `16` kiểm chứng khớp trên Android → **chuyển lên index** (dùng chung `Android · API`), mã giữ nguyên |

@@ -4,11 +4,11 @@
 
 | Mục | Giá trị |
 |---|---|
-| **Hệ thống** | AnhTester Book Management — mã hệ thống `BK` (namespace `_book-api/`) |
+| **Hệ thống** | canhnt14 Book Management — mã hệ thống `BK` (namespace `_book-api/`) |
 | **Module** | Người dùng — quản lý tài khoản người dùng (danh sách, tìm/lọc, thêm, sửa, khoá/mở, xoá). Hồ sơ **của chính mình** (My Profile, Setting account) thuộc module `AUTH` |
 | **Prefix** | `USER` → mã REQ `REQ-BK-USER-<nn>` · TC ID `BK_USER_TC_<nnn>` |
 | **Nền tảng** | **Web** ✅ (25-09-2026) · **API** ✅ (25-09-2026 — 5 operation `GET/POST /api/user` · `GET/PATCH/DELETE /api/user/{id}`) · **Android** 🟨 (26-09-2026 — danh sách · lọc · validation ✅ · 20-10-2026 — khách ✅ · xoá ✅ · **sửa / khoá lỗi** (REQ-129) · thêm thành công · email trùng ❔ — cần nhập mật khẩu) · iOS ❔ |
-| **Nguồn phân tích** | Web: thao tác thật trên `https://book.anhtester.com/user-management` (Chrome, Playwright MCP) ngày 25-09-2026 · API: spec OpenAPI (snapshot 19-09-2026, `sha256` trùng bản tải lại 25-09-2026) + ≈ 360 request gọi thật ngày 25-09-2026 · Android: thao tác thật trên app `book.anhtester.com` 1.0 (emulator Android 17) ngày 26-09-2026 và 20-10-2026 — chi tiết ở file nền tảng |
+| **Nguồn phân tích** | Web: thao tác thật trên `https://book.canhnt14.com/user-management` (Chrome, Playwright MCP) ngày 25-09-2026 · API: spec OpenAPI (snapshot 19-09-2026, `sha256` trùng bản tải lại 25-09-2026) + ≈ 360 request gọi thật ngày 25-09-2026 · Android: thao tác thật trên app `book.canhnt14.com` 1.0 (emulator Android 17) ngày 26-09-2026 và 20-10-2026 — chi tiết ở file nền tảng |
 | **Ngày phân tích** | 25-09-2026 (Web · API) · 26-09-2026 · 20-10-2026 (Android) |
 | **Tài khoản dùng khảo sát** | Web: khách + 2 tài khoản tự tạo `auto_web_<timestamp>_a|b@auto.test` — sửa/xoá **chỉ** trên 2 tài khoản này · Android 26-09: tài khoản test (tester đăng nhập sẵn), không tạo/sửa/xoá · Android 20-10: khách + tài khoản test do tester đăng nhập; **sửa thử rồi xoá** tài khoản test còn sót `auto_web_<timestamp>_b@auto.test` (đã dọn). Agent không nhập mật khẩu, không tạo tài khoản |
 | **Môi trường dùng chung** | **KHÔNG** (user chốt 14-08-2026) — vẫn chỉ ghi/xoá bản ghi do phiên tạo |

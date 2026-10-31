@@ -4,9 +4,9 @@
 
 | Mục | Giá trị |
 |---|---|
-| **Hệ thống** | AnhTester Book Management (mã hệ thống `BK`) |
+| **Hệ thống** | canhnt14 Book Management (mã hệ thống `BK`) |
 | **Module** | Xác thực & Phiên đăng nhập — phạm vi lượt này: **Đăng ký (Sign up) · Đăng nhập (Sign in) · Đăng xuất · My Profile · Setting account** |
-| **Nền tảng** | **Web** ✅ — `https://book.anhtester.com` (React + MUI, cùng backend với API/Android) |
+| **Nền tảng** | **Web** ✅ — `https://book.canhnt14.com` (React + MUI, cùng backend với API/Android) |
 | **Trình duyệt khảo sát** | Google Chrome 153 (Playwright MCP, headed), viewport đo được `innerWidth × innerHeight = 1600 × 750`, `navigator.language = en-US`. Mọi AC về hiển thị/bố cục **chỉ đúng với trình duyệt + viewport này** |
 | **Tầng network** | ✅ Quan sát **thụ động** request do UI phát sinh (`browser_network_requests`). **Không** gọi API trực tiếp |
 | **Phương pháp** | Thao tác thật ngày 25-09-2026 — gửi form trống/sai để lấy message, đọc thuộc tính DOM (`type` · `required` · `disabled` · `aria-invalid` · `value`), đo thời gian sống của thông báo nổi bằng `MutationObserver` |
@@ -156,7 +156,7 @@ F5 / mở URL mới ─► vẫn đăng nhập (trừ /user-management/my-profil
 | Lưu token phía trình duyệt | Access token nằm ở `localStorage['accessToken']` **và** cookie `accessToken` đọc được bằng JavaScript (`document.cookie`) | Cùng bản chất F-03 / `AMB-BK-AUTH-04` (đã chốt: phải có `HttpOnly`) → `RISK-BK-AUTH-09` |
 | Tải trang khi chưa đăng nhập | Mỗi lần tải trang: `GET /api/me` → 401 và `POST /api/refetch-token` → 422, console ghi 2 lỗi + `Token refresh failed` | Không ảnh hưởng người dùng; automation **không** được coi lỗi console này là thất bại |
 | Request thừa | Ngay sau đăng nhập có `GET /api/api/me` (lặp `/api`) → 200 nhưng trả **HTML** | Ghi chú kỹ thuật cho dev, không cấp REQ |
-| Tiêu đề tab | Tiêu đề bắt đầu là `API RESTful miễn phí dành cho Tester kiểm thử` rồi đổi theo trang (`Sign in - Book UI for api-book.anhtester.com`…). Sau khi đăng nhập, Dashboard **giữ** `Sign in - …` | `AMB-BK-AUTH-32` — AC **không** assert khớp tuyệt đối tiêu đề (skill 4.3.7) |
+| Tiêu đề tab | Tiêu đề bắt đầu là `API RESTful miễn phí dành cho Tester kiểm thử` rồi đổi theo trang (`Sign in - Book UI for api-book.canhnt14.com`…). Sau khi đăng nhập, Dashboard **giữ** `Sign in - …` | `AMB-BK-AUTH-32` — AC **không** assert khớp tuyệt đối tiêu đề (skill 4.3.7) |
 | Link `Need help?` | Trỏ về chính trang đang đứng (`/sign-in` · `/sign-up`) — bấm không có tác dụng | Cùng `AMB-BK-11` cấp hệ thống (Android) |
 
 ---

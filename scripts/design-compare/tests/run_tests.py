@@ -45,8 +45,8 @@ def semantics(name, res):
     out = []
     ok = lambda cond, msg: out.append((cond, msg))
     if name == 'A-06':  # hai ô động thuần không được ghép chéo
-        ok(row(res, '<Tên tài khoản>').get('actual') == 'Anh Tester Example', 'placeholder <Tên> ghép đúng tên')
-        ok(row(res, '<email tài khoản>').get('actual') == 'anhtester@example.com', 'placeholder <email> ghép đúng email')
+        ok(row(res, '<Tên tài khoản>').get('actual') == 'Canhnt Example', 'placeholder <Tên> ghép đúng tên')
+        ok(row(res, '<email tài khoản>').get('actual') == 'canhnt14@example.com', 'placeholder <email> ghép đúng email')
         ok(not res['extras'], 'node cha gộp chữ con không bị báo thừa')
     if name == 'A-05':  # bottom nav neo đáy, không xô theo nội dung
         ok('neo đáy' in row(res, 'Dashboard').get('anchor', ''), 'bottom nav đo theo neo đáy')

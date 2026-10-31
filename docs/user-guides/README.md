@@ -1,4 +1,4 @@
-# Danh mục Hướng dẫn sử dụng — Perfex CRM (Anh Tester Demo)
+# Danh mục Hướng dẫn sử dụng — Perfex CRM (canhnt14 Demo)
 
 > **Tài liệu viết cho người dùng cuối đọc**, không phải cho QA/Dev. Nguồn dữ liệu là `docs/requirements/<module>/` — hướng dẫn **dùng lại** kết quả khảo sát ở đó nhưng **không** chép nội dung sang: requirements nói *hệ thống phải làm gì*, hướng dẫn nói *người dùng làm thế nào*.
 >

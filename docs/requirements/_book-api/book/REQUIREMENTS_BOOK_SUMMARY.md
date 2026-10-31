@@ -4,12 +4,12 @@
 
 | Mục | Giá trị |
 |---|---|
-| **Hệ thống** | AnhTester Book Management — mã hệ thống `BK` (namespace `_book-api/`) |
+| **Hệ thống** | canhnt14 Book Management — mã hệ thống `BK` (namespace `_book-api/`) |
 | **Module** | Sách — danh sách công khai, lọc/sắp xếp, tạo · xem chi tiết · sửa · xoá sách. Quản lý danh mục (icon ⚙) thuộc `CAT`, khuyến mãi thuộc `PROMO`, kho ảnh thuộc `FILE` |
 | **Prefix** | `BOOK` → mã REQ `REQ-BK-BOOK-<nn>` · TC ID `BK_BOOK_TC_<nnn>` |
 | **Nền tảng** | **Web** ✅ (25-09-2026) · **API** ✅ (25-09-2026 — 5 operation `GET/POST /api/book` · `GET/PATCH/DELETE /api/book/{id}`) · **Android** 🟨 (26-09-2026 — danh sách · lọc · form · validation ✅ · 20-10-2026 — khách · High to Low · Promotion · lượt xem · nhãn New · xoá ✅; tạo sách **vẫn lỗi** (REQ-147), lưu thay đổi **lỗi** (REQ-155) — vế tạo/sửa thành công còn bị chặn) · iOS ❔ |
-| **Nguồn phân tích** | Web: thao tác thật trên `https://book.anhtester.com/book-management` (Chrome, Playwright MCP) ngày 25-09-2026 · API: spec OpenAPI (snapshot 19-09-2026, `sha256` trùng bản tải lại 25-09-2026) + ≈ 445 request gọi thật ngày 25-09-2026 — chi tiết ở file nền tảng |
-| **Ngày phân tích** | 25-09-2026 (Web · API) · 26-09-2026 · 20-10-2026 (Android — emulator Android 17, app `book.anhtester.com` 1.0) |
+| **Nguồn phân tích** | Web: thao tác thật trên `https://book.canhnt14.com/book-management` (Chrome, Playwright MCP) ngày 25-09-2026 · API: spec OpenAPI (snapshot 19-09-2026, `sha256` trùng bản tải lại 25-09-2026) + ≈ 445 request gọi thật ngày 25-09-2026 — chi tiết ở file nền tảng |
+| **Ngày phân tích** | 25-09-2026 (Web · API) · 26-09-2026 · 20-10-2026 (Android — emulator Android 17, app `book.canhnt14.com` 1.0) |
 | **Tài khoản dùng khảo sát** | Web: khách + tài khoản tự tạo `auto_web_<timestamp>_a@auto.test` (đã xoá cuối phiên) · Android 26-09: tài khoản test (tester đăng nhập sẵn) — không sách nào được tạo, không sửa/xoá sách có sẵn · Android 20-10: khách + tài khoản test do tester đăng nhập — tạo thử `Auto Mobile Book <timestamp>` (không tạo được), sửa thử rồi **xoá** sách test còn sót `Auto BKAPI NoPrice <timestamp>` (đã dọn) |
 | **Môi trường dùng chung** | **KHÔNG** (user chốt 14-08-2026) — vẫn chỉ ghi/xoá bản ghi do phiên tạo |
 | **Tổng số REQ** | **158** — `web/` 9 · `api/` 94 · `mobile/` 12 · dùng chung 43 (4 ở mục 3.1 — `01` · `42` · `51` là `Android · Web · API`, `52` `Web · API` · 39 `Android · Web`) |

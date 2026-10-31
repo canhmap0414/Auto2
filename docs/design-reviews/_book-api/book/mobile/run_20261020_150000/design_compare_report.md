@@ -7,7 +7,7 @@
 | Figma | File `hEWOqd9cGxTwZoVOJCg7nM` · page `BOOK — Sách` · https://www.figma.com/design/hEWOqd9cGxTwZoVOJCg7nM |
 | Độ trung thực thiết kế | **Wireframe có bảng màu thật** — cùng bộ kit với page AUTH. Ảnh bìa là khung giữ chỗ; tên sách, danh mục, giá, tác giả là **dữ liệu mẫu** (`Tên sách mẫu`, `Danh mục A/B/C`, `50.000 ₫`…) · B-07 vẽ sẵn ở vị trí đã cuộn |
 | Phạm vi so | Nội dung chữ · có/thiếu phần tử · bố cục · trạng thái (khách / đã đăng nhập / form tạo / form sửa) · màu chữ. Ảnh bìa, icon nhãn khuyến mãi → **tham khảo** (mục 6) |
-| Bản build | Android `com.anhtester.book` 1.0 (versionCode 1) — Hybrid Capacitor, WebView không bật debug |
+| Bản build | Android `com.canhnt14.book` 1.0 (versionCode 1) — Hybrid Capacitor, WebView không bật debug |
 | Môi trường | Emulator Pixel 10 Pro XL · Android 17 · 1344×2992 px · density 480 (×3) → **448 dp** rộng · `font_scale` 1.0 · dark mode tắt · locale en_US |
 | Mốc dọc | Đỉnh header: thiết kế 36 dp ↔ app **40 dp** (`--actual-top 40`) |
 | Dung sai | Vị trí ±4 dp (⚠️ ≤ 12) · ΔE chữ ≤ 6 · ΔE nền ≤ 3 — rule `design_compare_rules.md` mục 4 |

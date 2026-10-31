@@ -45,7 +45,7 @@
 | *(chọn trường lọc)* | Select một — `projectsRules` | — | 6 lựa chọn cố định | REQ-PRJ-20 | Chọn xong thì sinh một dòng điều kiện mới |
 | `Add Rule` | Nút mở danh sách | — | — | REQ-PRJ-21 | Bootstrap-select, không phải `<select>` thường |
 | Điều kiện `Status` | Select nhiều — `multiSelectRulestatus` | — | 5 lựa chọn: `1` Not Started · `2` In Progress · `3` On Hold · **`5` Cancelled** · **`4` Finished` | REQ-PRJ-21 | Toán tử cố định `in`, không đổi được |
-| Điều kiện `Members` | Select nhiều — `multiSelectRulemembers` | — | 3 lựa chọn: `1` Admin Anh Tester · `2` Admin Example · `3` Project Manager | REQ-PRJ-21 | Toán tử cố định `in` |
+| Điều kiện `Members` | Select nhiều — `multiSelectRulemembers` | — | 3 lựa chọn: `1` Admin canhnt14 · `2` Admin Example · `3` Project Manager | REQ-PRJ-21 | Toán tử cố định `in` |
 | Điều kiện `Billing Type` | Select một — `selectRulebilling_type` | — | 4 lựa chọn kể cả mục rỗng đầu danh sách: `` · `1` Fixed Rate · `2` Project Hours · `3` Based on task hourly rate | REQ-PRJ-21 | ⚠️ Nhãn ở đây là **`Based on task hourly rate`**, còn trên biểu mẫu dự án cùng mã `3` hiển thị **`Task Hours`** — hai chỗ dùng hai nhãn cho cùng một giá trị |
 | Điều kiện `Project Name` / `Start Date` / `Deadline` | Ô nhập chữ | — | Không ràng buộc định dạng | REQ-PRJ-21 | Toán tử cố định `equal` |
 | `and` / `or` | Nhóm nút chọn — `match_projects` | — | Mặc định `or` | REQ-PRJ-22 | — |

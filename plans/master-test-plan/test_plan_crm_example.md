@@ -1,11 +1,3 @@
-> 📘 **TÀI LIỆU MẪU — bám hệ thống THẬT của repo.** Đây là một Master Test Plan **đã điền kín và đã duyệt**, sinh bởi `/generate-master-test-plan` từ phiếu [`test_plan_crm_example.yaml`](test_plan_crm_example.yaml). Dùng để tham khảo **cách viết và độ chi tiết từng mục**.
->
-> **Số liệu hệ thống là thật** — module, prefix, số REQ, số TC, số bug, mã `AMB`/`RISK` đều đọc từ `docs/` ngày **20-09-2026**, đối chiếu được từng con số. **Tên người (trừ Anh Tester), ngày tháng, công sức, ngân sách là giả định** để minh hoạ — **không** chép sang dự án thật.
->
-> Plan thật nằm ở `docs/test-plans/test_plan_<slug>.md`, sinh từ phiếu `plans/master-test-plan/test_plan.config.yaml`. Plan mới lập thường còn ô `❓` — bản mẫu này là trạng thái **sau khi** đã trả lời hết.
-
----
-
 # Master Test Plan — Perfex CRM · Release 2.0
 
 ## Kiểm soát tài liệu
@@ -20,10 +12,10 @@
 | Mức phân loại | Nội bộ |
 | Ngày lập | 21-09-2026 |
 | Ngày hiệu lực | 25-09-2026 |
-| Người lập | Anh Tester — QA Lead |
+| Người lập | QA Lead |
 | Người review | Lê Thu Hà — Product Owner, review mục 1, 2, 4 · Nguyễn Hoàng Vũ — Dev Lead, review mục 5, 9 |
-| Người phê duyệt | Anh Tester — QA Lead · Lê Thu Hà — Product Owner · Phạm Đức Long — Project Manager — chữ ký ở mục 11 |
-| Hệ thống · Build | Perfex CRM (Anh Tester Demo) · `v2.0.0-rc1` |
+| Người phê duyệt |  QA Lead · Lê Thu Hà — Product Owner · Phạm Đức Long — Project Manager — chữ ký ở mục 11 |
+| Hệ thống · Build | Perfex CRM · `v2.0.0-rc1` |
 | Phiếu đầu vào | `plans/master-test-plan/test_plan_crm_example.yaml` (bản mẫu — plan thật lưu phiếu ở `docs/test-plans/test_plan_<slug>.input.yaml`) |
 | Cấu trúc tài liệu | Biên soạn **theo cấu trúc** ISO/IEC/IEEE 29119-3 — Test Plan · phủ đủ nội dung điển hình của ISTQB CTFL v4.0 mục 5.1.1 · ánh xạ ở mục 12 |
 
@@ -35,8 +27,8 @@
 
 | Phiên bản | Ngày | Người sửa | Mục thay đổi | Nội dung | Người duyệt |
 |---|---|---|---|---|---|
-| v1.1 | 24-09-2026 | Anh Tester | 4.2 · 5.1 · 7.1 · 7.3 · 8.1 | Theo ý kiến review: thêm **tiêu chí ra bổ sung #9** (bộ Smoke 3 module đã automate và chạy xanh trên CI) · thêm **Microsoft Edge** vào danh sách trình duyệt · dời *Môi trường sẵn sàng* từ 19-10 lên **12-10-2026** để có 5 ngày đệm trước khi thực thi (đóng R7 của v1.0) · thêm dòng **dự phòng 10%** vào ngân sách · thêm R9 về chi phí bảo trì suite UI. **Không** đổi phạm vi, nhân lực, ước lượng | Lê Thu Hà · Phạm Đức Long · Anh Tester — 25-09-2026 |
-| v1.0 | 21-09-2026 | Anh Tester | Toàn bộ | Lập mới từ phiếu `test_plan_crm_example.yaml`. Dữ liệu hệ thống đọc từ `docs/requirements/README.md`, `docs/testcases/README.md`, `docs/bugs/README.md` ngày 20-09-2026 | — (được thay bằng v1.1 trước khi duyệt) |
+| v1.1 | 24-09-2026 | canhnt14 | 4.2 · 5.1 · 7.1 · 7.3 · 8.1 | Theo ý kiến review: thêm **tiêu chí ra bổ sung #9** (bộ Smoke 3 module đã automate và chạy xanh trên CI) · thêm **Microsoft Edge** vào danh sách trình duyệt · dời *Môi trường sẵn sàng* từ 19-10 lên **12-10-2026** để có 5 ngày đệm trước khi thực thi (đóng R7 của v1.0) · thêm dòng **dự phòng 10%** vào ngân sách · thêm R9 về chi phí bảo trì suite UI. **Không** đổi phạm vi, nhân lực, ước lượng | Lê Thu Hà · Phạm Đức Long · canhnt14 — 25-09-2026 |
+| v1.0 | 21-09-2026 | canhnt14 | Toàn bộ | Lập mới từ phiếu `test_plan_crm_example.yaml`. Dữ liệu hệ thống đọc từ `docs/requirements/README.md`, `docs/testcases/README.md`, `docs/bugs/README.md` ngày 20-09-2026 | — (được thay bằng v1.1 trước khi duyệt) |
 
 ---
 
@@ -52,7 +44,7 @@
 | O4 | Cả 3 cặp module × nền tảng đều có TC đã review và đã chạy ít nhất một lượt đầy đủ | Tiêu chí exit #7 |
 | O5 | Có bộ Smoke tự động chạy được trên CI trước ngày bắt đầu thực thi | Tiêu chí exit bổ sung #9 · chỉ số Automation (3.6) |
 
-> Mục tiêu do Anh Tester đề xuất 21-09-2026, Lê Thu Hà duyệt 25-09-2026. Mục tiêu nào không đo được bằng tiêu chí exit hay chỉ số ở 3.6 thì viết lại hoặc bỏ — O5 được giữ vì đã có tiêu chí bổ sung #9 chống lưng.
+
 
 ### 1.2 Cơ sở kiểm thử (Test basis)
 
@@ -65,7 +57,7 @@
 | `docs/testcases/login/TEST_CASES_LOGIN_SUMMARY.md` | 19-09-2026 | `LOGIN` | 51 TC · 71 biến thể · bảng ISO/IEC 25010 · bộ chạy đề xuất |
 | `docs/testcases/customers/TEST_CASES_CUSTOMERS_SUMMARY.md` | 19-09-2026 | `CUST` | 129 TC · 155 biến thể · 5 part · bảng ISO/IEC 25010 |
 
-> ⚠️ Tài liệu của cả 3 module được khảo sát trên **bản demo dùng chung** `crm.anhtester.com`, không phải môi trường test riêng của đợt này — xem rủi ro R2. Cơ sở kiểm thử đổi giữa đợt (ticket sửa yêu cầu) → cập nhật bằng `/update-requirements-from-ticket` rồi tăng phiên bản plan; TC viết theo cơ sở cũ là TC sai.
+> ⚠️ Tài liệu của cả 3 module được khảo sát trên **bản demo dùng chung** `crm.canhnt14.com`, không phải môi trường test riêng của đợt này — xem rủi ro R2. Cơ sở kiểm thử đổi giữa đợt (ticket sửa yêu cầu) → cập nhật bằng `/update-requirements-from-ticket` rồi tăng phiên bản plan; TC viết theo cơ sở cũ là TC sai.
 
 ## 2. Phạm vi
 
@@ -95,7 +87,7 @@
 | Không kiểm thử | Lý do | Ai chịu trách nhiệm | Nguồn quyết định |
 |---|---|---|---|
 | 20 module CRM còn lại: `CONT` · `LEAD` · `TASK` · `EST` · `PROP` · `INV` · `PAY` · `CN` · `SUB` · `CTR` · `EXP` · `ITEM` · `TICK` · `ESTREQ` · `KB` · `REP` · `DASH` · `TODO` · `REM` · `PROF` | Chưa recon requirements — 20/23 module còn trắng tài liệu | Đợt sau | Lê Thu Hà — Product Owner, 21-09-2026 |
-| Hệ thống **AnhTester Book Management** (namespace `_book-api/` — 9 module, API + app Android) | Hệ thống riêng, có đợt kiểm thử riêng | Đợt Book Release 1.0 | Lê Thu Hà — Product Owner, 21-09-2026 |
+| Hệ thống **canhnt14 Book Management** (namespace `_book-api/` — 9 module, API + app Android) | Hệ thống riêng, có đợt kiểm thử riêng | Đợt Book Release 1.0 | Lê Thu Hà — Product Owner, 21-09-2026 |
 | **Cổng khách hàng** (khu front-end ngoài `/admin`) | Chưa chốt phạm vi. Hệ quả: `STORY-PRJ-03` (11 REQ về `Visible Tabs` và công tắc quyền khách hàng) chỉ kiểm được mức *biểu mẫu ghi nhận đúng*, **không** kiểm tác dụng thật phía khách hàng (`AMB-PRJ-14`). Riêng REQ *tài khoản khách hàng bị chặn ở khu `/admin`* **vẫn trong phạm vi** | Chưa xếp đợt — chờ PO chốt | Lê Thu Hà — Product Owner, 21-09-2026 |
 | Khu **Quản trị hệ thống** (Setup: Settings · Staff · Roles · Departments · Taxes · Currencies · Payment Modes · Custom Fields · Email Templates) | Trả 403 với mọi tài khoản hiện có, kể cả `Project Manager`. Hệ quả: danh sách giá trị hợp lệ của nhiều dropdown chỉ suy được, không kiểm chứng được | Cần tài khoản quyền cao hơn — đợt sau | `system_map.md` — Vùng loại khỏi phạm vi (14-08-2026) |
 | Calendar · Media · Bulk PDF Export | Loại khỏi phạm vi khảo sát từ đầu | — | `system_map.md` — Vùng loại khỏi phạm vi (14-08-2026) |
@@ -133,7 +125,7 @@
 
 | Bên | Vai trò trong đợt | Liên quan tới kiểm thử | Nhận gì | Tần suất | Kênh |
 |---|---|---|---|---|---|
-| Anh Tester | QA Lead · kiêm phụ trách automation | Lập plan, duyệt TC, lập báo cáo tiến độ và tổng hợp, dựng framework automation, cùng Dev Lead phân loại lỗi | Kế hoạch · báo cáo tiến độ · báo cáo tổng hợp · báo cáo lỗi | Hằng tuần thứ Sáu · cuối đợt | Jira · repo |
+| canhnt14| QA Lead · kiêm phụ trách automation | Lập plan, duyệt TC, lập báo cáo tiến độ và tổng hợp, dựng framework automation, cùng Dev Lead phân loại lỗi | Kế hoạch · báo cáo tiến độ · báo cáo tổng hợp · báo cáo lỗi | Hằng tuần thứ Sáu · cuối đợt | Jira · repo |
 | Lê Thu Hà | Product Owner | Duyệt plan · trả lời AMB 🔴 · chốt phạm vi REQ · chủ trì UAT · cùng PM chấp nhận dừng kiểm thử (4.2) | Kế hoạch · báo cáo tiến độ · báo cáo tổng hợp | Hằng tuần thứ Sáu · cuối đợt | Email · Jira |
 | Phạm Đức Long | Project Manager | Duyệt lịch và ngân sách · nhận khuyến nghị go/no-go · quyết định phát hành | Kế hoạch · báo cáo tiến độ · báo cáo tổng hợp | Hằng tuần thứ Sáu · cuối đợt | Email |
 | Nguyễn Hoàng Vũ | Dev Lead | Dựng và duy trì môi trường test riêng · nạp dữ liệu nền đã che · sửa bug · xác minh nhánh Vòng 3 mà QA không có quyền · cùng QA Lead phân loại lỗi | Báo cáo lỗi · báo cáo tiến độ | Khi phát sinh · họp phân loại lỗi hằng ngày 9h30 | Jira |
@@ -255,7 +247,7 @@
 | Tiêu chí chọn TC để tự động | Cột `Automation` của tài liệu TC ghi `Yes` · Priority High · chạy lặp mỗi build · không cần mắt người đánh giá · dữ liệu sinh được bằng script |
 | Framework · report | Playwright + TypeScript · Allure Report — toàn bộ output trong `reports/`, `.gitignore` đã chặn |
 | Hệ thống CI | **GitHub Actions** |
-| Người bảo trì | Anh Tester — **kiêm** vai trò QA Lead (R5) |
+| Người bảo trì | canhnt14 — **kiêm** vai trò QA Lead (R5) |
 
 **Phạm vi:**
 
@@ -270,9 +262,9 @@
 
 | Bộ chạy | Khi nào | Môi trường | Ai xem kết quả | Fail thì |
 |---|---|---|---|---|
-| Smoke 3 module | Mỗi build lên môi trường test | Môi trường test riêng | Anh Tester · Nguyễn Hoàng Vũ | **Chặn thực thi manual** — tiêu chí tạm dừng 4.3 |
-| Regression Priority High | Hằng đêm | Môi trường test riêng | Anh Tester | Phân loại bằng `/run-and-fix-tests` — **không** sửa test để né bug |
-| Regression đầy đủ đã automate | Trước phát hành — phải chạy xong **trước 04-12-2026** (hết cửa sổ hồi quy, 7.1) | Môi trường test riêng | Anh Tester · Phạm Đức Long | Kết quả vào báo cáo tổng hợp; bug mới mở như bug manual |
+| Smoke 3 module | Mỗi build lên môi trường test | Môi trường test riêng | canhnt14 · Nguyễn Hoàng Vũ | **Chặn thực thi manual** — tiêu chí tạm dừng 4.3 |
+| Regression Priority High | Hằng đêm | Môi trường test riêng | canhnt14 | Phân loại bằng `/run-and-fix-tests` — **không** sửa test để né bug |
+| Regression đầy đủ đã automate | Trước phát hành — phải chạy xong **trước 04-12-2026** (hết cửa sổ hồi quy, 7.1) | Môi trường test riêng | canhnt14 · Phạm Đức Long | Kết quả vào báo cáo tổng hợp; bug mới mở như bug manual |
 
 **Nguyên tắc:**
 - Script chỉ tính là xong khi đạt Definition of Done của `CLAUDE.md` — PASS ổn định ≥ 2 lần liên tiếp, đủ Allure metadata (tên Tiếng Việt, Severity, Tags, TC ID) và screenshot cuối mọi test
@@ -288,7 +280,7 @@
 
 | # | Nhóm | Điều kiện | Trạng thái |
 |---|---|---|---|
-| 1 | Nguồn lực | Nhân lực ở mục 6 đã phân công đủ 3 cặp module × nền tảng | ✅ Hồng · Lan · Huệ · Anh Tester |
+| 1 | Nguồn lực | Nhân lực ở mục 6 đã phân công đủ 3 cặp module × nền tảng | ✅ Hồng · Lan · Huệ · canhnt14|
 | 2 | Nguồn lực | Môi trường test riêng sẵn sàng, có dữ liệu nền đã che | ⏳ Nguyễn Hoàng Vũ cam kết **12-10-2026** |
 | 3 | Nguồn lực | Tài khoản test đủ 3 vai trò `Admin` · `Project Manager` · `Customer` **trên môi trường mới** | ⏳ Nguyễn Hoàng Vũ cam kết **12-10-2026** — bàn giao qua `.env`, không ghi vào tài liệu |
 | 4 | Nguồn lực | Công cụ sẵn sàng: Jira · project automation · CI | 🟨 Jira ✅ · automation và CI dựng trong đợt (3.7) — **không chặn** thực thi manual |
@@ -336,7 +328,7 @@
 
 **Tiếp tục khi:** nguyên nhân đã xử lý, có build mới, và đã chạy lại bộ Smoke PASS.
 
-> Ngưỡng trên là đề xuất của agent — **đã xác nhận** theo phiếu (`Dùng ngưỡng tạm dừng đề xuất: có`). Người công bố tạm dừng và tiếp tục: Anh Tester — QA Lead, thông báo ngay cho PM và Dev Lead.
+> Ngưỡng trên là đề xuất của agent — **đã xác nhận** theo phiếu (`Dùng ngưỡng tạm dừng đề xuất: có`). Người công bố tạm dừng và tiếp tục: QA Lead, thông báo ngay cho PM và Dev Lead.
 
 ## 5. Môi trường, Dữ liệu & Công cụ
 
@@ -378,13 +370,13 @@
 
 | Vai trò | Người | Module × nền tảng phụ trách | Ghi chú |
 |---|---|---|---|
-| QA Lead | Anh Tester | Cả 3 module | Lập plan, duyệt TC, báo cáo tiến độ và tổng hợp, cùng Dev Lead phân loại lỗi |
+| QA Lead | canhnt14 | Cả 3 module | Lập plan, duyệt TC, báo cáo tiến độ và tổng hợp, cùng Dev Lead phân loại lỗi |
 | Kiểm thử viên | Hồng | `LOGIN` × Web | Cập nhật 51 TC theo môi trường mới · retest 5 bug đang mở · chạy phần 🔧 của 25 TC `@TechCheck` |
 | Kiểm thử viên | Lan | `CUST` × Web | Chạy lần đầu bộ 129 TC · theo dõi 2 TC thiết kế để FAIL (`TC_040`, `TC_041`) · ghi nhận UAT |
 | Kiểm thử viên | Huệ | `PRJ` × Web | **Sinh + review TC trước 16-10-2026** — 104 REQ, module lớn nhất · chạy lại ma trận phân quyền bằng tài khoản PM trước khi sinh TC Vòng 3 |
-| Tự động hoá | Anh Tester *(kiêm)* | `LOGIN` · `CUST` · `PRJ` × Web | Dựng framework, automate Smoke trước 19-10-2026 và regression Priority High trước 30-11-2026 — **kiêm cùng vai trò QA Lead** (R5) |
+| Tự động hoá | canhnt14 *(kiêm)* | `LOGIN` · `CUST` · `PRJ` × Web | Dựng framework, automate Smoke trước 19-10-2026 và regression Priority High trước 30-11-2026 — **kiêm cùng vai trò QA Lead** (R5) |
 
-**Nhu cầu đào tạo:** buổi 2 giờ về DevTools cho Hồng — `LOGIN` có 25 TC gắn `@TechCheck`, riêng `TC_025` (sửa mã ẩn) và `TC_041` (giả lập mạng chậm) bắt buộc biết DevTools mới chạy được từ đầu. Anh Tester hướng dẫn, trước 16-10-2026.
+**Nhu cầu đào tạo:** buổi 2 giờ về DevTools cho Hồng — `LOGIN` có 25 TC gắn `@TechCheck`, riêng `TC_025` (sửa mã ẩn) và `TC_041` (giả lập mạng chậm) bắt buộc biết DevTools mới chạy được từ đầu. canhnt14 hướng dẫn, trước 16-10-2026.
 
 **Nhu cầu tuyển thêm:** Không.
 
@@ -434,7 +426,7 @@ Công thức: **E = (a + 4m + b) / 6** · **SD = (b − a) / 6**. E tổng = c�
 |---|---|---|---|---|---|
 | Viết & review TC — 28-09 → 16-10-2026 | Huệ (chính) · Hồng · Lan (cập nhật TC của mình + review chéo) | 15 | 45 người-ngày | 13,3 + 3,2 = 16,5 | Đủ về tổng, nhưng **riêng Huệ gánh 13,3 trong 15 ngày** — không còn đệm, xem R1 |
 | Thực thi — 19-10 → 27-11-2026 | Hồng · Lan · Huệ | 30 | 90 người-ngày | 24,7 + 7,3 = 32,0 | Đủ, còn đệm cho các vòng retest phát sinh |
-| Automation + quản lý đợt — 28-09 → 27-11-2026 | Anh Tester (dành 50% thời gian cho đợt) | 45 × 50% | 22,5 người-ngày | 12,7 + 5,3 = 18,0 | Đủ **sát** — chỉ còn 4,5 người-ngày đệm, trong khi riêng nhánh bi quan của automation đã là 20. Xem R5 |
+| Automation + quản lý đợt — 28-09 → 27-11-2026 | canhnt14 (dành 50% thời gian cho đợt) | 45 × 50% | 22,5 người-ngày | 12,7 + 5,3 = 18,0 | Đủ **sát** — chỉ còn 4,5 người-ngày đệm, trong khi riêng nhánh bi quan của automation đã là 20. Xem R5 |
 
 **Dữ liệu sẵn có trong repo để đối chiếu ước lượng:**
 
@@ -547,7 +539,7 @@ TC FAIL ──/create-bug-report──→ 🔴 Đang mở ──Dev sửa──�
 
 | | |
 |---|---|
-| Người phân loại lỗi (triage) | Anh Tester — QA Lead cùng Nguyễn Hoàng Vũ — Dev Lead |
+| Người phân loại lỗi (triage) | canhnt14 — QA Lead cùng Nguyễn Hoàng Vũ — Dev Lead |
 | Họp phân loại lỗi | Hằng ngày 15 phút, 9h30 |
 | Bug đang mở tại ngày lập | **5** — 🔴 Critical 1 (`TC039`) · 🟠 Major 0 · 🟡 Minor 3 (`TC004`, `TC016`, `TC028`) · 🟢 Trivial 1 (`TC029`). Toàn bộ thuộc `LOGIN`, xác nhận trên **bản demo** → phải retest trên môi trường mới (R2 · R3). Ngoài ra 1 bug đã đóng *không phải lỗi* (`TC018`) — `docs/bugs/README.md` |
 
@@ -581,10 +573,10 @@ TC FAIL ──/create-bug-report──→ 🔴 Đang mở ──Dev sửa──�
 
 | Vai trò | Tên | Phiên bản duyệt | Ngày | Ý kiến |
 |---|---|---|---|---|
-| QA Lead | Anh Tester | v1.1 | 25-09-2026 | Lập và đề xuất duyệt |
+| QA Lead | canhnt14 | v1.1 | 25-09-2026 | Lập và đề xuất duyệt |
 | Product Owner | Lê Thu Hà | v1.1 | 25-09-2026 | Đồng ý. Sẽ trả lời `AMB-PRJ-01` và `AMB-PRJ-14` trước 09-10-2026; chấp nhận treo 4 AMB còn lại của `PRJ` |
 | Project Manager | Phạm Đức Long | v1.1 | 25-09-2026 | Đồng ý lịch và ngân sách 14.190.000 ₫. Theo dõi sát R5 — Smoke tự động phải chạy được trước 19-10-2026 |
-| QA Lead | Anh Tester | v1.0 | 21-09-2026 | Lập — được thay bằng v1.1 trước khi duyệt |
+| QA Lead | canhnt14 | v1.0 | 21-09-2026 | Lập — được thay bằng v1.1 trước khi duyệt |
 
 > Bản duyệt của một phiên bản **không** tự áp cho phiên bản sau. Sửa nội dung bản 🟩 → quay về 🟨 Draft, tăng phiên bản, ký lại.
 
@@ -637,4 +629,4 @@ TC FAIL ──/create-bug-report──→ 🔴 Đang mở ──Dev sửa──�
 | Làm khác ở đâu | Test Policy / Test Strategy quy định | Đợt này làm | Lý do | Ai duyệt |
 |---|---|---|---|---|
 | Kiểm thử hiệu năng | Mọi release lớn phải đo thời gian phản hồi của màn hình danh sách | Không đo — chỉ kiểm mức thô bằng `CUST` `TC_128` (danh sách hơn 2.000 dòng không treo) | Chưa mua công cụ tải; tách thành đợt kiểm thử hiệu năng riêng tháng 01/2027 | Phạm Đức Long — Project Manager, 21-09-2026 |
-| Tỷ trọng tầng kiểm thử tự động | Automation ưu tiên tầng API, UI chỉ phủ luồng chính | Toàn bộ script ở tầng UI | QA chưa có quyền gọi API của CRM; đã đề nghị cấp quyền cho Release 2.1 | Anh Tester — QA Lead cùng Nguyễn Hoàng Vũ — Dev Lead, 21-09-2026 |
+| Tỷ trọng tầng kiểm thử tự động | Automation ưu tiên tầng API, UI chỉ phủ luồng chính | Toàn bộ script ở tầng UI | QA chưa có quyền gọi API của CRM; đã đề nghị cấp quyền cho Release 2.1 | canhnt14 — QA Lead cùng Nguyễn Hoàng Vũ — Dev Lead, 21-09-2026 |

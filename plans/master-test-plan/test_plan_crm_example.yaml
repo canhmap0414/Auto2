@@ -7,7 +7,7 @@
 #  Bám hệ thống THẬT trong docs/ — module, prefix, số REQ, số TC, số bug đều đọc
 #  từ danh mục ngày 20-09-2026 → đối chiếu được từng con số. Chỉ có mặt Web.
 #
-#  ⚠️ Tên người (trừ Anh Tester), ngày tháng, công sức, ngân sách là GIẢ ĐỊNH
+#  ⚠️ Tên người (trừ canhnt14), ngày tháng, công sức, ngân sách là GIẢ ĐỊNH
 #     để minh hoạ một phiếu đã điền kín — KHÔNG chép sang dự án thật.
 #
 #  CÁCH ĐIỀN
@@ -35,7 +35,7 @@ Mốc:
 
 # ─── 2. KIỂM SOÁT TÀI LIỆU ────────────── tuỳ chọn · QA Lead ─────────
 Kiểm soát tài liệu:
-  Người lập: Anh Tester          # để trống = người có vai trò "trưởng nhóm QA" ở Nhân lực
+  Người lập: canhnt14          # để trống = người có vai trò "trưởng nhóm QA" ở Nhân lực
   Người review:
     - Tên: Lê Thu Hà
       Vai trò: Product Owner — review mục 1, 2, 4
@@ -72,7 +72,7 @@ Phạm vi:
       Người chịu trách nhiệm: Đợt sau
       Người quyết định: Lê Thu Hà — Product Owner
       Ngày quyết định: 21-09-2026
-    - Nội dung: Hệ thống AnhTester Book Management (namespace _book-api/ — API + app Android)
+    - Nội dung: Hệ thống canhnt14 Book Management (namespace _book-api/ — API + app Android)
       Lý do: Hệ thống riêng, có đợt kiểm thử riêng
       Người chịu trách nhiệm: Đợt Book Release 1.0
       Người quyết định: Lê Thu Hà — Product Owner
@@ -115,7 +115,7 @@ Nhân lực:
   #   Vai trò:                   # trưởng nhóm QA | kiểm thử viên | tự động hoá | khác
   #   Phụ trách: [LOGIN × web]   # "Toàn bộ" hoặc từng cặp MODULE × nền tảng
   #   Cần đào tạo:
-  - Tên: Anh Tester
+  - Tên: canhnt14
     Vai trò: trưởng nhóm QA
     Phụ trách: [Toàn bộ]
     Cần đào tạo:
@@ -131,7 +131,7 @@ Nhân lực:
     Vai trò: kiểm thử viên
     Phụ trách: [PRJ × web]
     Cần đào tạo:
-  - Tên: Anh Tester
+  - Tên: canhnt14
     Vai trò: tự động hoá
     Phụ trách: [LOGIN × web, CUST × web, PRJ × web]
     Cần đào tạo:
@@ -274,7 +274,7 @@ Chiến lược tự động hoá:
       Khi nào: trước phát hành
       Môi trường: Môi trường test riêng cho Release 2.0
   Hệ thống CI: GitHub Actions
-  Người bảo trì: Anh Tester — kiêm vai trò QA Lead
+  Người bảo trì: canhnt14 — kiêm vai trò QA Lead
 
 
 # ─── 8. MỤC TIÊU ──────────────────────── tuỳ chọn · QA Lead · PO ────
@@ -350,7 +350,7 @@ Quản lý lỗi:
     # - Loại:                    # Severity | Priority
     #   Mức:
     #   Định nghĩa:
-  Người phân loại lỗi: Anh Tester — QA Lead cùng Nguyễn Hoàng Vũ — Dev Lead   # triage — ai chốt Severity/Priority
+  Người phân loại lỗi: canhnt14 — QA Lead cùng Nguyễn Hoàng Vũ — Dev Lead   # triage — ai chốt Severity/Priority
   Họp phân loại lỗi: Hằng ngày 15 phút, 9h30
   Thời hạn xử lý:
     # Không có mặc định — để trống thì plan ghi ❓
@@ -399,7 +399,7 @@ Bên liên quan:
   #   Nhận gì: [kế hoạch, báo cáo tiến độ]   # kế hoạch | báo cáo tiến độ | báo cáo tổng hợp | báo cáo lỗi
   #   Tần suất:
   #   Kênh:
-  - Tên: Anh Tester
+  - Tên: canhnt14
     Vai trò: QA Lead — lập plan, phụ trách automation
     Nhận gì: [kế hoạch, báo cáo tiến độ, báo cáo tổng hợp, báo cáo lỗi]
     Tần suất: Hằng tuần thứ Sáu · cuối đợt
@@ -436,7 +436,7 @@ Mẫu tài liệu:
 Phê duyệt:
   # - Tên:
   #   Vai trò:
-  - Tên: Anh Tester
+  - Tên: canhnt14
     Vai trò: QA Lead
   - Tên: Lê Thu Hà
     Vai trò: Product Owner
@@ -465,4 +465,4 @@ Chuẩn tổ chức:
       Quy định chung: Automation ưu tiên tầng API, UI chỉ phủ luồng chính
       Đợt này làm: Toàn bộ script ở tầng UI
       Lý do: QA chưa có quyền gọi API của CRM; đã đề nghị cấp quyền cho Release 2.1
-      Người duyệt: Anh Tester — QA Lead cùng Nguyễn Hoàng Vũ — Dev Lead, 21-09-2026
+      Người duyệt: canhnt14 — QA Lead cùng Nguyễn Hoàng Vũ — Dev Lead, 21-09-2026

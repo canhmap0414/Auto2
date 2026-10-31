@@ -4,7 +4,7 @@
 |---|---|
 | **Index module** | [../../TEST_CASES_AUTH_SUMMARY.md](../../TEST_CASES_AUTH_SUMMARY.md) — Coverage · 4 vòng · ISO 25010 · Automation · Nhật ký |
 | **Nguồn requirement** | [requirements_auth_api.md](../../../../../requirements/_book-api/auth/api/requirements_auth_api.md) · REQ dùng chung ở index [REQUIREMENTS_AUTH_SUMMARY.md](../../../../../requirements/_book-api/auth/REQUIREMENTS_AUTH_SUMMARY.md) mục 3 · bản đồ API [api_map.md](../../../../../requirements/_book-api/_discovery/api_map.md) |
-| **Base URL** | `https://book.anhtester.com` — production, server duy nhất · spec `openapi: 3.0.0` · `info.version 1.0.0` · snapshot [`openapi_2026-09-19.json`](../../../../../requirements/_book-api/_discovery/sources/openapi_2026-09-19.json) (`sha256 32bb8b39…3f09` — khớp spec online 20-09-2026) |
+| **Base URL** | `https://book.canhnt14.com` — production, server duy nhất · spec `openapi: 3.0.0` · `info.version 1.0.0` · snapshot [`openapi_2026-09-19.json`](../../../../../requirements/_book-api/_discovery/sources/openapi_2026-09-19.json) (`sha256 32bb8b39…3f09` — khớp spec online 20-09-2026) |
 | **Auth** | `BearerAuth` — HTTP bearer JWT qua header `Authorization`. `register` · `login` · `refetch-token` **công khai** (`security: []`) |
 | **Dải TC ID** | `BK_AUTH_TC_059` → `BK_AUTH_TC_081` · `BK_AUTH_TC_106` · `BK_AUTH_TC_107` — dải chung toàn module `AUTH` (Mobile `001` → `058`). `106` · `107` bổ sung 20-09-2026 khi tách `TC_069` — **nối tiếp** dải, không chèn giữa |
 | **Part liền kề** | Tiếp theo: [part_02_api_phien_ho_so.md](part_02_api_phien_ho_so.md) (`TC_082` → `TC_105` · `TC_108`) |

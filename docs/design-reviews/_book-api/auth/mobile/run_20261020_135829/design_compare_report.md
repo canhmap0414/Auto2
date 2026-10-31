@@ -7,7 +7,7 @@
 | Figma | File `hEWOqd9cGxTwZoVOJCg7nM` · page `AUTH — Xác thực` · https://www.figma.com/design/hEWOqd9cGxTwZoVOJCg7nM |
 | Độ trung thực thiết kế | **Wireframe có bảng màu thật** — banner/ảnh là khung giữ chỗ (icon ảnh + chú thích), icon nét đơn giản; màu chữ, màu nền khối, font DM Sans lấy theo app (biến `Wireframe`, mode "App"). Tiêu đề page ghi *"Dựng theo app chạy thật + evidence"* |
 | Phạm vi so | Nội dung chữ · có/thiếu phần tử · bố cục, khoảng cách · trạng thái · màu chữ. Gradient nền thẻ, đổ bóng, ảnh thật, kiểu icon → **tham khảo** (mục 6) |
-| Bản build | Android `com.anhtester.book` 1.0 (versionCode 1) — Hybrid Capacitor, WebView **không** bật debug (`appium_context` chỉ có `NATIVE_APP`) |
+| Bản build | Android `com.canhnt14.book` 1.0 (versionCode 1) — Hybrid Capacitor, WebView **không** bật debug (`appium_context` chỉ có `NATIVE_APP`) |
 | Môi trường | Emulator Pixel 10 Pro XL · Android 17 · 1344×2992 px · density 480 (×3) → **448 dp** rộng · status bar 53 dp · thanh cử chỉ 24 dp · `font_scale` 1.0 · dark mode tắt · locale en_US |
 | Mốc dọc | Đỉnh header: thiết kế 36 dp (dưới status bar giả lập) ↔ app **40 dp** — app vẽ header lấn vào vùng status bar 13 dp (mục 6) |
 | Dung sai | Vị trí ±4 dp (⚠️ ≤ 12) · ΔE chữ ≤ 6 · ΔE nền ≤ 3 — rule `design_compare_rules.md` mục 4 |
@@ -273,7 +273,7 @@ Mốc so: dp, tính từ đỉnh header ở cả hai phía (`--actual-top 40`). 
 |---|---|---|---|---|---|---|---|---|---|
 | 1 | 🔍 | A | — | — | — | — | — | — |  |
 | 2 | 🔍 | Banner — RESTful API Book Management | — | — | — | — | — | — |  |
-| 3 | ❌ | Welcome <Tên tài khoản> | Welcome Anh Tester Example | -1 (trái) | +28 | — | +2 | `#00b8d9` → `#00b8d8` · 0.3 | lệch +28 tính từ đầu vùng nội dung — nguyên nhân có thể nằm ở phần tử không có chữ phía trên (ảnh, banner, header) |
+| 3 | ❌ | Welcome <Tên tài khoản> | Welcome canhnt14 Example | -1 (trái) | +28 | — | +2 | `#00b8d9` → `#00b8d8` · 0.3 | lệch +28 tính từ đầu vùng nội dung — nguyên nhân có thể nằm ở phần tử không có chữ phía trên (ảnh, banner, header) |
 | 4 | ⚠️ | Bạn có thể quản lý thêm xóa sửa người dùng, sách và file. Cài đặt cá nhân hóa trang quản lý đổi màu và chế độ dark mode, light mode. | Bạn có thể quản lý thêm xóa sửa người dùng, sách và file. Cài đặt cá nhân hóa trang quản lý đổi màu và chế độ dark mode, light mode. | -1 (trái) | +33 | +5 | +1 | `#637381` → `#607080` · 1.5 | khoảng cách tới “Welcome <Tên tài khoản>” lệch +5 — điểm khởi phát xô lệch |
 | 5 | ❔ | User mgt | User mgttotal: 3294 users | — | — | — | — | — | chữ có trên app nhưng nằm chung node “User mgttotal: 3294 users” — vị trí, màu không đo tự động, đối chiếu bằng ảnh |
 | 6 | ❔ | total: <n> users | User mgttotal: 3294 users | — | — | — | — | — | chữ có trên app nhưng nằm chung node “User mgttotal: 3294 users” — vị trí, màu không đo tự động, đối chiếu bằng ảnh |
@@ -310,8 +310,8 @@ Mốc so: dp, tính từ đỉnh header ở cả hai phía (`--actual-top 40`). 
 
 | # | Trạng thái | Chữ trong thiết kế | Trên app | Δx (neo) | Δy | Δ khoảng cách | Δ cao | Màu (thiết kế → app · ΔE) | Ghi chú |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | ❌ | <Tên tài khoản> | Anh Tester Example | +43 (phải) | -9 | — | +0 | `#1c252e` → `#1c242c` · 0.6 | lệch -9 tính từ đầu vùng nội dung — nguyên nhân có thể nằm ở phần tử không có chữ phía trên (ảnh, banner, header) |
-| 2 | ❌ | <email tài khoản> | anhtester@example.com | +43 (phải) | -11 | -2 | +6 | `#637381` → `#607080` · 1.5 | Δy -11 kế thừa từ phía trên — không tính lỗi riêng |
+| 1 | ❌ | <Tên tài khoản> | canhnt14 Example | +43 (phải) | -9 | — | +0 | `#1c252e` → `#1c242c` · 0.6 | lệch -9 tính từ đầu vùng nội dung — nguyên nhân có thể nằm ở phần tử không có chữ phía trên (ảnh, banner, header) |
+| 2 | ❌ | <email tài khoản> | canhnt14@example.com | +43 (phải) | -11 | -2 | +6 | `#637381` → `#607080` · 1.5 | Δy -11 kế thừa từ phía trên — không tính lỗi riêng |
 | 3 | ⚠️ | Home | Home | -1 (phải) | -2 | +9 | +26 | — | khoảng cách tới “<email tài khoản>” lệch +9 — điểm khởi phát xô lệch<br>khung phần tử app lớn hơn hộp chữ (gồm icon/padding) — không đo được số dòng, so theo tâm<br>màu chữ không lấy mẫu được (khung có cả icon/nền) — đối chiếu bằng ảnh |
 | 4 | ⚠️ | Profile | Profile | -1 (phải) | +6 | +8 | +26 | — | khoảng cách tới “Home” lệch +8 — điểm khởi phát xô lệch<br>khung phần tử app lớn hơn hộp chữ (gồm icon/padding) — không đo được số dòng, so theo tâm<br>màu chữ không lấy mẫu được (khung có cả icon/nền) — đối chiếu bằng ảnh |
 | 5 | ⚠️ | Settings | Settings | -1 (phải) | +14 | +8 | +26 | — | khoảng cách tới “Profile” lệch +8 — điểm khởi phát xô lệch<br>khung phần tử app lớn hơn hộp chữ (gồm icon/padding) — không đo được số dòng, so theo tâm<br>màu chữ không lấy mẫu được (khung có cả icon/nền) — đối chiếu bằng ảnh |
@@ -356,7 +356,7 @@ Mốc so: dp, tính từ đỉnh header ở cả hai phía (`--actual-top 40`). 
 | 8 | 🔍 | Allowed *.jpeg, *.jpg, *.png, *.gif, *.webp, *.bmp, *.svg
 max size of 3.0 MB | — | — | — | — | — | — |  |
 | 9 | ⚠️ | Name * | Name | +1.8 (tỉ lệ) | +29 | -3 | +2 | `#637381` → `#607080` · 1.5 | chữ khác phần đuôi: “Name *” ↔ “Name” (phần thiếu có thể nằm ở node/span riêng — xem ảnh)<br>Δy +29 kế thừa từ phía trên — không tính lỗi riêng |
-| 10 | ❌ | <Tên tài khoản> | Anh Tester Example | -6 (trái) | +22 | -7 | +34 | — | ô nhập đang có giá trị — không phải placeholder<br>khoảng cách tới “Name *” lệch -7 — điểm khởi phát xô lệch<br>cao 56 vs 22 — khác số dòng (≈2.5 vs 1.0 dòng) |
+| 10 | ❌ | <Tên tài khoản> | canhnt14 Example | -6 (trái) | +22 | -7 | +34 | — | ô nhập đang có giá trị — không phải placeholder<br>khoảng cách tới “Name *” lệch -7 — điểm khởi phát xô lệch<br>cao 56 vs 22 — khác số dòng (≈2.5 vs 1.0 dòng) |
 | 11 | ⚠️ | Phone | Phone | +1.8 (tỉ lệ) | +31 | +9 | +2 | `#637381` → `#607080` · 1.5 | khoảng cách tới “<Tên tài khoản>” lệch +9 — điểm khởi phát xô lệch |
 | 12 | ❌ | 09xxxxxxxx | <số đt đã che> | -6 (trái) | +24 | -7 | +34 | — | ô nhập đang có giá trị — không phải placeholder<br>khoảng cách tới “Phone” lệch -7 — điểm khởi phát xô lệch<br>cao 56 vs 22 — khác số dòng (≈2.5 vs 1.0 dòng) |
 | 13 | ❌ | Address | Address | +0 (trái) | +52 | +28 | -2 | `#1c252e` → `#1c242c` · 0.6 | khoảng cách tới “09xxxxxxxx” lệch +28 — điểm khởi phát xô lệch |
@@ -435,7 +435,7 @@ max size of 3.0 MB | — | — | — | — | — | — |  |
 | 16 | ❌ | Address | Address | -4 (trái) | +33.5 | +27 | +1 | `#919eab` → `#607080` · 17.0 | khoảng cách tới “Ward” lệch +27 — điểm khởi phát xô lệch<br>màu chữ #607080 vs #919eab (ΔE 17.0) |
 | 17 | ❌ | Account | Account | -1.8 (tỉ lệ) | +6.5 | -27 | -2 | `#1c252e` → `#1c242c` · 0.6 | khoảng cách tới “Address” lệch -27 — điểm khởi phát xô lệch |
 | 18 | ❌ | Email * | Email | +1.8 (tỉ lệ) | -16.5 | -23 | +2 | `#637381` → `#607080` · 1.5 | chữ khác phần đuôi: “Email *” ↔ “Email” (phần thiếu có thể nằm ở node/span riêng — xem ảnh)<br>khoảng cách tới “Account” lệch -23 — điểm khởi phát xô lệch |
-| 19 | ❌ | <email tài khoản> | anhtester@example.com | -6 (trái) | -23.5 | -7 | +34 | — | ô nhập đang có giá trị — không phải placeholder<br>khoảng cách tới “Email *” lệch -7 — điểm khởi phát xô lệch<br>cao 56 vs 22 — khác số dòng (≈2.5 vs 1.0 dòng) |
+| 19 | ❌ | <email tài khoản> | canhnt14@example.com | -6 (trái) | -23.5 | -7 | +34 | — | ô nhập đang có giá trị — không phải placeholder<br>khoảng cách tới “Email *” lệch -7 — điểm khởi phát xô lệch<br>cao 56 vs 22 — khác số dòng (≈2.5 vs 1.0 dòng) |
 | 20 | ❌ | Old Password | Old Password | +1.8 (tỉ lệ) | +2.5 | +26 | +1 | `#919eab` → `#607080` · 17.0 | khoảng cách tới “<email tài khoản>” lệch +26 — điểm khởi phát xô lệch<br>màu chữ #607080 vs #919eab (ΔE 17.0) |
 | 21 | ❌ | Password | Password | +1.8 (tỉ lệ) | +4.5 | +2 | +1 | `#919eab` → `#607080` · 17.0 | Δy +4.5 kế thừa từ phía trên — không tính lỗi riêng<br>màu chữ #607080 vs #919eab (ΔE 17.0) |
 | 22 | ❌ | Password Confirmation | Password Confirmation | +1.8 (tỉ lệ) | +6.5 | +2 | +1 | `#919eab` → `#607080` · 17.0 | Δy +6.5 kế thừa từ phía trên — không tính lỗi riêng<br>màu chữ #607080 vs #919eab (ΔE 17.0) |

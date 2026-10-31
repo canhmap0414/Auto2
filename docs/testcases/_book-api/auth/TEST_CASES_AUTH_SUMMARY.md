@@ -2,7 +2,7 @@
 
 | Thông tin | Nội dung |
 |---|---|
-| **Hệ thống** | AnhTester Book Management — mã hệ thống `BK` (namespace `_book-api/`) · danh mục TC: [../README.md](../README.md) |
+| **Hệ thống** | canhnt14 Book Management — mã hệ thống `BK` (namespace `_book-api/`) · danh mục TC: [../README.md](../README.md) |
 | **Module** | Xác thực & Phiên đăng nhập · prefix `AUTH` |
 | **Nguồn requirement** | Index [REQUIREMENTS_AUTH_SUMMARY.md](../../../requirements/_book-api/auth/REQUIREMENTS_AUTH_SUMMARY.md) (8 REQ dùng chung `Android · API · Web` · 40 REQ `Android · Web` — mục 3.2: 29 · mục 3.3: 11) · [mobile/requirements_auth_mobile.md](../../../requirements/_book-api/auth/mobile/requirements_auth_mobile.md) (14 REQ) · [api/requirements_auth_api.md](../../../requirements/_book-api/auth/api/requirements_auth_api.md) (40 REQ) · [web/requirements_auth_web.md](../../../requirements/_book-api/auth/web/requirements_auth_web.md) (24 REQ) — **0 AMB treo** (chốt 25-09-2026, `DEMO-AMB-2509`) · bản đồ API [api_map.md](../../../requirements/_book-api/_discovery/api_map.md) |
 | **Mode sinh** | Mobile: QUICK (`/generate-testcases-from-requirements`), lượt 2 chế độ **BỔ SUNG** (Part 03) · API: `/generate-testcases-api` · Web: QUICK chế độ **BỔ SUNG** — cả ba **độ hạt GỘP** |
@@ -10,7 +10,7 @@
 | **Dải TC ID** | `BK_AUTH_TC_001` → `BK_AUTH_TC_210` — **dải chung toàn module**: Mobile `001`→`058` · `194`→`210` · API `059`→`108` · Web `109`→`193` |
 | **Mã kế tiếp** | `BK_AUTH_TC_211` — **KHÔNG đánh lại từ 001** |
 | **Mức rủi ro · độ sâu** | `Cao` → **Đầy đủ** — đủ 6 nhánh V1, mọi nhánh V2 có điều kiện kích hoạt, V3/V4 chấm từng nhánh.<br>Căn cứ chấm Cao (chỉ cần 1 dấu hiệu, ở đây có 3): đụng **xác thực** · là **cổng vào** mọi module khác (hỏng thì chặn cả đợt kiểm thử) · tạo bản ghi **người dùng** trên production.<br>**Hạ xuống Tiêu chuẩn khi:** không bao giờ — module xác thực luôn giữ mức Cao |
-| **Môi trường** | `https://book.anhtester.com` — **production, server duy nhất**. **Không** dùng chung (user chốt 14-08-2026) nhưng vẫn áp luật: chỉ ghi/xoá bản ghi do chính lượt chạy tạo |
+| **Môi trường** | `https://book.canhnt14.com` — **production, server duy nhất**. **Không** dùng chung (user chốt 14-08-2026) nhưng vẫn áp luật: chỉ ghi/xoá bản ghi do chính lượt chạy tạo |
 | **Thiết bị chuẩn** | Emulator `Pixel_10_Pro_XL_API_37` · Android 17 · `1344×2992` · dọc · locale `en-US` · app `1.0 (versionCode 1)` bản debug. **iOS chưa khảo sát** — bộ TC này **không** áp cho iOS |
 | **Trình duyệt chuẩn (Web)** | Google Chrome (desktop) · viewport `1600×750` · `en-US` — trình duyệt khác / di động chưa khảo sát |
 | **Tài khoản** | Mọi tài khoản do **chính TC tạo** (tiền tố `auto_auth_`) — **không** dùng tài khoản có sẵn nào. Mật khẩu `Auto@12345` là dữ liệu test tự sinh, không phải credentials thật |
@@ -36,7 +36,7 @@ Biến thể của **cùng một trường**, **cùng loại phản hồi** nằ
 
 | Ký hiệu | Trạng thái | Cách đưa app về |
 |---|---|---|
-| `S0` | **Chưa đăng nhập**, có mạng, dọc | Đang đăng nhập thì avatar → `Logout`. Hoặc Cài đặt → Ứng dụng → `book.anhtester.com` → Bộ nhớ → **Xoá dữ liệu**, rồi mở lại app |
+| `S0` | **Chưa đăng nhập**, có mạng, dọc | Đang đăng nhập thì avatar → `Logout`. Hoặc Cài đặt → Ứng dụng → `book.canhnt14.com` → Bộ nhớ → **Xoá dữ liệu**, rồi mở lại app |
 | `S1` | **`TK-A` đang đăng nhập** | Từ `S0`: avatar → nhập email/mật khẩu của `TK-A` → `Login account` |
 | `S2` | **`TK-M` đang đăng nhập**, đang ở tab Dashboard — chỉ Part 03 | Từ `S0`: avatar → đăng nhập `TK-M` (dữ liệu ở đầu [Part 03](mobile/parts/part_03_mobile_ho_so.md)) |
 

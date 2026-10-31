@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Thang màu thương hiệu Anh Tester, neo theo #4DBD44 lấy từ logo (public/Profile AnhTester 200px-border-radius.png).
+        // Thang màu neo theo #4DBD44 lấy từ logo (public/Profile canhnt14 200px-border-radius.png).
         // brand-700 trở lên đạt tương phản >= 4.5:1 trên nền trắng nên dùng cho chữ; 500 dùng cho mảng màu.
         brand: {
           50: "#F0F9EF",

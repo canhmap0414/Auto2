@@ -1,4 +1,4 @@
-# Bản đồ hệ thống — AnhTester Book Management (mặt Mobile)
+# Bản đồ hệ thống — canhnt14 Book Management (mặt Mobile)
 
 > **TẦNG KHÁM PHÁ — cấp hệ thống.** Tài liệu này **KHÔNG chứa mã REQ**, chỉ ghi màn hình nào tồn tại, nằm ở đâu, ghép vào module nào.
 > Mã REQ sinh ở tầng module: `docs/requirements/_book-api/<module>/REQUIREMENTS_<TÊN_MODULE>_SUMMARY.md`.
@@ -13,9 +13,9 @@
 | Ngày | 19-09-2026 |
 | Mode | **ADD** — thêm **mặt Mobile (Android)** cho hệ thống đã có bản đồ mặt API (14-08-2026) |
 | Mặt đã khám phá ở file này | Android. Web: không trong phạm vi. iOS: **chưa khảo sát** (máy Windows, không có bản build iOS) |
-| App | `book.anhtester.com` · tên hiển thị "Book Anhtester" · `versionName 1.0` · `versionCode 1` · bản **debug** (`DEBUGGABLE`) · `minSdk 23` · `targetSdk 35` |
-| Loại app | **Hybrid — Capacitor.** Toàn bộ giao diện là web app React chạy trong một `android.webkit.WebView`. Context `WEBVIEW_book.anhtester.com` có nhưng **không đọc được DOM** (`css selector` không tìm được `#root`) → khảo sát bằng cây `NATIVE_APP` (accessibility tree của WebView), đủ text/hint/`password`/`clickable` |
-| Backend | `https://book.anhtester.com` — cùng server với mặt API. Tiêu đề trang Sign in: *"Sign in - Book UI for api-book.anhtester.com"* |
+| App | `book.canhnt14.com` · tên hiển thị "Book canhnt14" · `versionName 1.0` · `versionCode 1` · bản **debug** (`DEBUGGABLE`) · `minSdk 23` · `targetSdk 35` |
+| Loại app | **Hybrid — Capacitor.** Toàn bộ giao diện là web app React chạy trong một `android.webkit.WebView`. Context `WEBVIEW_book.canhnt14.com` có nhưng **không đọc được DOM** (`css selector` không tìm được `#root`) → khảo sát bằng cây `NATIVE_APP` (accessibility tree của WebView), đủ text/hint/`password`/`clickable` |
+| Backend | `https://book.canhnt14.com` — cùng server với mặt API. Tiêu đề trang Sign in: *"Sign in - Book UI for api-book.canhnt14.com"* |
 | Thiết bị | Emulator `Pixel_10_Pro_XL_API_37` · Android 17 · màn hình `1344×2992` · dọc · `UiAutomator2` qua Appium MCP (chế độ nhúng) |
 | Quyền khai trong Manifest | Chỉ `INTERNET` (+ quyền nội bộ `DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION`) |
 | Deep link | **Không có** — `MainActivity` chỉ có `intent-filter` `MAIN`/`LAUNCHER` (đọc bằng `aapt2 dump xmltree`) |
@@ -115,10 +115,10 @@ Không module nào `BLOCKED`. iOS: chưa có lịch — cần máy Mac hoặc cl
 
 | Ngày | Nguồn | Thay đổi |
 |---|---|---|
-| 20-10-2026 | `/generate-requirements-from-mobile` (USER · BOOK lượt bổ sung) | Không lệch đường đi so với bản đồ. Ghi nhận cấp app: (1) mọi thao tác **gửi dữ liệu** đã thử đều lỗi — Save Profile (`AUTH-122`) · Create book (`BOOK-147`, nay báo `Uploading book...`) · Update user (`USER-129`) · Save changes (`BOOK-155`), trong khi **Delete** (người dùng · sách) chạy được — cần Dev xác minh · (2) app vẫn là bản `1.0 (versionCode 1)` cài 22-09-2026 · (3) app gọi thẳng `https://book.anhtester.com` (gắn cứng trong APK, IP công khai) — không có backend local |
-| 26-09-2026 | `/generate-requirements-from-mobile` (AUTH lượt 2 · USER · BOOK) | Lệch so với bản đồ: (1) context `WEBVIEW_book.anhtester.com` **không** còn liệt kê (chỉ `NATIVE_APP`), WebView hệ thống lên `153.0.8010.36`; cây phần tử WebView **rỗng** tới lần chạm đầu tiên. (2) Nút avatar giờ mang `text` = chữ cái đầu tên tài khoản (không còn rỗng hoàn toàn). (3) Lỗi điều hướng `AMB-BK-12` gặp **cả ở tab Book** khi đang ở `Modify book` (REQ-BK-BOOK-148), không riêng tab User. (4) Mục `Exit app` đưa app về launcher, tiến trình vẫn chạy. Sơ đồ điều hướng không đổi. REQ Android đã sinh cho `USER` · `BOOK`, bổ sung cho `AUTH` |
-| 25-09-2026 | `/generate-requirements-from-website` (AUTH · USER · BOOK) | Lệch so với bản đồ: hệ thống **có mặt Web** tại `https://book.anhtester.com` (mục 1 ghi "Web: không trong phạm vi") — cùng web app React mà Android bọc lại, điều hướng bằng **sidebar** thay cho bottom navigation: `Dashboard` `/` · `User` `/user-management` (+ `/my-profile` · `/setting-account`) · `Book` `/book-management` (+ `/handle` · `/detail/<slug>`) · `Promotion` `/promotion-book-management` · `File` `/file-management` · **`Database` `/db-management`** — mục này **không có** trên Android và **chưa thuộc module/prefix nào** → cần `/discover-system` mode ADD (mặt Web) trước khi recon. Web khác Android: menu tài khoản **không** có `Exit app`; User hiển thị dạng bảng 6 cột + bộ lọc nâng cao. REQ Web đã sinh cho `AUTH` · `USER` · `BOOK` |
-| 19-09-2026 | User bổ sung mặt Mobile | Tạo file. Khám phá app Android `book.anhtester.com` 1.0 (Hybrid Capacitor, debug). Ghép 8/9 module vào module đã có của mặt API, **cấp prefix mới `DASH`** (user chốt). Không deep link, không quyền runtime, không màn hình lần đầu. Tách bản đồ thành 6 file (9 module > ngưỡng 8). **Dữ liệu tạo ra:** 1 user `auto_discover_<timestamp>@auto.test` (dùng tiếp cho recon `AUTH`) — **đã xoá** cuối phiên bằng token của chính tài khoản đó (tạo 1 · dọn 1 · sót 0) · **không** sửa/xoá bản ghi có sẵn nào. Mở `AMB-BK-11` · `AMB-BK-12` |
+| 20-10-2026 | `/generate-requirements-from-mobile` (USER · BOOK lượt bổ sung) | Không lệch đường đi so với bản đồ. Ghi nhận cấp app: (1) mọi thao tác **gửi dữ liệu** đã thử đều lỗi — Save Profile (`AUTH-122`) · Create book (`BOOK-147`, nay báo `Uploading book...`) · Update user (`USER-129`) · Save changes (`BOOK-155`), trong khi **Delete** (người dùng · sách) chạy được — cần Dev xác minh · (2) app vẫn là bản `1.0 (versionCode 1)` cài 22-09-2026 · (3) app gọi thẳng `https://book.canhnt14.com` (gắn cứng trong APK, IP công khai) — không có backend local |
+| 26-09-2026 | `/generate-requirements-from-mobile` (AUTH lượt 2 · USER · BOOK) | Lệch so với bản đồ: (1) context `WEBVIEW_book.canhnt14.com` **không** còn liệt kê (chỉ `NATIVE_APP`), WebView hệ thống lên `153.0.8010.36`; cây phần tử WebView **rỗng** tới lần chạm đầu tiên. (2) Nút avatar giờ mang `text` = chữ cái đầu tên tài khoản (không còn rỗng hoàn toàn). (3) Lỗi điều hướng `AMB-BK-12` gặp **cả ở tab Book** khi đang ở `Modify book` (REQ-BK-BOOK-148), không riêng tab User. (4) Mục `Exit app` đưa app về launcher, tiến trình vẫn chạy. Sơ đồ điều hướng không đổi. REQ Android đã sinh cho `USER` · `BOOK`, bổ sung cho `AUTH` |
+| 25-09-2026 | `/generate-requirements-from-website` (AUTH · USER · BOOK) | Lệch so với bản đồ: hệ thống **có mặt Web** tại `https://book.canhnt14.com` (mục 1 ghi "Web: không trong phạm vi") — cùng web app React mà Android bọc lại, điều hướng bằng **sidebar** thay cho bottom navigation: `Dashboard` `/` · `User` `/user-management` (+ `/my-profile` · `/setting-account`) · `Book` `/book-management` (+ `/handle` · `/detail/<slug>`) · `Promotion` `/promotion-book-management` · `File` `/file-management` · **`Database` `/db-management`** — mục này **không có** trên Android và **chưa thuộc module/prefix nào** → cần `/discover-system` mode ADD (mặt Web) trước khi recon. Web khác Android: menu tài khoản **không** có `Exit app`; User hiển thị dạng bảng 6 cột + bộ lọc nâng cao. REQ Web đã sinh cho `AUTH` · `USER` · `BOOK` |
+| 19-09-2026 | User bổ sung mặt Mobile | Tạo file. Khám phá app Android `book.canhnt14.com` 1.0 (Hybrid Capacitor, debug). Ghép 8/9 module vào module đã có của mặt API, **cấp prefix mới `DASH`** (user chốt). Không deep link, không quyền runtime, không màn hình lần đầu. Tách bản đồ thành 6 file (9 module > ngưỡng 8). **Dữ liệu tạo ra:** 1 user `auto_discover_<timestamp>@auto.test` (dùng tiếp cho recon `AUTH`) — **đã xoá** cuối phiên bằng token của chính tài khoản đó (tạo 1 · dọn 1 · sót 0) · **không** sửa/xoá bản ghi có sẵn nào. Mở `AMB-BK-11` · `AMB-BK-12` |
 
 ## 8. Ambiguity cấp hệ thống phát sinh ở mặt Mobile
 
@@ -135,10 +135,10 @@ Nối tiếp dải `AMB-BK-nn` của [`api_map.md` mục 4](api_map.md#4-khoản
 |---|---|
 | `resource-id` của ô nhập **tự sinh** | Ô nhập mang `resource-id` dạng `_r_k_`, `_r_l_` (id tự sinh của React) — đổi theo thứ tự render, **CẤM** dùng làm locator. Dùng `hint` (`//android.widget.EditText[@hint='Email address']`) hoặc đề nghị dev thêm định danh ổn định |
 | Nút avatar không nhãn | `android.widget.Button` không `text`, không `content-desc` → chỉ bắt được theo vị trí trong cây. Đề nghị dev thêm `aria-label` |
-| Có `content-desc` dùng được | `Book management sign in` · `Get started` · `Need help?` · `anhtester_logo_512` · `Free API for Testing` |
+| Có `content-desc` dùng được | `Book management sign in` · `Get started` · `Need help?` · `canhnt14_logo_512` · `Free API for Testing` |
 | Tab bottom navigation | `android.view.View` có `text` = tên tab, `clickable=true`, tab đang chọn `selected=true` |
 | App tải chậm hơn khung | Mở app lần đầu: màn hình trắng trước khi Dashboard hiện. Bộ đếm Dashboard hiện `0` rồi mới ra số thật — phải chờ theo điều kiện |
-| WebView context | 19-09-2026: `WEBVIEW_book.anhtester.com` liệt kê được nhưng không đọc được DOM · 26-09-2026: không còn liệt kê. Automation dùng `NATIVE_APP` |
+| WebView context | 19-09-2026: `WEBVIEW_book.canhnt14.com` liệt kê được nhưng không đọc được DOM · 26-09-2026: không còn liệt kê. Automation dùng `NATIVE_APP` |
 | Cây phần tử rỗng lúc đầu phiên | 26-09-2026: `page source` đầu tiên chỉ có 1 `WebView` rỗng — chạm một vùng trung tính rồi mới đọc cây |
 | `appium_screenshot` lỗi schema | Chụp bằng `adb shell screencap` + `adb pull` |
 

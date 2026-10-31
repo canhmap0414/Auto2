@@ -4,10 +4,10 @@
 
 | Mục | Giá trị |
 |---|---|
-| **Hệ thống** | AnhTester Book Management (mã hệ thống `BK`) |
+| **Hệ thống** | canhnt14 Book Management (mã hệ thống `BK`) |
 | **Module** | Sách — tab `Book` (Book Management): danh sách · sắp xếp · tab danh mục · Filter · form Create a new book · Modify book · trang chi tiết · Confirm delete |
 | **Nền tảng** | **Android** 🟨 (đọc · validation · khách · xoá ✅ — tạo ❌ (REQ-147) · lưu thay đổi ❌ (REQ-155)) · iOS ❔ chưa khảo sát (máy Windows) |
-| **Thiết bị khảo sát** | Emulator `Pixel_10_Pro_XL_API_37` · Android 17 · màn hình `1344×2992` · hướng **dọc** (trừ REQ-152) · locale `en-US` · app `book.anhtester.com` `1.0 (versionCode 1)` bản **debug** · `UiAutomator2` qua Appium MCP · loại app **Hybrid (Capacitor)** — WebView `153.0.8010.36`, khảo sát bằng cây `NATIVE_APP` |
+| **Thiết bị khảo sát** | Emulator `Pixel_10_Pro_XL_API_37` · Android 17 · màn hình `1344×2992` · hướng **dọc** (trừ REQ-152) · locale `en-US` · app `book.canhnt14.com` `1.0 (versionCode 1)` bản **debug** · `UiAutomator2` qua Appium MCP · loại app **Hybrid (Capacitor)** — WebView `153.0.8010.36`, khảo sát bằng cây `NATIVE_APP` |
 | **Tầng network** | ❌ Không quan sát được — chưa dựng proxy, WebView không bật gỡ lỗi. Rule phía server lấy từ web và [api/requirements_book_api.md](../api/requirements_book_api.md) |
 | **Phương pháp** | Thao tác thật trên app ngày 26-09-2026 và 20-10-2026 — đọc thuộc tính phần tử, nhập thử (ô số nhập bằng bàn phím `adb shell input text`), chọn ảnh qua trình chọn ảnh hệ thống, tắt mạng bằng `adb shell svc wifi/data disable`, xoay bằng `settings put system user_rotation`, đưa app xuống nền bằng `appium_app_lifecycle background`, quay màn hình / chụp liên tục để đọc thông báo nổi. Kết quả ghi dữ liệu đối chiếu bằng **đọc công khai** `GET /api/book?search=` · `GET /api/book/<id>` · `GET /api/promotion-book` (không token) |
 | **Tài khoản** | 26-09: tài khoản test do tester đăng nhập — user cho phép tạo/sửa/xoá sách test `Auto Mobile Book <timestamp>`; form sửa chỉ mở trên sách test còn sót, **không** lưu · 20-10: **khách** (app đang chưa đăng nhập) rồi tài khoản test do tester đăng nhập; tạo thử lại sách test, sửa thử rồi **xoá** sách test còn sót `Auto BKAPI NoPrice <timestamp>`. Mục 10 |

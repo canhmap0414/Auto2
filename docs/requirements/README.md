@@ -1,4 +1,4 @@
-# Danh mục Requirements — Perfex CRM (Anh Tester Demo)
+# Danh mục Requirements — Perfex CRM (canhnt14 Demo)
 
 > **Điểm vào cấp hệ thống.** Mọi workflow đụng tới `docs/` đọc file này **trước tiên**: module nào đã có tài liệu · **prefix nào đã bị chiếm** · mã REQ kế tiếp · ambiguity 🔴 còn treo.
 >
@@ -6,7 +6,7 @@
 
 | Mục | Giá trị |
 |---|---|
-| Hệ thống | Perfex CRM — Anh Tester Demo |
+| Hệ thống | Perfex CRM — canhnt14 Demo |
 | Tiền tố TC ID | `CRM_` → `CRM_<MODULE>_TC_<3 số>` |
 | Môi trường dùng chung | **CÓ** — cấm thao tác phá huỷ, phải dọn dữ liệu test sau khi chạy |
 | URL · tài khoản | `.env` (không commit) — **KHÔNG** ghi credentials vào `docs/` |

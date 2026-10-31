@@ -4,10 +4,10 @@
 
 | Mục | Giá trị |
 |---|---|
-| **Hệ thống** | AnhTester Book Management (mã hệ thống `BK`) |
+| **Hệ thống** | canhnt14 Book Management (mã hệ thống `BK`) |
 | **Module** | Xác thực & Phiên đăng nhập — lượt 1 (19-09-2026): **Đăng ký · Đăng nhập · Đăng xuất** · lượt 2 (26-09-2026): **My Profile · Setting account · Exit app** |
 | **Nền tảng** | **Android** ✅ · iOS ❔ chưa khảo sát (máy Windows, chưa có bản build iOS) |
-| **Thiết bị khảo sát** | Emulator `Pixel_10_Pro_XL_API_37` · Android 17 · màn hình `1344×2992` · hướng **dọc** (trừ REQ-85) · locale `en-US` · app `book.anhtester.com` `1.0 (versionCode 1)` bản **debug** · `UiAutomator2` qua Appium MCP · loại app **Hybrid (Capacitor)**, khảo sát bằng cây `NATIVE_APP`. WebView: `149.0.7827.5` (lượt 1) · `153.0.8010.36` (lượt 2). Lượt 2: context `WEBVIEW_*` **không** còn liệt kê, cổng DevTools của WebView không mở |
+| **Thiết bị khảo sát** | Emulator `Pixel_10_Pro_XL_API_37` · Android 17 · màn hình `1344×2992` · hướng **dọc** (trừ REQ-85) · locale `en-US` · app `book.canhnt14.com` `1.0 (versionCode 1)` bản **debug** · `UiAutomator2` qua Appium MCP · loại app **Hybrid (Capacitor)**, khảo sát bằng cây `NATIVE_APP`. WebView: `149.0.7827.5` (lượt 1) · `153.0.8010.36` (lượt 2). Lượt 2: context `WEBVIEW_*` **không** còn liệt kê, cổng DevTools của WebView không mở |
 | **Tầng network** | ❌ Không quan sát được — chưa dựng proxy, WebView không bật gỡ lỗi. Rule phía server lấy từ [api/requirements_auth_api.md](../api/requirements_auth_api.md) và web |
 | **Phương pháp** | Thao tác thật trên app ngày 19-09-2026 và 26-09-2026 — nhập thử từng ô để lấy message, đọc thuộc tính phần tử (`enabled` · `selected` · `password` · `bounds` · text), tắt mạng bằng `adb shell svc wifi/data disable`. Lượt 2: **agent không nhập mật khẩu** trên hệ thống thật — ô mật khẩu do tester gõ tay, agent đọc kết quả |
 | **Tài khoản** | Lượt 1: 1 tài khoản **tự đăng ký trên app** `auto_discover_<timestamp>@auto.test` — đã xoá. Lượt 2: tài khoản test `auto_demo_account_<timestamp>@auto.test` do tester đăng nhập sẵn (dùng chung Web · API · Android), user cho phép sửa hồ sơ. Mục 10 |

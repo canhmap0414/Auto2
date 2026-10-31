@@ -2,7 +2,7 @@
 
 | Thông tin | Nội dung |
 |---|---|
-| **Hệ thống** | AnhTester Book Management — mã hệ thống `BK` (namespace `_book-api/`) · danh mục TC: [../README.md](../README.md) |
+| **Hệ thống** | canhnt14 Book Management — mã hệ thống `BK` (namespace `_book-api/`) · danh mục TC: [../README.md](../README.md) |
 | **Module** | Sách — `Book Management` · prefix `BOOK` |
 | **Nguồn requirement** | Index [REQUIREMENTS_BOOK_SUMMARY.md](../../../requirements/_book-api/book/REQUIREMENTS_BOOK_SUMMARY.md) (dùng chung: 4 REQ mục 3.1 — `01` · `42` · `51` là `Android · Web · API` · 39 REQ `Android · Web` mục 3.2) · [web/requirements_book_web.md](../../../requirements/_book-api/book/web/requirements_book_web.md) (9 REQ) · [api/requirements_book_api.md](../../../requirements/_book-api/book/api/requirements_book_api.md) (94 REQ) · [mobile/requirements_book_mobile.md](../../../requirements/_book-api/book/mobile/requirements_book_mobile.md) (12 REQ) — **0 AMB treo** (chốt 25-09-2026 `DEMO-AMB-2509` · `DEMO-AMB-2509B` · 26-09-2026 `DEMO-AMB-2609` · 20-10-2026 `DEMO-AMB-2010`) |
 | **Mode sinh** | QUICK (`/generate-testcases-from-requirements`) · độ hạt **GỘP** (mặc định) · Mobile: chế độ **BỔ SUNG** (module đã có bộ TC Web + API) |
@@ -11,9 +11,9 @@
 | **Mã kế tiếp** | `BK_BOOK_TC_192` — **KHÔNG đánh lại từ 001** |
 | **Phạm vi REQ** | Web: 52/52 REQ (9 chỉ Web + 39 `Android · Web` + 4 mục 3.1). API: **98/98** REQ (94 riêng API + 4 dùng chung) — 5 endpoint `/api/book*`. **Mobile (Android): 54/54** REQ (39 `Android · Web` + `01` · `42` · `51` + 12 chỉ Android). Ngoài phạm vi viết TC: quản lý danh mục ⚙ (module `CAT`) · **tạo / sửa khuyến mãi** (module `PROMO` — khuyến mãi tác động lên giá bán của **mọi** sách nên TC **không** tạo) · tải ảnh bìa (module `FILE`) · mở khoá slug bằng `Change` · Android: REQ **chưa khai** nền tảng Android — `39` · `40` · `46` · `47` · `52` (**bị chặn** bởi REQ-147 — tạo sách Android lỗi) · `08` · `19` · `43` (dựa vào URL) · `35` · `36` (chọn tệp — thay bằng REQ-150), [requirements mobile mục 2](../../../requirements/_book-api/book/mobile/requirements_book_mobile.md#2-bản-đồ-phủ-tài-liệu) · iOS chưa khảo sát |
 | **Mức rủi ro · độ sâu** | `Cao` → **Đầy đủ** — đủ 6 nhánh V1, mọi nhánh V2 có điều kiện kích hoạt, V3/V4 chấm từng nhánh.<br>Căn cứ chấm Cao: đụng **giá tiền** (giá gốc, giá bán sau khuyến mãi — đang có lỗi giá âm) · thao tác **không hồi lại được** (xoá sách) · mọi người dùng sửa/xoá được sách người khác.<br>**Hạ xuống Tiêu chuẩn khi:** không bao giờ — module có tiền luôn giữ mức Cao |
-| **Môi trường** | `https://book.anhtester.com` — **production, server duy nhất**. **Không** dùng chung (user chốt 14-08-2026) nhưng chỉ ghi/xoá sách do chính lượt chạy tạo |
+| **Môi trường** | `https://book.canhnt14.com` — **production, server duy nhất**. **Không** dùng chung (user chốt 14-08-2026) nhưng chỉ ghi/xoá sách do chính lượt chạy tạo |
 | **Trình duyệt chuẩn** | Google Chrome (desktop) · viewport `1600×750` · `en-US` |
-| **Thiết bị chuẩn (Mobile)** | Emulator `Pixel_10_Pro_XL_API_37` · Android 17 · `1344×2992` · dọc (trừ TC_180) · locale `en-US` · app `book.anhtester.com` `1.0 (versionCode 1)` bản debug (Hybrid — Capacitor). **iOS chưa khảo sát** — bộ TC Mobile **không** áp cho iOS |
+| **Thiết bị chuẩn (Mobile)** | Emulator `Pixel_10_Pro_XL_API_37` · Android 17 · `1344×2992` · dọc (trừ TC_180) · locale `en-US` · app `book.canhnt14.com` `1.0 (versionCode 1)` bản debug (Hybrid — Capacitor). **iOS chưa khảo sát** — bộ TC Mobile **không** áp cho iOS |
 
 ## Cách đọc bộ TC này
 
@@ -27,7 +27,7 @@ Cùng quy ước với module `AUTH` — xem [TEST_CASES_AUTH_SUMMARY.md › Cá
 
 | Ký hiệu | Trạng thái | Cách đưa về |
 |---|---|---|
-| `B0` | **Khách**, ở `https://book.anhtester.com/book-management`, tab `All`, `Sort By: Feature` | Avatar → `Logout`, rồi menu trái `Book` |
+| `B0` | **Khách**, ở `https://book.canhnt14.com/book-management`, tab `All`, `Sort By: Feature` | Avatar → `Logout`, rồi menu trái `Book` |
 | `B1` | **`TK-B` đang đăng nhập**, ở `/book-management` | Từ `B0`: avatar → đăng nhập `TK-B` → menu trái `Book` |
 
 ### Tài khoản & sách test

@@ -1,4 +1,4 @@
-# Bản đồ API — AnhTester Book Management API
+# Bản đồ API — canhnt14 Book Management API
 
 > **TẦNG KHÁM PHÁ — cấp hệ thống.** Tài liệu này **KHÔNG chứa mã REQ**, chỉ cấp **mã module** và ghi lại những gì quan sát được từ spec + gọi thật.
 > Mã REQ chi tiết sinh ở tầng module: `docs/requirements/_book-api/<module>/REQUIREMENTS_<TÊN_MODULE>_SUMMARY.md`.
@@ -7,11 +7,11 @@
 
 | Mục | Giá trị |
 |---|---|
-| Hệ thống | AnhTester Book Management API |
+| Hệ thống | canhnt14 Book Management API |
 | Loại | REST API. Từ 19-09-2026 hệ thống có thêm **mặt Android** — bản đồ màn hình ở [`system_map.md`](system_map.md); bảng module của file đó là nơi **duy nhất** ghép prefix ↔ màn hình app (cột `Nền tảng`). 8 module ở mục 1 dưới đây giữ nguyên prefix; `DASH` chỉ có trên app, không có operation |
 | Spec | OpenAPI **3.0.0** · version `1.0.0` |
-| Nguồn spec | `https://book.anhtester.com/swagger/json` (trang `/swagger` là Scalar renderer, không phải spec) · snapshot mới nhất 19-09-2026 `sha256 32bb8b39…3f09` |
-| Base URL | `https://book.anhtester.com` — 1 server duy nhất, **Production** |
+| Nguồn spec | `https://book.canhnt14.com/swagger/json` (trang `/swagger` là Scalar renderer, không phải spec) · snapshot mới nhất 19-09-2026 `sha256 32bb8b39…3f09` |
+| Base URL | `https://book.canhnt14.com` — 1 server duy nhất, **Production** |
 | Auth | `BearerAuth` — HTTP bearer, JWT **HS256** |
 | Tổng endpoint | **35 operations** / 8 nhóm |
 | Ngày khám phá | 14-08-2026 |
@@ -128,7 +128,7 @@ Cột **Auth** lấy từ `security` của **từng operation**, không phải `
 
 | Mã | Phát hiện | Bằng chứng | Ảnh hưởng |
 |---|---|---|---|
-| **F-01** | `GET /api/user` và `GET /api/user/{id}` **công khai**, trả về `email` + `phone` + `address` của **mọi** user | `GET /api/user?limit=2` không token → **200**, body chứa `anhtester@example.com`, `0939206009`, địa chỉ đầy đủ | Rò rỉ PII toàn hệ thống. Là nguồn `id` để tấn công các endpoint khác |
+| **F-01** | `GET /api/user` và `GET /api/user/{id}` **công khai**, trả về `email` + `phone` + `address` của **mọi** user | `GET /api/user?limit=2` không token → **200**, body chứa `canhnt14@example.com`, `0939206009`, địa chỉ đầy đủ | Rò rỉ PII toàn hệ thống. Là nguồn `id` để tấn công các endpoint khác |
 | **F-02** | **Không có mô hình phân quyền.** Tài khoản vừa `register` (user thường, mới tinh) làm được mọi thứ | Cùng 1 token user thường: `POST /api/book` → 200 · `PATCH /api/user/{id_người_khác}` → 200 · `DELETE /api/user/{id_người_khác}` → 200 · `POST /api/user` → 201 | BOLA + BFLA toàn diện. Spec khai `403` ở nhiều endpoint nhưng **không quan sát được trường hợp nào phát sinh 403** |
 | **F-03** | Cookie `accessToken` set **không có** `HttpOnly`, `Secure`, `SameSite` | `Set-Cookie: accessToken=eyJ...; Path=/` — trong khi `refetchToken` cùng response có đủ `HttpOnly; Secure; SameSite=Strict` | XSS đọc được access token. Hai cookie cùng luồng nhưng chuẩn bảo mật lệch nhau. *19-09-2026: tái xác nhận — quy về `AMB-BK-AUTH-04`* |
 | **F-16** *(19-09-2026)* | `PATCH /api/profile` **không dùng được** — mọi body hợp lệ (JSON · form · multipart · có/không bọc `fields`) đều 422 | `{"msg":"Invalid data.","fields":{"fields":["Property 'fields' is missing","Expected object"]}}` · `GET /api/me` sau đó: dữ liệu không đổi. Riêng `email` sai định dạng vẫn ra đúng lỗi `should be email` | Không cập nhật được hồ sơ, không đổi được mật khẩu. `AMB-BK-AUTH-01` |
@@ -141,7 +141,7 @@ Cột **Auth** lấy từ `security` của **từng operation**, không phải `
 | **F-04** | `price` **âm** được chấp nhận | `POST /api/book` với `price: -99999` → **200 Book created successfully**. Spec chỉ khai `maximum: 9000000000000`, **không có `minimum`** |
 | **F-05** | `categories` trỏ tới danh mục **không tồn tại** vẫn tạo được sách | `POST /api/book` với `categories: ["khong_ton_tai_zzz"]` → **200**. Không kiểm tra khoá ngoại |
 | **F-06** | Xoá user làm **mồ côi** sách của user đó | Sau khi xoá user, `GET /api/book/{id}` của sách cũ trả `auth: null`. Không chặn xoá, không gán lại chủ sở hữu |
-| **F-07** | `POST /api/user` **không nhận** password → gán mặc định `anhtester.com` | Tạo user không truyền password, sau đó `POST /api/login` với password `anhtester.com` → **200**. Mọi user tạo qua endpoint này có mật khẩu đoán được |
+| **F-07** | `POST /api/user` **không nhận** password → gán mặc định `canhnt14.com` | Tạo user không truyền password, sau đó `POST /api/login` với password `canhnt14.com` → **200**. Mọi user tạo qua endpoint này có mật khẩu đoán được |
 | **F-18** *(19-09-2026)* | Refresh token **không xoay vòng** | Cùng một cookie `refetchToken` gọi `POST /api/refetch-token` 2 lần liên tiếp → 200 cả hai; response không `Set-Cookie` mới |
 | **F-19** *(19-09-2026)* | `default` của `email` **thay cho field bắt buộc bị thiếu** | Snapshot 19-09-2026 thêm `email.default: "user@example.com"` ở 5 operation. Thực tế: `POST /api/register` thiếu `email` → 422 `Email already exists.`; `POST /api/login` thiếu `email` → 400 `Invalid password.`; body `{}` của register **không** có lỗi `email`. `user@example.com` là một tài khoản có thật (không do QA tạo) |
 | **F-20** *(19-09-2026)* | Đăng nhập lộ email nào đã đăng ký | Sai mật khẩu → **400** `Invalid password.` · email không tồn tại → **404** `Email not found, please register.` |
@@ -254,4 +254,4 @@ Cột **Auth** lấy từ `security` của **từng operation**, không phải `
 
 | Ngày | Sự cố | Khắc phục |
 |---|---|---|
-| 14-08-2026 | Khi kiểm chứng BOLA, đã dùng **bản ghi seed có sẵn** `anhtester@example.com` (id `cmiyq38a300027udmc9666cq1`) làm mục tiêu `PATCH` rồi `DELETE` → xoá mất tài khoản gốc của demo | Tạo lại tài khoản cùng `name`/`email`/`phone`/`address`/`avatarUrl`/`isActive`, mật khẩu về mặc định `anhtester.com` (đã kiểm chứng đăng nhập được). **Không khôi phục được:** ID mới `cmssozna6102s7uk1dda2ujja`, các sách thuộc tài khoản cũ nay mang `auth: null`. Đã bổ sung quy tắc chặn vào workflow `/generate-api-tests-from-swagger` mục "Quy tắc dữ liệu test" *(15-09-2026: workflow đó đã tách thành `/generate-testcases-api` + `/generate-automation-api`; bộ luật nay nằm ở skill `skills-requirements-analyzer` mục 3.4.4)* |
+| 14-08-2026 | Khi kiểm chứng BOLA, đã dùng **bản ghi seed có sẵn** `canhnt14@example.com` (id `cmiyq38a300027udmc9666cq1`) làm mục tiêu `PATCH` rồi `DELETE` → xoá mất tài khoản gốc của demo | Tạo lại tài khoản cùng `name`/`email`/`phone`/`address`/`avatarUrl`/`isActive`, mật khẩu về mặc định `canhnt14.com` (đã kiểm chứng đăng nhập được). **Không khôi phục được:** ID mới `cmssozna6102s7uk1dda2ujja`, các sách thuộc tài khoản cũ nay mang `auth: null`. Đã bổ sung quy tắc chặn vào workflow `/generate-api-tests-from-swagger` mục "Quy tắc dữ liệu test" *(15-09-2026: workflow đó đã tách thành `/generate-testcases-api` + `/generate-automation-api`; bộ luật nay nằm ở skill `skills-requirements-analyzer` mục 3.4.4)* |

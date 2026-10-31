@@ -4,10 +4,10 @@
 
 | Mục | Giá trị |
 |---|---|
-| **Hệ thống** | AnhTester Book Management (mã hệ thống `BK`) |
+| **Hệ thống** | canhnt14 Book Management (mã hệ thống `BK`) |
 | **Module** | Người dùng — tab `User` (User Management): danh sách · tìm kiếm · bộ lọc · Add user · Update user · Confirm delete |
 | **Nền tảng** | **Android** 🟨 (đọc · validation · khách · xoá ✅ — sửa/khoá **lỗi** (REQ-129) · thêm người dùng khai **theo giả định**, chưa kiểm chứng — `AMB-BK-USER-22`) · iOS ❔ chưa khảo sát (máy Windows) |
-| **Thiết bị khảo sát** | Emulator `Pixel_10_Pro_XL_API_37` · Android 17 · màn hình `1344×2992` · hướng **dọc** · locale `en-US` · app `book.anhtester.com` `1.0 (versionCode 1)` bản **debug** · `UiAutomator2` qua Appium MCP · loại app **Hybrid (Capacitor)** — WebView `153.0.8010.36`, khảo sát bằng cây `NATIVE_APP` (context `WEBVIEW_*` không liệt kê) |
+| **Thiết bị khảo sát** | Emulator `Pixel_10_Pro_XL_API_37` · Android 17 · màn hình `1344×2992` · hướng **dọc** · locale `en-US` · app `book.canhnt14.com` `1.0 (versionCode 1)` bản **debug** · `UiAutomator2` qua Appium MCP · loại app **Hybrid (Capacitor)** — WebView `153.0.8010.36`, khảo sát bằng cây `NATIVE_APP` (context `WEBVIEW_*` không liệt kê) |
 | **Tầng network** | ❌ Không quan sát được — chưa dựng proxy, WebView không bật gỡ lỗi. Rule phía server lấy từ web và [api/requirements_user_api.md](../api/requirements_user_api.md) |
 | **Phương pháp** | Thao tác thật trên app ngày 26-09-2026 và 20-10-2026 — đọc thuộc tính phần tử (`enabled` · `selected` · `checked` · `content-desc` · `bounds`), nhập thử từng ô, tắt mạng bằng `adb shell svc wifi/data disable`, xoay bằng `appium_orientation`, quay màn hình (`adb shell screenrecord`) để đọc thông báo nổi. Kết quả ghi dữ liệu đối chiếu bằng **đọc công khai** `GET /api/user?search=<email>` (không token). **Agent không nhập mật khẩu và không tạo tài khoản** trên hệ thống production |
 | **Tài khoản** | 26-09: tài khoản test do tester đăng nhập sẵn — chỉ mở menu / hộp thoại rồi Cancel · 20-10: **khách** (app đang chưa đăng nhập) rồi tài khoản test do tester đăng nhập; Update thử rồi **xoá** tài khoản test còn sót `auto_web_<timestamp>_b@auto.test`. Mục 10 |

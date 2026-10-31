@@ -2,7 +2,7 @@
 
 | Thông tin | Nội dung |
 |---|---|
-| **Hệ thống** | Perfex CRM — Anh Tester Demo (`https://crm.anhtester.com`) |
+| **Hệ thống** | Perfex CRM — canhnt14 Demo (`https://crm.canhnt14.com`) |
 | **Module** | Khách hàng (Customers) · prefix `CUST` |
 | **Nguồn requirement** | [REQUIREMENTS_CUSTOMERS_SUMMARY.md](../../requirements/customers/REQUIREMENTS_CUSTOMERS_SUMMARY.md) (index) · [web/requirements_customers_web.md](../../requirements/customers/web/requirements_customers_web.md) — **84 REQ**, toàn bộ trong phạm vi |
 | **Mode sinh** | QUICK (`/generate-testcases-from-requirements`) · **độ hạt GỘP** · khung 4 vòng |
@@ -43,7 +43,7 @@ Phần chính của mọi TC **quan sát được bằng mắt**. Nội dung c�
 
 | Mã | Nội dung |
 |---|---|
-| `P-ADMIN` | Đã đăng nhập khu quản trị `https://crm.anhtester.com/admin/authentication` bằng `ADMIN_EMAIL` / `ADMIN_PASSWORD` trong `.env` |
+| `P-ADMIN` | Đã đăng nhập khu quản trị `https://crm.canhnt14.com/admin/authentication` bằng `ADMIN_EMAIL` / `ADMIN_PASSWORD` trong `.env` |
 | `P-PM` | Như trên, bằng `PM_EMAIL` / `PM_PASSWORD` (vai trò `Project Manager`) |
 | `KH-TEST` | Khách hàng test **do chính TC tạo** ở bước tiền đề: `/admin/clients` → `+ New Customer` → nhập các trường TC nêu → `Save`. Tên theo mẫu `auto_cust_tc{số TC}_{thời điểm YYYYMMDDHHmm}` |
 | `CSV-2` · `CSV-DUP` | Tệp CSV tự soạn — mô tả ở đầu Nhóm R, [part 04](web/parts/part_04_web_trang_thai_tab_nhap.md#nhóm-r--nhập-khách-hàng-từ-csv) |

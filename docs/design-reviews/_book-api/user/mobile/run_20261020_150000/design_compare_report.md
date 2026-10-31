@@ -7,7 +7,7 @@
 | Figma | File `hEWOqd9cGxTwZoVOJCg7nM` · page `USER — Người dùng` · https://www.figma.com/design/hEWOqd9cGxTwZoVOJCg7nM |
 | Độ trung thực thiết kế | **Wireframe có bảng màu thật** — cùng bộ kit với page AUTH (DM Sans, biến `Wireframe` mode "App"). Danh sách dùng **dữ liệu mẫu** (5 người tên tiếng Việt, số điện thoại `09…`) · U-06 ghi chú *"lược bớt cho gọn"* |
 | Phạm vi so | Nội dung chữ · có/thiếu phần tử · bố cục, khoảng cách · trạng thái (khách / đã đăng nhập / lỗi / rỗng) · màu chữ. Đường kẻ nét đứt, icon, ảnh đại diện → **tham khảo** (mục 6) |
-| Bản build | Android `com.anhtester.book` 1.0 (versionCode 1) — Hybrid Capacitor, WebView không bật debug |
+| Bản build | Android `com.canhnt14.book` 1.0 (versionCode 1) — Hybrid Capacitor, WebView không bật debug |
 | Môi trường | Emulator Pixel 10 Pro XL · Android 17 · 1344×2992 px · density 480 (×3) → **448 dp** rộng · `font_scale` 1.0 · dark mode tắt · locale en_US |
 | Mốc dọc | Đỉnh header: thiết kế 36 dp ↔ app **40 dp** (`--actual-top 40`, như AUTH) |
 | Dung sai | Vị trí ±4 dp (⚠️ ≤ 12) · ΔE chữ ≤ 6 · ΔE nền ≤ 3 — rule `design_compare_rules.md` mục 4 |

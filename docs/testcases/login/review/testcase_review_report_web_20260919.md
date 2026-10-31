@@ -48,7 +48,7 @@ Tiêu chí: ① Rõ ràng · ② Expected đo được · ③ Độc lập · �
 |---|---|
 | 12/12 | TC_001, 004, 005, 006, 007, 010, 012, 013, 015, 016, 017, 021, 022, 023, 026, 027, 028, 029, 030, 032, 036, 037, 038, 042, 043, 044, 045, 047, 048, 051 |
 | 11/12 | TC_002, 003 (bảng kiểm nhiều mục — đúng độ hạt GỘP) · TC_019 · TC_035 |
-| 10/12 | TC_008, 009, 024 (phần chính không chấm được mục tiêu — có lý do, đã tách xuống 🔧) · TC_020 (Pre-Condition *"nối tiếp `CRM_LOGIN_TC_019` bước 2"* → phụ thuộc TC khác. **Đề xuất nhẹ:** đổi thành *"Đăng nhập ở `https://crm.anhtester.com/login` bằng `CUSTOMER_EMAIL` / `CUSTOMER_PASSWORD` trong `.env`"* để chạy độc lập) |
+| 10/12 | TC_008, 009, 024 (phần chính không chấm được mục tiêu — có lý do, đã tách xuống 🔧) · TC_020 (Pre-Condition *"nối tiếp `CRM_LOGIN_TC_019` bước 2"* → phụ thuộc TC khác. **Đề xuất nhẹ:** đổi thành *"Đăng nhập ở `https://crm.canhnt14.com/login` bằng `CUSTOMER_EMAIL` / `CUSTOMER_PASSWORD` trong `.env`"* để chạy độc lập) |
 
 > 📌 `TC_004` (logo) và `TC_029` (ô Email Quên mật khẩu không reset) đang FAIL, bug mở — theo nguyên tắc *TC là chuẩn*, **không** sửa Expected. Nếu PO quyết định đây là hành vi chấp nhận được thì đóng bug như `TC018` rồi mới sửa TC.
 

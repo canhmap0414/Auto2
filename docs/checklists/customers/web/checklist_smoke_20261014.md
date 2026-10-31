@@ -58,7 +58,7 @@
 
 | # | Trạng thái | Hạng mục kiểm tra | Kết quả kỳ vọng | Priority | REQ ID | TC ID liên quan | Execution ID |
 |---|---|---|---|---|---|---|---|
-| 16 | ☐ | Cửa sổ ẩn danh, chưa đăng nhập, gõ thẳng `https://crm.anhtester.com/admin/clients` | Bị đưa về `/admin/authentication`, không thoáng thấy tên khách hàng hay bảng nào | P1 | REQ-CUST-01 | CRM_CUST_TC_113 | — |
+| 16 | ☐ | Cửa sổ ẩn danh, chưa đăng nhập, gõ thẳng `https://crm.canhnt14.com/admin/clients` | Bị đưa về `/admin/authentication`, không thoáng thấy tên khách hàng hay bảng nào | P1 | REQ-CUST-01 | CRM_CUST_TC_113 | — |
 | 17 | ☐ | Đăng nhập Project Manager, mở `Customers` | Thấy đủ 3 nút như Admin; `Total Customers` bằng số Admin thấy (PM thấy toàn bộ khách hàng) | P1 | REQ-CUST-01, REQ-CUST-08 | CRM_CUST_TC_115 | — |
 
 ### Không áp dụng cho module này

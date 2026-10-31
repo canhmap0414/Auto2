@@ -4,7 +4,7 @@
 |---|---|
 | **Index module** | [../../TEST_CASES_BOOK_SUMMARY.md](../../TEST_CASES_BOOK_SUMMARY.md) — Coverage · 4 vòng · ISO 25010 · Automation · Dữ liệu dùng chung · Nhật ký |
 | **Nguồn requirement** | [requirements_book_api.md](../../../../../requirements/_book-api/book/api/requirements_book_api.md) mục 3.11 · 3.12 · 3.13 |
-| **Base URL** | `https://book.anhtester.com` — production, server duy nhất · spec `openapi: 3.0.0` (snapshot 19-09-2026, `sha256 32bb8b39…3f09`) |
+| **Base URL** | `https://book.canhnt14.com` — production, server duy nhất · spec `openapi: 3.0.0` (snapshot 19-09-2026, `sha256 32bb8b39…3f09`) |
 | **Auth** | `PATCH` · `DELETE /api/book/{id}` 🔒 `BearerAuth`. Spec **không khai** 401 cho `DELETE` — 401 là hành vi thực tế đã kiểm chứng |
 | **Dải TC ID** | Part 03: `BK_BOOK_TC_081` → `089` · `122` → `135` |
 | **Part liền kề** | Trước: [part_02_api_tao.md](part_02_api_tao.md) · Đầu: [part_01_api_doc_danh_sach_chi_tiet.md](part_01_api_doc_danh_sach_chi_tiet.md) |

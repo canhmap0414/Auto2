@@ -1,9 +1,9 @@
-# Hướng dẫn sử dụng — Perfex CRM (Anh Tester Demo) · Đăng nhập & Đăng xuất
+# Hướng dẫn sử dụng — Perfex CRM (canhnt14 Demo) · Đăng nhập & Đăng xuất
 
 | | |
 |---|---|
 | Phiên bản tài liệu | v2.0 |
-| Áp dụng cho phiên bản phần mềm | Perfex CRM — Anh Tester Demo, trạng thái chạy thật ngày **12-10-2026** |
+| Áp dụng cho phiên bản phần mềm | Perfex CRM — canhnt14 Demo, trạng thái chạy thật ngày **12-10-2026** |
 | Đối tượng đọc | **Nhân viên nội bộ** — vai trò `Admin` và `Project Manager` |
 | Ngày cập nhật | 12-10-2026 |
 | Cấu trúc tài liệu | Biên soạn theo cấu trúc ISO/IEC/IEEE 26514 |

@@ -5,7 +5,7 @@
 | Run ID | run_1787215085 |
 | Nguồn TC | docs/testcases/login/TEST_CASES_LOGIN_SUMMARY.md |
 | Phạm vi | Toàn bộ 41 TC — bỏ qua phần 🔧 (@TechCheck, cần DevTools); TC_026 (@Slow, chờ 65 phút) chạy CUỐI cùng |
-| Môi trường | https://crm.anhtester.com — **Dùng chung** |
+| Môi trường | https://crm.canhnt14.com — **Dùng chung** |
 | Tài khoản | Admin (`admin@example.com`), PM (`projectmanager@example.com`), Customer (`anvo@example.com`) |
 | Người thực hiện | Agent hỗ trợ (Claude Code) |
 | Bắt đầu → Kết thúc | 20-08-2026 15:39 → 16:02 (~23 phút) |
@@ -91,10 +91,10 @@
 | REQ ID | REQ-LOGIN-04 |
 | Priority | Low |
 | Bước fail | Bước 3 |
-| **Expected** | Thanh địa chỉ dừng ở `https://crm.anhtester.com/` |
-| **Actual** | Thanh địa chỉ dừng ở `https://crm.anhtester.com/authentication/login` (tiêu đề tab `Please login`) |
+| **Expected** | Thanh địa chỉ dừng ở `https://crm.canhnt14.com/` |
+| **Actual** | Thanh địa chỉ dừng ở `https://crm.canhnt14.com/authentication/login` (tiêu đề tab `Please login`) |
 | Evidence | ![](evidence/TC_004_logo_redirect_actual.png) |
-| Tái hiện được? | Có — thử lại bằng cách gõ thẳng `https://crm.anhtester.com/` cũng cho cùng kết quả redirect |
+| Tái hiện được? | Có — thử lại bằng cách gõ thẳng `https://crm.canhnt14.com/` cũng cho cùng kết quả redirect |
 | Ghi chú | "Trang chủ công khai" không tồn tại như một trang độc lập — root URL của hệ thống tự động chuyển hướng sang form đăng nhập cổng khách hàng `/authentication/login`. Có thể do thiết kế hiện tại của Perfex CRM demo, không nhất thiết là bug — nhưng lệch với Expected Result trong TC nên vẫn ghi FAIL theo đúng hiện trạng |
 
 ### FAIL #2 — CRM_LOGIN_TC_016 · 🐞 Ô Email phải giữ lại email vừa nhập sau khi đăng nhập thất bại
@@ -156,8 +156,8 @@
 | REQ ID | REQ-LOGIN-01 |
 | Priority | High |
 | Bước fail | Bước 3 |
-| **Expected** | Thanh địa chỉ tự đổi thành `https://crm.anhtester.com/admin/authentication` |
-| **Actual** | Thanh địa chỉ giữ nguyên `http://crm.anhtester.com/admin/authentication` — không chuyển hướng |
+| **Expected** | Thanh địa chỉ tự đổi thành `https://crm.canhnt14.com/admin/authentication` |
+| **Actual** | Thanh địa chỉ giữ nguyên `http://crm.canhnt14.com/admin/authentication` — không chuyển hướng |
 | Evidence | ![](evidence/TC_039_http_not_upgraded.png) |
 | Tái hiện được? | Có |
 | Ghi chú | Xác nhận lại **bug cũ vẫn còn tồn tại** trên build hiện tại — khớp với [BUG_login_1785678750_TC039.md](../../../../bugs/login/web/BUG_login_1785678750_TC039.md) (02-08-2026). Đã cập nhật lại đúng tham chiếu TC ID/REQ ID + evidence mới qua `/create-bug-report` |

@@ -1,4 +1,4 @@
-# Ma Trận Truy Vết (RTM) — AnhTester Book Management (`BK`) · Tổng hợp
+# Ma Trận Truy Vết (RTM) — canhnt14 Book Management (`BK`) · Tổng hợp
 
 > **Tóm tắt:** 415/415 REQ đã có TC (100%) · 0 cặp REQ × nền tảng chưa có TC đúng nền tảng · **0/561 TC có script automation** · **chưa chạy TC nào** · 60 TC `@KnownBug` · **chỉ 3/9 module** nằm trong RTM này
 

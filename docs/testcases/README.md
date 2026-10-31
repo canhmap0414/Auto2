@@ -1,10 +1,10 @@
-# Danh mục Test Cases — Perfex CRM (Anh Tester Demo)
+# Danh mục Test Cases — Perfex CRM (canhnt14 Demo)
 
 > **Điểm vào tầng test case.** Mọi workflow đụng tới `docs/testcases/` đọc file này **trước tiên**: module nào đã có TC · **dải TC ID nào đã bị chiếm** · mã kế tiếp · độ phủ so với requirements.
 
 | Mục | Giá trị |
 |---|---|
-| Hệ thống | Perfex CRM — Anh Tester Demo (`https://crm.anhtester.com`) |
+| Hệ thống | Perfex CRM — canhnt14 Demo (`https://crm.canhnt14.com`) |
 | Tiền tố TC ID | `CRM_` → `CRM_<MODULE>_TC_<3 số>` |
 | Nguồn requirements | [`docs/requirements/README.md`](../requirements/README.md) |
 | Môi trường | ⚠️ **Dùng chung** — TC phải chỉ đọc hoặc hoàn tác được; cấm thao tác phá huỷ dữ liệu nghiệp vụ |
@@ -23,7 +23,7 @@
 
 | Namespace | Hệ thống | Trạng thái |
 |---|---|---|
-| `_book-api/` | AnhTester Book Management (hệ thống thứ hai — Web · API · Android) | **522 TC** — `AUTH` 193 (`BK_AUTH_TC_001` → `193`) · `USER` 149 (`BK_USER_TC_001` → `149`) · `BOOK` 180 (`BK_BOOK_TC_001` → `180`) — danh mục riêng: [`_book-api/README.md`](_book-api/README.md) |
+| `_book-api/` | canhnt14 Book Management (hệ thống thứ hai — Web · API · Android) | **522 TC** — `AUTH` 193 (`BK_AUTH_TC_001` → `193`) · `USER` 149 (`BK_USER_TC_001` → `149`) · `BOOK` 180 (`BK_BOOK_TC_001` → `180`) — danh mục riêng: [`_book-api/README.md`](_book-api/README.md) |
 
 
 ### Độ hạt test case của từng module

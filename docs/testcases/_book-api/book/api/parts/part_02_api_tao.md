@@ -4,7 +4,7 @@
 |---|---|
 | **Index module** | [../../TEST_CASES_BOOK_SUMMARY.md](../../TEST_CASES_BOOK_SUMMARY.md) — Coverage · 4 vòng · ISO 25010 · Automation · Dữ liệu dùng chung · Nhật ký |
 | **Nguồn requirement** | [requirements_book_api.md](../../../../../requirements/_book-api/book/api/requirements_book_api.md) mục 3.10 · REQ dùng chung ở index [REQUIREMENTS_BOOK_SUMMARY.md](../../../../../requirements/_book-api/book/REQUIREMENTS_BOOK_SUMMARY.md) mục 3 (`REQ-51` · `REQ-52`) |
-| **Base URL** | `https://book.anhtester.com` — production, server duy nhất · spec `openapi: 3.0.0` (snapshot 19-09-2026, `sha256 32bb8b39…3f09`) |
+| **Base URL** | `https://book.canhnt14.com` — production, server duy nhất · spec `openapi: 3.0.0` (snapshot 19-09-2026, `sha256 32bb8b39…3f09`) |
 | **Auth** | `POST /api/book` 🔒 `BearerAuth` — mọi request ghi dùng `tokenA` trừ khi ghi rõ |
 | **Dải TC ID** | Part 02: `BK_BOOK_TC_066` → `077` · `102` → `121` |
 | **Part liền kề** | Trước: [part_01_api_doc_danh_sach_chi_tiet.md](part_01_api_doc_danh_sach_chi_tiet.md) · Tiếp: [part_03_api_sua_xoa.md](part_03_api_sua_xoa.md) |

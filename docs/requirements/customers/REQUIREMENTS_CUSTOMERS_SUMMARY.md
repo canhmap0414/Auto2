@@ -4,7 +4,7 @@
 
 | Mục | Giá trị |
 |---|---|
-| **Hệ thống** | Perfex CRM — Anh Tester Demo |
+| **Hệ thống** | Perfex CRM — canhnt14 Demo |
 | **Module** | Khách hàng (Customers) |
 | **Prefix** | `CUST` |
 | **Nền tảng** | Web ✅ · Mobile — chưa có · API — chưa có |

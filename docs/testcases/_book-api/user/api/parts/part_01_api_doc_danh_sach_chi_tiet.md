@@ -4,7 +4,7 @@
 |---|---|
 | **Index module** | [../../TEST_CASES_USER_SUMMARY.md](../../TEST_CASES_USER_SUMMARY.md) — Coverage · 4 vòng · ISO 25010 · Automation · Dữ liệu dùng chung · Nhật ký |
 | **Nguồn requirement** | [requirements_user_api.md](../../../../../requirements/_book-api/user/api/requirements_user_api.md) · REQ dùng chung ở index [REQUIREMENTS_USER_SUMMARY.md](../../../../../requirements/_book-api/user/REQUIREMENTS_USER_SUMMARY.md) mục 3 · bản đồ API [api_map.md](../../../../../requirements/_book-api/_discovery/api_map.md) mục 2.2 · 3.3c |
-| **Base URL** | `https://book.anhtester.com` — production, server duy nhất · spec `openapi: 3.0.0` · `info.version 1.0.0` · snapshot [`openapi_2026-09-19.json`](../../../../../requirements/_book-api/_discovery/sources/openapi_2026-09-19.json) (`sha256 32bb8b39…3f09` — khớp spec online 25-09-2026) |
+| **Base URL** | `https://book.canhnt14.com` — production, server duy nhất · spec `openapi: 3.0.0` · `info.version 1.0.0` · snapshot [`openapi_2026-09-19.json`](../../../../../requirements/_book-api/_discovery/sources/openapi_2026-09-19.json) (`sha256 32bb8b39…3f09` — khớp spec online 25-09-2026) |
 | **Auth** | `GET /api/user` · `GET /api/user/{id}` **công khai** (`security: []`) — mọi request đọc ở part này **không** gửi token trừ khi ghi rõ |
 | **Dải TC ID** | Part 01: `BK_USER_TC_051` → `056` · `067` → `069` · `082` → `090` — dải chung toàn module `USER` (Web `001` → `050`, API `051` → `107`). `082` → `107` **bổ sung 25-09-2026** khi có REQ mặt API — **nối tiếp** dải, không chèn giữa |
 | **Part liền kề** | Tiếp theo: [part_02_api_tao.md](part_02_api_tao.md) (`057` → `066` · `091` → `097`) · [part_03_api_sua_xoa.md](part_03_api_sua_xoa.md) (`070` → `081` · `098` → `107`) |

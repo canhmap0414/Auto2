@@ -11,7 +11,7 @@
 
 | # | Trạng thái | Hạng mục kiểm tra | Kết quả kỳ vọng | Priority | REQ ID | TC ID liên quan | Execution ID |
 |---|---|---|---|---|---|---|---|
-| 1 | ✅ PASS | Mở `https://crm.anhtester.com/admin/authentication` trong cửa sổ ẩn danh | Tab trình duyệt ghi `Perfex CRM \| Anh Tester Demo - Login`, khối biểu mẫu có tiêu đề `Login` | P1 | REQ-LOGIN-01 | CRM_LOGIN_TC_001 | [run_1787215085](../../../executions/login/web/run_1787215085/execution_report.md)<br><sub>20-08-2026</sub> |
+| 1 | ✅ PASS | Mở `https://crm.canhnt14.com/admin/authentication` trong cửa sổ ẩn danh | Tab trình duyệt ghi `Perfex CRM \| canhnt14 Demo - Login`, khối biểu mẫu có tiêu đề `Login` | P1 | REQ-LOGIN-01 | CRM_LOGIN_TC_001 | [run_1787215085](../../../executions/login/web/run_1787215085/execution_report.md)<br><sub>20-08-2026</sub> |
 | 2 | ✅ PASS | Quan sát biểu mẫu vừa nạp, chưa bấm gì | Đủ ô `Email Address`, `Password`, ô tích `Remember me` (rỗng), nút `Login`, liên kết `Forgot Password?`; con trỏ nằm sẵn trong ô Email | P1 | REQ-LOGIN-02, REQ-LOGIN-03 | CRM_LOGIN_TC_002 | [run_1787215085](../../../executions/login/web/run_1787215085/execution_report.md)<br><sub>20-08-2026</sub> |
 
 ### Nhóm: Đăng nhập
@@ -27,7 +27,7 @@
 
 | # | Trạng thái | Hạng mục kiểm tra | Kết quả kỳ vọng | Priority | REQ ID | TC ID liên quan | Execution ID |
 |---|---|---|---|---|---|---|---|
-| 7 | ✅ PASS | Chưa đăng nhập, gõ thẳng `https://crm.anhtester.com/admin/clients` | Bị đưa về `/admin/authentication`, không thoáng thấy dữ liệu khách hàng nào | P1 | REQ-LOGIN-17 | CRM_LOGIN_TC_021 | [run_1787215085](../../../executions/login/web/run_1787215085/execution_report.md)<br><sub>20-08-2026</sub> |
+| 7 | ✅ PASS | Chưa đăng nhập, gõ thẳng `https://crm.canhnt14.com/admin/clients` | Bị đưa về `/admin/authentication`, không thoáng thấy dữ liệu khách hàng nào | P1 | REQ-LOGIN-17 | CRM_LOGIN_TC_021 | [run_1787215085](../../../executions/login/web/run_1787215085/execution_report.md)<br><sub>20-08-2026</sub> |
 
 ### Nhóm: Quên mật khẩu
 

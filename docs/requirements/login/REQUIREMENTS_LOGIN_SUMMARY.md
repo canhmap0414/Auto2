@@ -4,7 +4,7 @@
 
 | Mục | Giá trị |
 |---|---|
-| **Hệ thống** | Perfex CRM — Anh Tester Demo |
+| **Hệ thống** | Perfex CRM — canhnt14 Demo |
 | **Module** | Đăng nhập / Xác thực |
 | **Prefix** | `LOGIN` |
 | **Route** | `/admin/authentication` · `/admin/authentication/forgot_password` · `/admin/authentication/reset_password/<id>/<key>` · `/admin/authentication/logout` |
@@ -80,7 +80,7 @@ Hệ thống có **3 vai trò**: `Admin` · `Project Manager` · `Customer` (`AM
 |---|---|---|
 | `Admin` | `/admin/authentication` | "Admin Example", `user-id-2` · menu trái **14** mục |
 | `Project Manager` | `/admin/authentication` | "Project Manager", `user-id-3` · menu trái **9** mục (thiếu Subscriptions · Expenses · Estimate Request · Knowledge Base · Reports) |
-| `Customer` | **`/login`** — cổng khách hàng, KHÁC khu `/admin` | Đăng nhập xong dừng ở `/` (tiêu đề `HKD Anh Tester`) |
+| `Customer` | **`/login`** — cổng khách hàng, KHÁC khu `/admin` | Đăng nhập xong dừng ở `/` (tiêu đề `HKD canhnt14`) |
 
 | Hành động (trong khu `/admin`) | Khách (chưa đăng nhập) | `Admin` | `Project Manager` | `Customer` |
 |---|---|---|---|---|

@@ -4,7 +4,7 @@
 |---|---|
 | **Index module** | [../../TEST_CASES_AUTH_SUMMARY.md](../../TEST_CASES_AUTH_SUMMARY.md) — Coverage · 4 vòng · ISO 25010 · Automation · Nhật ký |
 | **Nguồn requirement** | [requirements_auth_api.md](../../../../../requirements/_book-api/auth/api/requirements_auth_api.md) · bản đồ API [api_map.md](../../../../../requirements/_book-api/_discovery/api_map.md) |
-| **Base URL** | `https://book.anhtester.com` · spec snapshot [`openapi_2026-09-19.json`](../../../../../requirements/_book-api/_discovery/sources/openapi_2026-09-19.json) |
+| **Base URL** | `https://book.canhnt14.com` · spec snapshot [`openapi_2026-09-19.json`](../../../../../requirements/_book-api/_discovery/sources/openapi_2026-09-19.json) |
 | **Auth** | `DELETE /api/logout` · `GET /api/me` · `PATCH /api/profile`: 🔒 `BearerAuth` (kế thừa cấp gốc) · `POST /api/refetch-token`: 🌐 công khai, **chỉ** đọc cookie `refetchToken` |
 | **Dải TC ID** | `BK_AUTH_TC_082` → `BK_AUTH_TC_105` · `BK_AUTH_TC_108` (bổ sung 20-09-2026 khi tách `TC_082`) |
 | **Part liền kề** | Trước: [part_01_api_dang_ky_dang_nhap.md](part_01_api_dang_ky_dang_nhap.md) (`TC_059` → `TC_081` · `TC_106` · `TC_107`) |

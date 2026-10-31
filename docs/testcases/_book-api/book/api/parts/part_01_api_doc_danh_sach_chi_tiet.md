@@ -4,7 +4,7 @@
 |---|---|
 | **Index module** | [../../TEST_CASES_BOOK_SUMMARY.md](../../TEST_CASES_BOOK_SUMMARY.md) — Coverage · 4 vòng · ISO 25010 · Automation · Dữ liệu dùng chung · Nhật ký |
 | **Nguồn requirement** | [requirements_book_api.md](../../../../../requirements/_book-api/book/api/requirements_book_api.md) · REQ dùng chung ở index [REQUIREMENTS_BOOK_SUMMARY.md](../../../../../requirements/_book-api/book/REQUIREMENTS_BOOK_SUMMARY.md) mục 3 · bản đồ API [api_map.md](../../../../../requirements/_book-api/_discovery/api_map.md) mục 2.3 · 3.3c |
-| **Base URL** | `https://book.anhtester.com` — production, server duy nhất · spec `openapi: 3.0.0` (snapshot 19-09-2026, `sha256 32bb8b39…3f09` — khớp spec online 25-09-2026) |
+| **Base URL** | `https://book.canhnt14.com` — production, server duy nhất · spec `openapi: 3.0.0` (snapshot 19-09-2026, `sha256 32bb8b39…3f09` — khớp spec online 25-09-2026) |
 | **Auth** | `GET /api/book` · `GET /api/book/{id}` **công khai** (`security: []`) — request đọc **không** gửi token trừ khi ghi rõ |
 | **Dải TC ID** | Part 01: `BK_BOOK_TC_060` → `065` · `078` → `080` · `090` → `101` — dải chung toàn module `BOOK` (Web `001` → `059`, API `060` → `135`). `090` → `135` **bổ sung 25-09-2026** khi có REQ mặt API — nối tiếp dải |
 | **Part liền kề** | Tiếp theo: [part_02_api_tao.md](part_02_api_tao.md) (`066` → `077` · `102` → `121`) · [part_03_api_sua_xoa.md](part_03_api_sua_xoa.md) (`081` → `089` · `122` → `135`) |

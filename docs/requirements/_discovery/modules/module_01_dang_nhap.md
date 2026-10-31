@@ -19,7 +19,7 @@
 
 | Màn hình | Route | Thành phần |
 |---|---|---|
-| Đăng nhập | `/admin/authentication` | Email Address · Password · checkbox **Remember me** · nút **Login** · link **Forgot Password?** · logo dẫn về `https://crm.anhtester.com/` |
+| Đăng nhập | `/admin/authentication` | Email Address · Password · checkbox **Remember me** · nút **Login** · link **Forgot Password?** · logo dẫn về `https://crm.canhnt14.com/` |
 | Quên mật khẩu | `/admin/authentication/forgot_password` | ❔ Chưa mở — chỉ ghi nhận link tồn tại |
 | Đăng xuất | `/admin/authentication/logout` | Có link Logout trong dropdown hồ sơ |
 

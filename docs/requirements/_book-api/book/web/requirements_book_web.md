@@ -4,9 +4,9 @@
 
 | Mục | Giá trị |
 |---|---|
-| **Hệ thống** | AnhTester Book Management (mã hệ thống `BK`) |
+| **Hệ thống** | canhnt14 Book Management (mã hệ thống `BK`) |
 | **Module** | Sách — `Book Management` (`/book-management`) · tạo / sửa (`/book-management/handle`) · chi tiết (`/book-management/detail/<slug>`) |
-| **Nền tảng** | **Web** ✅ — `https://book.anhtester.com` |
+| **Nền tảng** | **Web** ✅ — `https://book.canhnt14.com` |
 | **Trình duyệt khảo sát** | Google Chrome 153 (Playwright MCP, headed), viewport đo được `1600 × 750`, `navigator.language = en-US`. Mọi AC về hiển thị **chỉ đúng với trình duyệt + viewport này** |
 | **Tầng network** | ✅ Quan sát **thụ động** request do UI phát sinh. **Không** gọi API trực tiếp |
 | **Phương pháp** | Thao tác thật ngày 25-09-2026 — khách và tài khoản tự tạo `auto_web_<timestamp>_a@auto.test`. Tạo / sửa / xoá **chỉ** trên 1 cuốn sách do phiên tạo; sách của người khác chỉ xem, **không** mở trang chi tiết (tránh làm tăng lượt xem) |

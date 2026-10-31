@@ -11,7 +11,7 @@ import { fileURLToPath } from 'node:url'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 
-const LOGO = 'public/Profile AnhTester 200px-border-radius.png'
+const LOGO = 'public/Profile canhnt14 200px-border-radius.png'
 const FAVICON = 'public/favicon.ico'
 
 const read = (rel) => {

@@ -2,7 +2,7 @@
 
 # CONTEXT
 - Module: [Tên module chứa bug]
-- URL môi trường: [VD: https://crm.anhtester.com]
+- URL môi trường: [VD: https://crm.canhnt14.com]
 - Build / Version ĐANG TEST: [VD: 2.4.3 — BẮT BUỘC, phải khác build lúc log bug]
 - Môi trường dùng chung? [Có / Không] — Có thì agent tự SKIP các TC thao tác phá huỷ
 

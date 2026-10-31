@@ -4,7 +4,7 @@
 
 | Mục | Giá trị |
 |---|---|
-| **Hệ thống** | Perfex CRM — Anh Tester Demo |
+| **Hệ thống** | Perfex CRM — canhnt14 Demo |
 | **Module** | Dự án (Projects) |
 | **Prefix** | `PRJ` |
 | **Route** | `/admin/projects` · `/admin/projects/project` (tạo) · `/admin/projects/project/{id}` (sửa) · `/admin/projects/view/{id}?group=<tab>` (chi tiết) · `/admin/projects/gantt` · `/admin/projects/delete/{id}` · `/admin/projects/export_project_data/{id}` |
@@ -138,7 +138,7 @@ Xếp theo phụ thuộc và rủi ro, **không** theo thứ tự đánh số:
 
 > ⚠️ Khảo sát chỉ có **1 tài khoản** ("Admin Example", `staff-id-2`). Khu Setup (`/admin/roles`, `/admin/staff`) trả **403** nên **không đọc được màn hình cấu hình phân quyền** của hệ thống. Chỉ cột Admin là kiểm chứng được.
 
-Ô chọn `Members` của biểu mẫu dự án và ô lọc `Members` xác nhận hệ thống có **3 nhân sự**: `Project Manager` (id 3) · `Admin Anh Tester` (id 1) · `Admin Example` (id 2) — cùng danh sách đã ghi nhận ở module `CUST`. Tên `Project Manager` cho thấy tồn tại ít nhất một vai trò **không phải** quản trị viên, nhưng không có căn cứ nào về quyền của vai trò đó.
+Ô chọn `Members` của biểu mẫu dự án và ô lọc `Members` xác nhận hệ thống có **3 nhân sự**: `Project Manager` (id 3) · `Admin canhnt14` (id 1) · `Admin Example` (id 2) — cùng danh sách đã ghi nhận ở module `CUST`. Tên `Project Manager` cho thấy tồn tại ít nhất một vai trò **không phải** quản trị viên, nhưng không có căn cứ nào về quyền của vai trò đó.
 
 | Hành động | Admin | Project Manager | Vai trò khác |
 |---|---|---|---|

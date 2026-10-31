@@ -1,4 +1,4 @@
-# Danh mục Bug Report — Perfex CRM (Anh Tester Demo)
+# Danh mục Bug Report — Perfex CRM (canhnt14 Demo)
 
 > **Điểm vào tầng bug.** Mọi workflow đụng tới bug đọc file này **trước tiên**: bug nào đang mở · mã nào đã chiếm · bug nào đã fix nhưng chưa retest.
 >
@@ -6,7 +6,7 @@
 
 | Mục | Giá trị |
 |---|---|
-| Hệ thống | Perfex CRM — Anh Tester Demo (`https://crm.anhtester.com`) |
+| Hệ thống | Perfex CRM — canhnt14 Demo (`https://crm.canhnt14.com`) |
 | Quy ước mã bug | `BUG_<module>_<timestamp>_<TC_ID>` — `timestamp` epoch giây lúc sinh (đảm bảo không trùng), `TC_ID` là mã TC ngắn (VD `TC004`) để nhìn tên là biết ngay thuộc TC nào, không phải mở file/tra bảng |
 | Đường dẫn file | `docs/bugs/<module>/<nền-tảng>/BUG_<module>_<timestamp>_<TC_ID>.md` — `<nền-tảng>` chỉ nhận `web` · `mobile` · `api` |
 | Ngày cập nhật | 19-09-2026 |

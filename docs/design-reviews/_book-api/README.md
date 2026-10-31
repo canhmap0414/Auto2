@@ -1,4 +1,4 @@
-# Danh mục So thiết kế Figma — AnhTester Book Management (`BK`)
+# Danh mục So thiết kế Figma — canhnt14 Book Management (`BK`)
 
 > Điểm vào của nhánh `docs/design-reviews/_book-api/`. Mọi lần chạy `/compare-ui-from-figma-design` cho hệ thống `BK` đọc file này trước để lấy **mã DIFF kế tiếp** của module. Mã DIFF đếm **theo module**, dùng chung mọi nền tảng: `DIFF-BK-<MODULE>-<nn>`.
 >

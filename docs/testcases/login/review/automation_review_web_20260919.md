@@ -45,7 +45,7 @@
 | CRM_LOGIN_TC_001 | Mở trang đăng nhập khi chưa có phiên | Yes | — | — | HTTP `200` đọc từ `response.status()` |
 | CRM_LOGIN_TC_002 | Biểu mẫu đủ thành phần, đúng trạng thái mặc định | Yes | — | — | Assert **trạng thái** (`toBeFocused`, `not.toBeChecked`, `toBeEnabled`, `type=password`), **không** assert màu. Mục `6` bấm vào `<label>` |
 | CRM_LOGIN_TC_003 | Không CAPTCHA, không đăng nhập bên thứ ba, không JS | Yes | — | — | Đếm phần tử bằng locator. Mục `3`: đếm `<script>` + lắng nghe request loại `script` = 0 |
-| CRM_LOGIN_TC_004 | Bấm logo thì về trang chủ công khai | Yes · ⏸️ Hoãn | — | *"Thanh địa chỉ dừng ở `https://crm.anhtester.com/`"* | Đo lại 19-09-2026: `/` trả `303` → `/authentication/login`. Bug [TC004](../../../bugs/login/web/BUG_login_1787226513_TC004.md) chưa có kết luận của PO → **chờ điều kiện #3** |
+| CRM_LOGIN_TC_004 | Bấm logo thì về trang chủ công khai | Yes · ⏸️ Hoãn | — | *"Thanh địa chỉ dừng ở `https://crm.canhnt14.com/`"* | Đo lại 19-09-2026: `/` trả `303` → `/authentication/login`. Bug [TC004](../../../bugs/login/web/BUG_login_1787226513_TC004.md) chưa có kết luận của PO → **chờ điều kiện #3** |
 
 ### Nhóm B — Đăng nhập thành công & Ghi nhớ đăng nhập
 

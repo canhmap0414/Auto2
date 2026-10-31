@@ -4,7 +4,7 @@
 |---|---|
 | **Index module** | [../../TEST_CASES_USER_SUMMARY.md](../../TEST_CASES_USER_SUMMARY.md) — Coverage · 4 vòng · ISO 25010 · Automation · Dữ liệu dùng chung · Nhật ký |
 | **Nguồn requirement** | [requirements_user_api.md](../../../../../requirements/_book-api/user/api/requirements_user_api.md) mục 3.4 · 3.5 · 3.6 · REQ dùng chung ở index [REQUIREMENTS_USER_SUMMARY.md](../../../../../requirements/_book-api/user/REQUIREMENTS_USER_SUMMARY.md) mục 3 (`REQ-38`) |
-| **Base URL** | `https://book.anhtester.com` — production, server duy nhất · spec `openapi: 3.0.0` (snapshot 19-09-2026, `sha256 32bb8b39…3f09`) |
+| **Base URL** | `https://book.canhnt14.com` — production, server duy nhất · spec `openapi: 3.0.0` (snapshot 19-09-2026, `sha256 32bb8b39…3f09`) |
 | **Auth** | `PATCH` · `DELETE /api/user/{id}` 🔒 `BearerAuth`. Spec **không khai** 401 — 401 là hành vi thực tế đã kiểm chứng |
 | **Dải TC ID** | Part 03: `BK_USER_TC_070` → `081` · `098` → `107` |
 | **Part liền kề** | Trước: [part_02_api_tao.md](part_02_api_tao.md) · Đầu: [part_01_api_doc_danh_sach_chi_tiet.md](part_01_api_doc_danh_sach_chi_tiet.md) |

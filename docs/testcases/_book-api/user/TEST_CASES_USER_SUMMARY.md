@@ -2,7 +2,7 @@
 
 | Thông tin | Nội dung |
 |---|---|
-| **Hệ thống** | AnhTester Book Management — mã hệ thống `BK` (namespace `_book-api/`) · danh mục TC: [../README.md](../README.md) |
+| **Hệ thống** | canhnt14 Book Management — mã hệ thống `BK` (namespace `_book-api/`) · danh mục TC: [../README.md](../README.md) |
 | **Module** | Người dùng — màn hình `User Management` · prefix `USER` |
 | **Nguồn requirement** | Index [REQUIREMENTS_USER_SUMMARY.md](../../../requirements/_book-api/user/REQUIREMENTS_USER_SUMMARY.md) (dùng chung: 4 REQ mục 3.1 — `01` · `33` · `35` là `Android · Web · API` · 35 REQ `Android · Web` mục 3.2) · [web/requirements_user_web.md](../../../requirements/_book-api/user/web/requirements_user_web.md) (3 REQ) · [api/requirements_user_api.md](../../../requirements/_book-api/user/api/requirements_user_api.md) (77 REQ) · [mobile/requirements_user_mobile.md](../../../requirements/_book-api/user/mobile/requirements_user_mobile.md) (12 REQ) — **0 AMB treo** (chốt 25-09-2026 `DEMO-AMB-2509` · `DEMO-AMB-2509B` · 26-09-2026 `DEMO-AMB-2609` · 20-10-2026 `DEMO-AMB-2010`) |
 | **Mode sinh** | QUICK (`/generate-testcases-from-requirements`) · độ hạt **GỘP** (mặc định) · Mobile: chế độ **BỔ SUNG** (module đã có bộ TC Web + API) |
@@ -11,9 +11,9 @@
 | **Mã kế tiếp** | `BK_USER_TC_161` — **KHÔNG đánh lại từ 001** |
 | **Phạm vi REQ** | Web: 42/42 REQ (3 chỉ Web + 35 `Android · Web` + 4 dùng chung mục 3.1). API: **81/81** REQ (77 riêng API + 4 dùng chung) — 5 endpoint `/api/user*`. **Mobile (Android): 50/50** REQ (35 dùng chung `Android · Web` + `01` · `33` · `35` `Android · Web · API` + 12 chỉ Android — `32 → 35` khai **theo giả định** `AMB-BK-USER-22`). Ngoài phạm vi: **tải ảnh đại diện** (`AMB-BK-USER-05` ✅ — module `FILE`) · Android: REQ **chưa khai** nền tảng Android — `37` · `38` · `39` · `40` (**bị chặn** bởi REQ-129 — Update user Android lỗi; vế Android phủ qua REQ-129), [requirements mobile mục 2](../../../requirements/_book-api/user/mobile/requirements_user_mobile.md#2-bản-đồ-phủ-tài-liệu) · iOS chưa khảo sát |
 | **Mức rủi ro · độ sâu** | `Cao` → **Đầy đủ** — đủ 6 nhánh V1, mọi nhánh V2 có điều kiện kích hoạt, V3/V4 chấm từng nhánh.<br>Căn cứ chấm Cao: chạm **dữ liệu cá nhân** (email · SĐT · địa chỉ công khai) · có thao tác **không hồi lại được** (xoá người dùng) · khoá / mở tài khoản ảnh hưởng đăng nhập.<br>**Hạ xuống Tiêu chuẩn khi:** không bao giờ — module quản lý tài khoản luôn giữ mức Cao |
-| **Môi trường** | `https://book.anhtester.com` — **production, server duy nhất**. **Không** dùng chung (user chốt 14-08-2026) nhưng vẫn áp luật: chỉ ghi/xoá bản ghi do chính lượt chạy tạo |
+| **Môi trường** | `https://book.canhnt14.com` — **production, server duy nhất**. **Không** dùng chung (user chốt 14-08-2026) nhưng vẫn áp luật: chỉ ghi/xoá bản ghi do chính lượt chạy tạo |
 | **Trình duyệt chuẩn** | Google Chrome (desktop) · viewport `1600×750` · `en-US`. Trình duyệt khác: chưa khảo sát |
-| **Thiết bị chuẩn (Mobile)** | Emulator `Pixel_10_Pro_XL_API_37` · Android 17 · `1344×2992` · dọc · locale `en-US` · app `book.anhtester.com` `1.0 (versionCode 1)` bản debug (Hybrid — Capacitor). **iOS chưa khảo sát** — bộ TC Mobile **không** áp cho iOS |
+| **Thiết bị chuẩn (Mobile)** | Emulator `Pixel_10_Pro_XL_API_37` · Android 17 · `1344×2992` · dọc · locale `en-US` · app `book.canhnt14.com` `1.0 (versionCode 1)` bản debug (Hybrid — Capacitor). **iOS chưa khảo sát** — bộ TC Mobile **không** áp cho iOS |
 
 ## Cách đọc bộ TC này
 
@@ -27,7 +27,7 @@ Cùng quy ước với module `AUTH` — xem [TEST_CASES_AUTH_SUMMARY.md › Cá
 
 | Ký hiệu | Trạng thái | Cách đưa về |
 |---|---|---|
-| `U0` | **Khách** — chưa đăng nhập, ở `https://book.anhtester.com/user-management` | Đang đăng nhập thì avatar → `Logout`, rồi bấm menu trái `User` |
+| `U0` | **Khách** — chưa đăng nhập, ở `https://book.canhnt14.com/user-management` | Đang đăng nhập thì avatar → `Logout`, rồi bấm menu trái `User` |
 | `U1` | **`TK-U` đang đăng nhập**, ở `/user-management` | Từ `U0`: avatar → đăng nhập `TK-U` → menu trái `User` |
 
 ### Tài khoản & người dùng test

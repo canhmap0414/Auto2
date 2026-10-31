@@ -4,10 +4,10 @@
 
 | Mục | Giá trị |
 |---|---|
-| **Hệ thống** | AnhTester Book Management API (mã hệ thống `BK`) |
+| **Hệ thống** | canhnt14 Book Management API (mã hệ thống `BK`) |
 | **Module** | Sách — tag `Book Management` (`/api/book` · `/api/book/{id}`). Danh mục (`/api/category-book`) thuộc `CAT`, khuyến mãi thuộc `PROMO`, tệp thuộc `FILE` — chỉ **đọc** ở mức cần để đối chiếu |
 | **Nền tảng** | API |
-| **Nguồn spec** | `https://book.anhtester.com/swagger/json` · snapshot 19-09-2026 [`openapi_2026-09-19.json`](../../_discovery/sources/openapi_2026-09-19.json) · `openapi: 3.0.0` · `info.version: 1.0.0` · `sha256 32bb8b39…3f09` — **tải lại 25-09-2026: `sha256` trùng, không thêm/bỏ/đổi operation nào** |
+| **Nguồn spec** | `https://book.canhnt14.com/swagger/json` · snapshot 19-09-2026 [`openapi_2026-09-19.json`](../../_discovery/sources/openapi_2026-09-19.json) · `openapi: 3.0.0` · `info.version: 1.0.0` · `sha256 32bb8b39…3f09` — **tải lại 25-09-2026: `sha256` trùng, không thêm/bỏ/đổi operation nào** |
 | **Môi trường gọi thử** | Production — 1 server duy nhất · **không** dùng chung (user chốt 14-08-2026) · `Gọi API: ✅` (user xác nhận 19-09-2026) · base URL + tài khoản ở `.env`, không ghi vào tài liệu |
 | **Phương pháp** | Parse spec + **≈ 445 request gọi thật** ngày 25-09-2026 (4 lượt) trên **5 tài khoản · 46 sách · 40 danh mục do phiên tự tạo** (`auto_bookapi_*` · `Auto BookAPI <tag> <timestamp>`) — đã xoá đủ (mục 12.2). Không sửa/xoá sách hay danh mục có sẵn. Khuyến mãi (`/api/promotion-book`) chỉ **đọc** để giải thích `currentPrice` — **không** tạo khuyến mãi (khuyến mãi tác động lên giá bán của **mọi** sách, xem REQ-137) |
 | **REQ trong file này** | **94** — `REQ-BK-BOOK-53` → `REQ-BK-BOOK-146`. 4 REQ `01` · `42` · `51` · `52` kiểm chứng khớp trên API → **chuyển lên index** (dùng chung `Web · API`), mã giữ nguyên |

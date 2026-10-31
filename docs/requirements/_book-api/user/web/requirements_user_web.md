@@ -4,9 +4,9 @@
 
 | Mục | Giá trị |
 |---|---|
-| **Hệ thống** | AnhTester Book Management (mã hệ thống `BK`) |
+| **Hệ thống** | canhnt14 Book Management (mã hệ thống `BK`) |
 | **Module** | Người dùng — màn hình `User Management` (`/user-management`) |
-| **Nền tảng** | **Web** ✅ — `https://book.anhtester.com` |
+| **Nền tảng** | **Web** ✅ — `https://book.canhnt14.com` |
 | **Trình duyệt khảo sát** | Google Chrome 153 (Playwright MCP, headed), viewport đo được `1600 × 750`, `navigator.language = en-US`. Mọi AC về hiển thị **chỉ đúng với trình duyệt + viewport này** |
 | **Tầng network** | ✅ Quan sát **thụ động** request do UI phát sinh. **Không** gọi API trực tiếp |
 | **Phương pháp** | Thao tác thật ngày 25-09-2026 — khách và 2 tài khoản tự tạo; sửa/xoá **chỉ** trên 2 tài khoản đó. Ảnh chụp danh sách **làm mờ** mọi dòng không phải tài khoản test (chèn CSS `filter: blur` tạm thời trước khi chụp — không đổi dữ liệu) |

@@ -6,7 +6,7 @@
 | Loại kỳ | **Kỳ mốc gốc (baseline), trước giai đoạn thực thi.** Plan lập ngày 17-09-2026 và chưa duyệt, thực thi bắt đầu 30-09-2026. Chọn kỳ này theo quyết định của QA Lead ngày 17-09-2026 |
 | Mốc · Plan | Release 1.0 · [test_plan_release_1.0.md](../test-plans/test_plan_release_1.0.md) v1.1 (🟨 Draft, chưa duyệt) |
 | Báo cáo kỳ trước | Đây là kỳ đầu tiên |
-| Người lập | Anh Tester — QA Lead (agent hỗ trợ) |
+| Người lập | canhnt14 — QA Lead (agent hỗ trợ) |
 | Nguồn dữ liệu | 1 execution report (`LOGIN`, 20-08-2026) · 0 retest report · 6 bug report · 1 bộ TC (`LOGIN`) · danh mục `docs/testcases/README.md` · `docs/bugs/README.md` · không có `traceability_matrix.md` · không có `reports/` |
 | Nội dung | Lập theo nội dung báo cáo tiến độ của ISTQB CTFL v4.0 mục 5.3.2 |
 
@@ -26,7 +26,7 @@ Mọi số **luỹ kế** trong báo cáo lấy từ lần chạy ngày 20-08-20
 
 | Mốc | Hạn theo plan (7.1) | Thực tế | Trạng thái | Bằng chứng |
 |---|---|---|---|---|
-| Anh Tester duyệt plan | ❓ | — | ⚪ Không có hạn để so | Plan v1.1 ghi `🟨 Draft`, mục 10 chưa có chữ ký |
+| canhnt14 duyệt plan | ❓ | — | ⚪ Không có hạn để so | Plan v1.1 ghi `🟨 Draft`, mục 10 chưa có chữ ký |
 | Hoàn tất viết và review TC `CUST`, `PRJ` | Trước 30-09-2026 | 0 TC | ⏳ Chưa tới hạn · **chưa bắt đầu** | `docs/testcases/README.md`: không có dòng `CUST` hay `PRJ`, độ phủ 0/79 và 0/104. Kỳ đầu nên không dự báo được, xem ghi chú dưới bảng |
 | Môi trường test sẵn sàng | 27-09-2026 | — | ⏳ Chưa tới hạn | Tiêu chí vào #2, #3, #9 đang `❓` (plan 4.1) |
 | Smoke xác nhận môi trường | 28-09-2026 → 29-09-2026 | — | ⏳ Chưa tới hạn | Tiêu chí vào #10 đang `❓` |
@@ -162,11 +162,11 @@ Kỳ này **không phát hiện rủi ro mới** ngoài register của plan.
 |---|---|---|---|---|
 | Sinh TC theo RBT, review theo từng batch | `CUST` × Web | Lan | Trước 30-09-2026 | Plan 6 · 7.1 · R1 |
 | Sinh TC theo RBT, review theo từng batch | `PRJ` × Web | Huệ | Trước 30-09-2026 | Plan 6 · 7.1 · R1 |
-| Gửi 10 AMB 🔴 cho PO | `CUST` · `PRJ` | Anh Tester | ❓ | R3 |
-| Duyệt plan, chốt ô treo 8 (lịch) · 9 (ước lượng) · 12 (nguồn chính) · 14 (người chấp nhận dừng) | Cả 3 | Anh Tester | Trước 30-09-2026 | R6 · R10 · plan 4.2 |
-| Quyết định có đưa 5 REQ ⚪ trở lại phạm vi không (ô treo 3). Nếu có, khảo sát bổ sung **trước** khi sinh TC | `CUST` · `PRJ` | Anh Tester | Trước khi Lan/Huệ sinh TC vùng đó | Plan 2.1 |
+| Gửi 10 AMB 🔴 cho PO | `CUST` · `PRJ` | canhnt14 | ❓ | R3 |
+| Duyệt plan, chốt ô treo 8 (lịch) · 9 (ước lượng) · 12 (nguồn chính) · 14 (người chấp nhận dừng) | Cả 3 | canhnt14 | Trước 30-09-2026 | R6 · R10 · plan 4.2 |
+| Quyết định có đưa 5 REQ ⚪ trở lại phạm vi không (ô treo 3). Nếu có, khảo sát bổ sung **trước** khi sinh TC | `CUST` · `PRJ` | canhnt14 | Trước khi Lan/Huệ sinh TC vùng đó | Plan 2.1 |
 | DEV xác nhận lại mốc môi trường 27-09-2026, tài khoản 3 vai trò và dữ liệu nền | Web | Đội DEV | ❓ | R7 · tiêu chí vào #2 · #3 |
-| Chỉ định người phụ trách automation | Web | Anh Tester | ❓ | R5 · ô treo 7 |
+| Chỉ định người phụ trách automation | Web | canhnt14 | ❓ | R5 · ô treo 7 |
 
 **Đối chiếu kế hoạch kỳ này đã hứa:** — Đây là kỳ đầu tiên, chưa có báo cáo nào hứa việc cho kỳ này.
 
@@ -178,10 +178,10 @@ Kỳ này **không phát hiện rủi ro mới** ngoài register của plan.
 
 | Đề xuất | Lý do (dẫn số liệu) | Ai quyết định | Cần sửa plan? |
 |---|---|---|---|
-| Chốt ngày code freeze, release, báo cáo tổng hợp và tần suất báo cáo tiến độ | 5/9 mốc chưa có ngày. R10 đã xảy ra ngay kỳ 1 (mục 2 · mục 5) | Anh Tester | **Có** → `/generate-master-test-plan` cập nhật mục 7.1 |
-| Lập ước lượng công sức cho `CUST`/`PRJ` | Cần ≈ 22,3 REQ/ngày để kịp 30-09-2026, nhưng chưa có ước lượng để biết 2 tester có đủ năng lực không (mục 2 · R1) | Anh Tester + Lan · Huệ | **Có** → mục 7.2 |
-| Làm rõ tiêu chí exit #3 có tính cả TC Priority `Critical` không | Bộ TC dùng 4 mức (`Critical` · `High` · `Medium` · `Low`). Hai cách tính cho ra 75,0% và 84,6% (mục 3.6) | Anh Tester | **Có** → mục 4.2 |
-| Chốt nguồn chính khi Jira và markdown lệch nhau | Báo cáo này chưa đối chiếu được Jira (mục 3.4 · R6) | Anh Tester | **Có** → mục 5 |
-| Nếu đến giữa kỳ 2 tốc độ viết TC thấp hơn ≈ 22,3 REQ/ngày: ưu tiên TC Priority High của `CUST` trước `PRJ`, phần còn lại ghi nợ kiểm thử | Biện pháp đã có ở R1. Thứ tự `CUST` → `PRJ` theo plan 3.2 | Anh Tester | Không. Đổi phạm vi mới phải sửa plan |
+| Chốt ngày code freeze, release, báo cáo tổng hợp và tần suất báo cáo tiến độ | 5/9 mốc chưa có ngày. R10 đã xảy ra ngay kỳ 1 (mục 2 · mục 5) | canhnt14 | **Có** → `/generate-master-test-plan` cập nhật mục 7.1 |
+| Lập ước lượng công sức cho `CUST`/`PRJ` | Cần ≈ 22,3 REQ/ngày để kịp 30-09-2026, nhưng chưa có ước lượng để biết 2 tester có đủ năng lực không (mục 2 · R1) | canhnt14 + Lan · Huệ | **Có** → mục 7.2 |
+| Làm rõ tiêu chí exit #3 có tính cả TC Priority `Critical` không | Bộ TC dùng 4 mức (`Critical` · `High` · `Medium` · `Low`). Hai cách tính cho ra 75,0% và 84,6% (mục 3.6) | canhnt14 | **Có** → mục 4.2 |
+| Chốt nguồn chính khi Jira và markdown lệch nhau | Báo cáo này chưa đối chiếu được Jira (mục 3.4 · R6) | canhnt14 | **Có** → mục 5 |
+| Nếu đến giữa kỳ 2 tốc độ viết TC thấp hơn ≈ 22,3 REQ/ngày: ưu tiên TC Priority High của `CUST` trước `PRJ`, phần còn lại ghi nợ kiểm thử | Biện pháp đã có ở R1. Thứ tự `CUST` → `PRJ` theo plan 3.2 | canhnt14 | Không. Đổi phạm vi mới phải sửa plan |
 
 > Đề xuất nào đụng phạm vi · lịch · nhân lực · tiêu chí → **phải** cập nhật plan bằng `/generate-master-test-plan`, không sửa ngầm trong báo cáo tiến độ.

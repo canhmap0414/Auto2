@@ -7,10 +7,10 @@
 | Loại nguồn | `Bộ TC` |
 | Nguồn TC | [part_01_web_smoke.md](../../../../testcases/customers/web/parts/part_01_web_smoke.md) (TC_001 → TC_016) · [part_02_web_danh_sach.md](../../../../testcases/customers/web/parts/part_02_web_danh_sach.md) (TC_017 → TC_030) |
 | Phạm vi | **30 TC** đầu của module — `CRM_CUST_TC_001` → `CRM_CUST_TC_030`. 0 TC `@Deprecated`, 0 TC `@PersonalOnly` trong dải |
-| Môi trường | https://crm.anhtester.com — **Dùng chung** — auto-skip TC phá huỷ đang BẬT |
+| Môi trường | https://crm.canhnt14.com — **Dùng chung** — auto-skip TC phá huỷ đang BẬT |
 | Tài khoản | Admin (`admin@example.com`) · Project Manager (`PM_EMAIL` trong `.env`, chỉ cho `TC_025-b`) — mật khẩu do **người dùng tự gõ** |
 | Trình duyệt | Chrome (Playwright MCP, headed, viewport `1600×750`) |
-| Người thực hiện | Anh Tester (agent hỗ trợ — Claude Code) |
+| Người thực hiện | canhnt14 (agent hỗ trợ — Claude Code) |
 | Bắt đầu → Kết thúc | 14-10-2026 04:16 → 04:49 (~33 phút, gồm thời gian chờ người dùng đăng nhập PM cho `TC_025-b`) |
 | Môi trường dùng chung? | Có — auto-skip TC phá huỷ đang BẬT |
 

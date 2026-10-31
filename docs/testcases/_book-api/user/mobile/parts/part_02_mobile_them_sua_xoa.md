@@ -4,7 +4,7 @@
 |---|---|
 | **Index module** | [../../TEST_CASES_USER_SUMMARY.md](../../TEST_CASES_USER_SUMMARY.md) — cách đọc bộ TC · Dữ liệu dùng chung (mặt Android) · Assumptions · Coverage · Evidence · 4 vòng · bộ chạy · Nhật ký |
 | **Nguồn requirement** | [requirements_user_mobile.md](../../../../../requirements/_book-api/user/mobile/requirements_user_mobile.md) (12 REQ chỉ Android) · REQ dùng chung ở index [REQUIREMENTS_USER_SUMMARY.md](../../../../../requirements/_book-api/user/REQUIREMENTS_USER_SUMMARY.md) mục 3.2 (35 REQ `Android · Web`) và mục 3.1 (`REQ-BK-USER-01` · `33` · `35` `Android · Web · API`) |
-| **Nền tảng** | Android — emulator `Pixel_10_Pro_XL_API_37` · Android 17 · màn hình `1344×2992` · **hướng dọc** · locale `en-US` · app `book.anhtester.com` `1.0 (versionCode 1)`. iOS **chưa khảo sát** — không chạy bộ này trên iOS |
+| **Nền tảng** | Android — emulator `Pixel_10_Pro_XL_API_37` · Android 17 · màn hình `1344×2992` · **hướng dọc** · locale `en-US` · app `book.canhnt14.com` `1.0 (versionCode 1)`. iOS **chưa khảo sát** — không chạy bộ này trên iOS |
 | **TC trong part này** | 22 TC — `BK_USER_TC_` 114 · 115 · 116 · 117 · 134 · 135 · 136 · 137 · 138 · 139 · 140 · 141 · 148 · 149 · 152 · 153 · 155 · 156 · 157 · 158 · 159 · 160 · REQ `24 · 25 · 26 · 27 · 28 · 29 · 30 · 31 · 32 · 33 · 34 · 35 · 36 · 41 · 42 · 124 · 126 · 127 · 129 · 131` |
 | **Dải TC ID** | `BK_USER_TC_108` → `BK_USER_TC_160` (`150` → `160` bổ sung 20-10-2026) — dải chung toàn module `USER` (Web `001`→`050` · API `051`→`107`) |
 | **Part còn lại** | [part_01_mobile_danh_sach.md](part_01_mobile_danh_sach.md) — danh sách · lọc · khách |

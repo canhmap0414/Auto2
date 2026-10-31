@@ -2,7 +2,7 @@
 
 | Thông tin | Nội dung |
 |---|---|
-| **Hệ thống** | Perfex CRM — Anh Tester Demo (`https://crm.anhtester.com`) |
+| **Hệ thống** | Perfex CRM — canhnt14 Demo (`https://crm.canhnt14.com`) |
 | **Module** | Đăng nhập / Xác thực · prefix `LOGIN` |
 | **Nguồn requirement** | [REQUIREMENTS_LOGIN_SUMMARY.md](../../requirements/login/REQUIREMENTS_LOGIN_SUMMARY.md) — 44 REQ, **40 trong phạm vi** |
 | **Mode sinh** | QUICK (`/generate-testcases-from-requirements`) · **độ hạt GỘP**<br>Bổ sung 11-09-2026: 9 TC theo **Bản Đồ Loại Kiểm Thử — 4 Vòng** (`/generate-testcases-manual-rbt`) |

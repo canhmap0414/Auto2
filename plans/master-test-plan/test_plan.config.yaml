@@ -62,17 +62,17 @@ Phạm vi:
     - Nội dung: 20 module CRM còn lại (CONT · LEAD · TASK · EST · PROP · INV · PAY · CN · SUB · CTR · EXP · ITEM · TICK · ESTREQ · KB · REP · DASH · TODO · REM · PROF)
       Lý do: Không thuộc Release 1.0
       Người chịu trách nhiệm: Đợt sau
-      Người quyết định: Anh Tester — QA Lead
+      Người quyết định: QA Lead
       Ngày quyết định: 17-09-2026
     - Nội dung: Hệ thống Book API (namespace _book-api/)
       Lý do: Không thuộc Release 1.0
       Người chịu trách nhiệm: Đợt sau
-      Người quyết định: Anh Tester — QA Lead
+      Người quyết định: QA Lead
       Ngày quyết định: 17-09-2026
     - Nội dung: Cổng khách hàng (khu front-end ngoài /admin)
       Lý do: Loại khỏi phạm vi Release 1.0
       Người chịu trách nhiệm: Chưa xếp đợt — chờ PO chốt phạm vi cổng khách hàng
-      Người quyết định: Anh Tester — QA Lead
+      Người quyết định: QA Lead
       Ngày quyết định: 17-09-2026
 
   Đưa lại REQ bị loại vì môi trường: có   # có | không — REQ ⚪ trước đây bị loại chỉ vì môi trường dùng chung
@@ -102,7 +102,7 @@ Nhân lực:
   #   Vai trò:                   # trưởng nhóm QA | kiểm thử viên | tự động hoá | khác
   #   Phụ trách: [LOGIN × web]   # "Toàn bộ" hoặc từng cặp MODULE × nền tảng
   #   Cần đào tạo:
-  - Tên: Anh Tester
+  - Tên: Canhnt14
     Vai trò: trưởng nhóm QA
     Phụ trách: [Toàn bộ]
     Cần đào tạo:
@@ -118,7 +118,7 @@ Nhân lực:
     Vai trò: kiểm thử viên
     Phụ trách: [PRJ × web]
     Cần đào tạo:
-  - Tên: Anh Tester
+  - Tên: Canhnt14
     Vai trò: tự động hoá
     Phụ trách: [LOGIN × web, CUST × web, PRJ × web]
     Cần đào tạo:
@@ -297,7 +297,7 @@ Tiêu chí:
     # Chỉ khi Bộ tiêu chí ra = riêng — thay toàn bộ bộ mặc định
     # - Tiêu chí:
     #   Ngưỡng:
-  Người chấp nhận dừng khi hết thời gian hoặc ngân sách: Product Owner cùng Anh Tester — QA Lead
+  Người chấp nhận dừng khi hết thời gian hoặc ngân sách: Product Owner cùng — QA Lead
   Dùng ngưỡng tạm dừng đề xuất: có   # có | không
   Ngưỡng tạm dừng riêng:
     # Chỉ khi không dùng ngưỡng đề xuất — mỗi ngưỡng một dòng "- "
@@ -310,7 +310,7 @@ Bên liên quan:
   #   Nhận gì: [kế hoạch, báo cáo tiến độ]   # kế hoạch | báo cáo tiến độ | báo cáo tổng hợp | báo cáo lỗi
   #   Tần suất:
   #   Kênh:
-  - Tên: Anh Tester
+  - Tên: Canhnt14
     Vai trò: QA Lead — duyệt plan
     Nhận gì: [kế hoạch, báo cáo tiến độ, báo cáo tổng hợp]
     Tần suất: Hằng tuần thứ Sáu · cuối đợt
@@ -337,7 +337,7 @@ Mẫu tài liệu:
 Phê duyệt:
   # - Tên:
   #   Vai trò:
-  - Tên: Anh Tester
+  - Tên: Canhnt14
     Vai trò: QA Lead
   - Tên:
     Vai trò: Product Owner

@@ -1,4 +1,4 @@
-# Bản đồ hệ thống — Perfex CRM (Anh Tester Demo)
+# Bản đồ hệ thống — Perfex CRM (canhnt14 Demo)
 
 > **Tầng khám phá — KHÔNG chứa mã `REQ-XXX-NN`.** Ở đây chỉ cấp **prefix** cho từng module. Mã REQ được cấp ở tầng module khi chạy `/generate-requirements-from-website`.
 >
@@ -12,7 +12,7 @@
 |---|---|
 | Ngày khảo sát | 14-08-2026 |
 | Mode | **UI** — repo chưa có `docs/`, không có tài liệu QA kèm theo |
-| Hệ thống | Perfex CRM (bản demo tuỳ biến thương hiệu "ANHTESTER") |
+| Hệ thống | Perfex CRM (bản demo tuỳ biến thương hiệu "canhnt14") |
 | Tiền tố TC ID đã chốt | `CRM_` → `CRM_<MODULE>_TC_<3 số>` (VD `CRM_LOGIN_TC_001`) |
 | URL · tài khoản | Lưu ở `.env` — **KHÔNG** ghi vào `docs/` |
 | Role đã dùng | 1 account duy nhất, hiển thị **Admin Example**; **không phải full admin** (xem mục 5) |

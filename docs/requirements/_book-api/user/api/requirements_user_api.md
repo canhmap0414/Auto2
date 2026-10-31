@@ -4,10 +4,10 @@
 
 | Mục | Giá trị |
 |---|---|
-| **Hệ thống** | AnhTester Book Management API (mã hệ thống `BK`) |
+| **Hệ thống** | canhnt14 Book Management API (mã hệ thống `BK`) |
 | **Module** | Người dùng — tag `User Management` (`/api/user` · `/api/user/{id}`). Hồ sơ **của chính mình** (`/api/me` · `/api/profile`) thuộc module `AUTH` |
 | **Nền tảng** | API |
-| **Nguồn spec** | `https://book.anhtester.com/swagger/json` (trang `/swagger` là Scalar renderer) · snapshot 19-09-2026 [`openapi_2026-09-19.json`](../../_discovery/sources/openapi_2026-09-19.json) · `openapi: 3.0.0` · `info.version: 1.0.0` · `sha256 32bb8b39…3f09` — **tải lại 25-09-2026: `sha256` trùng, không thêm/bỏ/đổi operation nào** |
+| **Nguồn spec** | `https://book.canhnt14.com/swagger/json` (trang `/swagger` là Scalar renderer) · snapshot 19-09-2026 [`openapi_2026-09-19.json`](../../_discovery/sources/openapi_2026-09-19.json) · `openapi: 3.0.0` · `info.version: 1.0.0` · `sha256 32bb8b39…3f09` — **tải lại 25-09-2026: `sha256` trùng, không thêm/bỏ/đổi operation nào** |
 | **Môi trường gọi thử** | Production — 1 server duy nhất · **không** dùng chung (user chốt 14-08-2026) · `Gọi API: ✅` (user xác nhận 19-09-2026) · base URL + tài khoản ở `.env`, không ghi vào tài liệu |
 | **Phương pháp** | Parse spec + **≈ 360 request gọi thật** ngày 25-09-2026 (4 lượt) trên **40 tài khoản do phiên tự tạo** `auto_userapi_<timestamp>_*` — đã xoá đủ 40 (mục 12.2). Không sửa/xoá bản ghi có sẵn nào; dữ liệu của người dùng có sẵn chỉ được **đọc** và **không** ghi lại vào tài liệu (danh sách công khai chứa email · điện thoại · địa chỉ thật) |
 | **REQ trong file này** | **77** — `REQ-BK-USER-43` → `REQ-BK-USER-119` (`116` → `119` thêm sau khi chốt AMB — `DEMO-AMB-2509B`). 4 REQ `01` · `33` · `35` · `38` kiểm chứng khớp trên API → **chuyển lên index** (dùng chung `Web · API`), mã giữ nguyên |
@@ -110,7 +110,7 @@ Không có tài liệu nghiệp vụ — toàn bộ REQ sinh từ **spec OpenAPI
 | REQ-BK-USER-76 | `name` tối đa 191 ký tự | Spec **không khai** `maxLength`. **Web cho tới 250** (REQ-BK-USER-30) — `AMB-BK-USER-09` | `name` dài 1 · 50 · 100 · 120 · 191 ký tự → **201**. `name` dài ≥ 192 ký tự (đã đo 192 · 193 · 195 · 199 · 200 · 240 · 250 · 255 · 1000 · 5000 · 10000) → **400** · body **chỉ** `{"msg":"Invalid data."}` — **không** có `fields` (khác REQ-73 · 74 dùng 422 + `fields`) | 🟢 | — | Thực tế — spec không nói · POST /api/user → 201 / 400 (K-55) |
 | REQ-BK-USER-77 | Thiếu `email` bị từ chối với lỗi thiếu field | `email` là field bắt buộc (`required`) | Body có `name` + `password`, **không** có khoá `email` → **422** · `fields.email` báo **thiếu field** · **không** tạo tài khoản | 🟢 | — | Spec — ❌ lệch thực tế (F-19): server gán `default` `user@example.com` rồi trả **422** `Email already exists.` vì tài khoản này có sẵn (K-39). **Chạy đúng 1 lần / lượt** |
 | REQ-BK-USER-78 | `email` sai định dạng bị từ chối | `format: email` | `email` ∈ {`khong-phai-email` · `auto@` · `@auto.test` · `a@b@auto.test` · `co khoang@auto.test`} (các field khác hợp lệ) → **422** · `fields.email` chứa `Property 'email' should be email` · không tạo tài khoản. `email` = `null` → **422** · `fields.email` chứa `to be string but found: null` | 🟢 | — | Spec + kiểm chứng thực tế · POST /api/user → 422 (K-40 · K-41) |
-| REQ-BK-USER-79 | Thiếu `password` bị từ chối | Kỳ vọng — **PO đã chốt** web đúng, API gán mật khẩu mặc định là lỗi (`AMB-BK-USER-02` ✅ · F-07) | Body có `name` + `email`, **không** có khoá `password` → **không** phải 201 · không tạo tài khoản. **Hiện tại:** **201**, và đăng nhập được bằng mật khẩu `anhtester.com` (đoán được — `default` khai trong spec) | 🟢 | — | Spec — ❌ lệch quyết định PO (F-07 · `AMB-BK-USER-02` ✅) · POST /api/user → 201 · POST /api/login → 200 (K-43) |
+| REQ-BK-USER-79 | Thiếu `password` bị từ chối | Kỳ vọng — **PO đã chốt** web đúng, API gán mật khẩu mặc định là lỗi (`AMB-BK-USER-02` ✅ · F-07) | Body có `name` + `email`, **không** có khoá `password` → **không** phải 201 · không tạo tài khoản. **Hiện tại:** **201**, và đăng nhập được bằng mật khẩu `canhnt14.com` (đoán được — `default` khai trong spec) | 🟢 | — | Spec — ❌ lệch quyết định PO (F-07 · `AMB-BK-USER-02` ✅) · POST /api/user → 201 · POST /api/login → 200 (K-43) |
 | REQ-BK-USER-80 | `password` rỗng không tạo được tài khoản | | `password` = `""` → **không** phải 201 · không tạo tài khoản. **Quan sát:** **400** · body chỉ `{"msg":"Invalid data."}` (không `fields`) — khác `422` của các lỗi kiểu ở REQ-81 (`4.3.9`: chưa loại trừ khả năng lỗi phát sinh sau tầng kiểm tra dữ liệu — AC **không** assert mã 400) | 🟢 | — | Thực tế — spec không nói · POST /api/user → 400 (K-44) |
 | REQ-BK-USER-81 | `password` sai kiểu bị từ chối | | `password` = `null` hoặc `123456` (số) → **422** · `fields.password` chứa `to be string but found:` | 🟢 | — | Spec + kiểm chứng thực tế · POST /api/user → 422 (K-45) |
 | REQ-BK-USER-82 | `isActive` mặc định là `true` | Spec **không khai** `default` cho `isActive` | Body **không** có `isActive` → **201** · `GET /api/user/<id>` → `isActive` = `true` · đăng nhập được | 🟢 | — | Thực tế — spec không nói · POST /api/user → 201 (K-34 · K-35) |
@@ -182,7 +182,7 @@ Không có tài liệu nghiệp vụ — toàn bộ REQ sinh từ **spec OpenAPI
 | `Authorization` | header | `Bearer <JWT>` | ✅ (POST · PATCH · DELETE) | `BearerAuth` · ⚠️ spec **không khai** 401 cho 3 operation này | POST · PATCH · DELETE | 71 · 72 · 102 · 111 |
 | `name` | body | string | ✅ (POST) · ❌ (PATCH) | Spec không khai `minLength`/`maxLength`. **Quan sát:** rỗng được nhận (`AMB-BK-USER-10`) · tối đa **191** ký tự (`AMB-BK-USER-09`) | POST · PATCH | 73 → 76 · 91 · 108 |
 | `email` | body | string | ✅ (POST) · ❌ (PATCH) | `format: email` · `default: "user@example.com"` ⚠️ (nguồn của F-19 · F-27) · so khớp không phân biệt hoa thường | POST · PATCH | 77 · 78 · 92 → 96 · 33 |
-| `password` | body | string | ❌ | Spec (POST) khai `default: "anhtester.com"` ⚠️ (F-07) · PATCH không khai `default`. **Quan sát:** rỗng bị từ chối (400) · 1 ký tự và 1000 ký tự được nhận — **không** có chính sách (`AMB-BK-USER-16` · F-22) | POST · PATCH | 79 → 81 · 97 · 98 · 38 |
+| `password` | body | string | ❌ | Spec (POST) khai `default: "canhnt14.com"` ⚠️ (F-07) · PATCH không khai `default`. **Quan sát:** rỗng bị từ chối (400) · 1 ký tự và 1000 ký tự được nhận — **không** có chính sách (`AMB-BK-USER-16` · F-22) | POST · PATCH | 79 → 81 · 97 · 98 · 38 |
 | `isActive` | body | boolean | ❌ | Không khai `default`; **quan sát** mặc định `true` | POST · PATCH | 82 → 84 · 99 · 100 |
 | `avatarUrl` · `phone` · `address` | body | string | ❌ | Không ràng buộc; quan sát: `phone` 100 ký tự và `address` 2000 ký tự được nhận | POST · PATCH | 85 · 101 |
 
@@ -325,7 +325,7 @@ Nhánh API thay ảnh bằng **request/response nguyên văn** (skill 3.4.7). To
 | K-40 | POST /api/user — `email: null` | 422 | `fields.email` = `…but found: null` | 78 |
 | K-41 | POST /api/user — 5 email sai định dạng | 422 ×5 | `Property 'email' should be email` | 78 |
 | K-42 | POST /api/user — email userA (đúng · HOA) | 422 ×2 | `Email already exists.` · userA vẫn đăng nhập được (200) | 33 |
-| K-43 | POST /api/user — không `password` → login `anhtester.com` | 201 → 200 | | 79 |
+| K-43 | POST /api/user — không `password` → login `canhnt14.com` | 201 → 200 | | 79 |
 | K-44 | POST /api/user — `password: ""` | 400 | `{"msg":"Invalid data."}` | 80 |
 | K-45 | POST /api/user — `password: null` · `123456` | 422 | `fields.password` | 81 |
 | K-46 | POST /api/user — `password` 1 · 73 · 1000 ký tự | 201 ×3 | không có chính sách | `AMB-BK-USER-16` |

@@ -1,4 +1,4 @@
-# Danh mục Bug Report — Book (Anh Tester)
+# Danh mục Bug Report — Book (canhnt14)
 
 > **Điểm vào tầng bug của namespace `_book-api`.** Danh mục riêng của hệ thống thứ hai trong repo — mã bug, trạng thái, TC liên quan **không** dùng chung sổ với danh mục hệ thống mặc định ở [`docs/bugs/README.md`](../README.md) (Perfex CRM).
 >
@@ -6,7 +6,7 @@
 
 | Mục | Giá trị |
 |---|---|
-| Hệ thống | Book — Anh Tester (`https://book.anhtester.com` — **production**) · app Android `book.anhtester.com` `1.0` |
+| Hệ thống | Book — canhnt14 (`https://book.canhnt14.com` — **production**) · app Android `book.canhnt14.com` `1.0` |
 | Quy ước mã bug | `BUG_<module>_<timestamp>_<TC_ID>` — `timestamp` epoch giây lúc sinh, `TC_ID` mã TC ngắn (VD `TC152`). REQ chưa có TC thì hậu tố `REQ<số>` (VD `REQ122`) |
 | Đường dẫn file | `docs/bugs/_book-api/<module>/<nền-tảng>/BUG_<module>_<timestamp>_<TC_ID>.md` — `<nền-tảng>` chỉ nhận `web` · `mobile` · `api` |
 | Ngày cập nhật | 20-10-2026 |
